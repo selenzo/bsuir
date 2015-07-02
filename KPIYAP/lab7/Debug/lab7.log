@@ -1,0 +1,18 @@
+﻿Сборка начата 06.12.2014 14:12:21.
+     1>Проект "C:\Users\Antonio\Desktop\Kpiyap\lab7\lab7.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\lab7.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt lab7.cpp
+         lab7.cpp
+     1>c:\users\antonio\desktop\kpiyap\lab7\lab7.cpp(19): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\antonio\desktop\kpiyap\lab7\lab7.cpp(20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\antonio\desktop\kpiyap\lab7\lab7.cpp(30): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\antonio\desktop\kpiyap\lab7\lab7.cpp(31): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Antonio\Desktop\Kpiyap\Debug\lab7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Antonio\Desktop\Kpiyap\Debug\lab7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Antonio\Desktop\Kpiyap\Debug\lab7.lib" /MACHINE:X86 Debug\lab7.obj
+         Debug\stdafx.obj
+         lab7.vcxproj -> C:\Users\Antonio\Desktop\Kpiyap\Debug\lab7.exe
+     1>Сборка проекта "C:\Users\Antonio\Desktop\Kpiyap\lab7\lab7.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:00.29

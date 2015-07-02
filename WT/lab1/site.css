@@ -1,0 +1,133 @@
+body {
+    background-color: white;
+    border-spacing: 0;
+    margin: 0px 0px 0px 0px;
+    font-family: Arial, Georgia, Serif;
+}
+
+img {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.mainTable {
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    font-size: 11pt;
+}
+
+.menuTable {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 11pt;
+}
+
+.formTable {
+    border-spacing: 0;
+    font-size: 11pt;
+}
+
+.formTable td {
+    line-height: 18pt;
+    width: 50%;
+    padding: 8px 5px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul a {
+    font-weight: bold;
+}
+
+ul {
+    font-size: 12pt;
+    padding: 5px 0px 0px 20px;
+    margin: 0px 0px 0px 0px;
+}
+
+.head {
+    height: 15%;
+    text-align: right;
+    vertical-align: bottom;
+    padding: 0px 5px 1px 0px;
+    background-image: url(img/logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(168, 221, 255);
+}
+
+.line {
+    height: 1px;
+    background-color: blue;
+}
+
+.reklama {
+    padding: 0px 0px 0px 0px;
+    height: 4%;
+    background-color: rgb(198, 233, 255);
+    text-align: center;
+}
+
+.copyright {
+    height: 4%;
+    background-color: blue;
+    text-align: center;
+    color: white;
+}
+
+.content {
+    /*    height: 85%;*/
+    
+    width: 50%;
+    background-color: white;
+    vertical-align: top;
+    padding: 0px 5px 5px 5px;
+}
+
+.news {
+    width: 20%;
+    vertical-align: top;
+    padding: 10px 0px 0px 5px;
+    font-size: 14pt;
+    font-weight: bold;
+    /*    letter-spacing: 2px;*/
+}
+
+.news table {
+    padding: 20px 0px 0px 0px;
+}
+
+.news table td {
+    vertical-align: top;
+}
+
+.menu {
+    width: 15%;
+    background-image: url(img/image6.jpg);
+    vertical-align: top;
+}
+
+.menuPanel {
+    height: 30%;
+    vertical-align: top;
+    padding: 0px 0px 5px 0px;
+}
+
+.formTableButton input {
+    width: 100px;
+    background-color: rgb(198, 233, 255);
+}
+
+.formTableButton button {
+    margin: 2px 0px 0px 0px;
+    background-color: rgb(198, 233, 255);
+}
+
+.formTableText {
+    vertical-align: top;
+    text-align: right;
+}

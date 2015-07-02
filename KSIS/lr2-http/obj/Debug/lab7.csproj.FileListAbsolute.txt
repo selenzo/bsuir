@@ -1,0 +1,23 @@
+c:\users\boris\documents\visual studio 2012\Projects\lab7\bin\Debug\lab7.exe
+c:\users\boris\documents\visual studio 2012\Projects\lab7\bin\Debug\lab7.pdb
+c:\users\boris\documents\visual studio 2012\Projects\lab7\obj\Debug\lab7.csprojResolveAssemblyReference.cache
+c:\users\boris\documents\visual studio 2012\Projects\lab7\obj\Debug\lab7.Form1.resources
+c:\users\boris\documents\visual studio 2012\Projects\lab7\obj\Debug\lab7.Properties.Resources.resources
+c:\users\boris\documents\visual studio 2012\Projects\lab7\obj\Debug\lab7.csproj.GenerateResource.Cache
+c:\users\boris\documents\visual studio 2012\Projects\lab7\obj\Debug\lab7.exe
+c:\users\boris\documents\visual studio 2012\Projects\lab7\obj\Debug\lab7.pdb
+D:\Study\3\2\ксис\lr7-http\obj\Debug\lab7.exe
+D:\Study\3\2\ксис\lr7-http\obj\Debug\lab7.pdb
+D:\Study\3\2\ксис\lr7-http\bin\Debug\lab7.exe
+D:\Study\3\2\ксис\lr7-http\bin\Debug\lab7.pdb
+D:\Study\3\2\ксис\lr7-http\obj\Debug\lab7.csprojResolveAssemblyReference.cache
+D:\Study\3\2\ксис\lr7-http\obj\Debug\lab7.Form1.resources
+D:\Study\3\2\ксис\lr7-http\obj\Debug\lab7.Properties.Resources.resources
+D:\Study\3\2\ксис\lr7-http\obj\Debug\lab7.csproj.GenerateResource.Cache
+C:\Users\Sozzuro\Desktop\lr2-http\bin\Debug\lab7.exe
+C:\Users\Sozzuro\Desktop\lr2-http\bin\Debug\lab7.pdb
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab7.Form1.resources
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab7.Properties.Resources.resources
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab7.csproj.GenerateResource.Cache
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab7.exe
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab7.pdb

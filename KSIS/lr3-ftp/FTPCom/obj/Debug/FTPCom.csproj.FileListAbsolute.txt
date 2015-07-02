@@ -1,0 +1,6 @@
+C:\Users\Boris\Desktop\FTPCom\essai\FTPCom\bin\Debug\FTPCom.dll
+C:\Users\Boris\Desktop\FTPCom\essai\FTPCom\bin\Debug\FTPCom.pdb
+C:\Users\Boris\Desktop\FTPCom\essai\FTPCom\obj\Debug\FTPCom.FTPC.resources
+C:\Users\Boris\Desktop\FTPCom\essai\FTPCom\obj\Debug\FTPCom.csproj.GenerateResource.Cache
+C:\Users\Boris\Desktop\FTPCom\essai\FTPCom\obj\Debug\FTPCom.dll
+C:\Users\Boris\Desktop\FTPCom\essai\FTPCom\obj\Debug\FTPCom.pdb

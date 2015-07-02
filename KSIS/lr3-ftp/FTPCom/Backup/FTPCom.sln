@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTPCom", "FTPCom.csproj", "{55F0EAA0-5D10-44AD-93E9-91E563961B6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFTPCOM", "..\TestFTPCOM\TestFTPCOM\TestFTPCOM.csproj", "{DB79DE17-64BA-4DE3-BEF8-240A8964A51C}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{55F0EAA0-5D10-44AD-93E9-91E563961B6D}.Debug.ActiveCfg = Debug|.NET
+		{55F0EAA0-5D10-44AD-93E9-91E563961B6D}.Debug.Build.0 = Debug|.NET
+		{55F0EAA0-5D10-44AD-93E9-91E563961B6D}.Release.ActiveCfg = Release|.NET
+		{55F0EAA0-5D10-44AD-93E9-91E563961B6D}.Release.Build.0 = Release|.NET
+		{DB79DE17-64BA-4DE3-BEF8-240A8964A51C}.Debug.ActiveCfg = Debug|.NET
+		{DB79DE17-64BA-4DE3-BEF8-240A8964A51C}.Debug.Build.0 = Debug|.NET
+		{DB79DE17-64BA-4DE3-BEF8-240A8964A51C}.Release.ActiveCfg = Release|.NET
+		{DB79DE17-64BA-4DE3-BEF8-240A8964A51C}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

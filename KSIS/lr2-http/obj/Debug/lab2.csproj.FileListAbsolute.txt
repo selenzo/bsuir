@@ -1,0 +1,16 @@
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab7.exe
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab7.pdb
+C:\Users\Sozzuro\Desktop\lr2-http\bin\Debug\lab7.exe
+C:\Users\Sozzuro\Desktop\lr2-http\bin\Debug\lab7.pdb
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab2.csprojResolveAssemblyReference.cache
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab2.csproj.GenerateResource.Cache
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab2.Form1.resources
+C:\Users\Sozzuro\Desktop\lr2-http\obj\Debug\lab2.Properties.Resources.resources
+d:\work\bsuir\KSIS\lr2-http\obj\Debug\lab7.exe
+d:\work\bsuir\KSIS\lr2-http\obj\Debug\lab7.pdb
+d:\work\bsuir\KSIS\lr2-http\bin\Debug\lab7.exe
+d:\work\bsuir\KSIS\lr2-http\bin\Debug\lab7.pdb
+d:\work\bsuir\KSIS\lr2-http\obj\Debug\lab2.csprojResolveAssemblyReference.cache
+d:\work\bsuir\KSIS\lr2-http\obj\Debug\lab2.Form1.resources
+d:\work\bsuir\KSIS\lr2-http\obj\Debug\lab2.Properties.Resources.resources
+d:\work\bsuir\KSIS\lr2-http\obj\Debug\lab2.csproj.GenerateResource.Cache
