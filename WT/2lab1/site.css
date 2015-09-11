@@ -13,7 +13,8 @@ body {
     background-image: url(img/logo.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgb(168, 221, 255);
+    background-color: rgb(168, 221, 255);    
+    
 }
 
 #menu {
@@ -159,4 +160,12 @@ ul ul ul {
 #newsitemcontent {
     font-size: 11pt;
     padding: 0px 0px 0px 18px;
+}
+
+#logotext {
+    text-align: right;
+    height: 100%;
+    vertical-align: bottom;
+    display: inline;
+/*    bottom: 0;*/
 }
