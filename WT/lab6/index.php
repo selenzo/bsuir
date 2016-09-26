@@ -1,4 +1,5 @@
 <?php
+
 ini_set('default_charset','utf-8');
 mysql_set_charset('utf8');
 header("Content-Type: application/rss+xml; charset=utf-8");
@@ -30,3 +31,5 @@ $html .= '</channel>
   </rss>
 ';
 echo $html;
+
+?>

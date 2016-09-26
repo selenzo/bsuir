@@ -1,0 +1,175 @@
+div{
+border:1px bold #f12313;
+}
+
+body {
+    font-size: 11pt;
+    background-color: white;
+    border-spacing: 0;
+    margin: 0 0 0 0;
+    font-family: Arial, Georgia, Serif;
+    background-color: rgb(237, 248, 255);
+}
+
+#logo {
+	position: relative;
+	overflow:hidden;
+    width: 100%;
+    height: 13%;
+    background-image: url(img/logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(168, 221, 255);    
+    
+}
+
+#logotext {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#menu {
+    position: absolute;
+    background-color: antiquewhite;
+    width: 20%;
+    background-image: url(img/image6.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    height: 81%;
+}
+
+#menu input {
+    width: 100px;
+    margin: 3px 0px 0px 3px;
+    background-color: rgb(198, 233, 255);
+}
+
+#menu button {
+    margin: 3px 0px 0px 3px;
+    background-color: rgb(198, 233, 255);
+}
+
+#news {
+    position: absolute;
+    right: 0;
+    width: 16%;
+    height: 77%;
+    vertical-align: top;
+    padding: 10px 0px 0px 5px;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#content {
+    font-size: 11pt;
+    position: absolute;
+    left: 20%;
+    right: 16%;
+    height: 77%;
+    padding: 5px 5px 0px 5px;
+}
+
+#main {
+    height: 81%;
+    width: 100%;
+}
+
+#reklama {
+    width: 100%;
+    height: 5.7%;
+    background-color: rgb(198, 233, 255);
+    text-align: center;
+}
+
+#copyright {
+    position: absolute;
+    background-color: blue;
+    right: 0;
+    bottom: 6%;
+    width: 78%;
+    height: 5%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+#line {
+    background-color: blue;
+    height: 0.3%;
+}
+
+#menupanel {
+    padding: 15px 0px 15px 20px;
+    border-spacing: 0;
+    font-size: 11pt;
+    text-decoration: none;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul a {
+    font-weight: bold;
+}
+
+ul {
+    font-size: 12pt;
+    padding: 5px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+ul ul {
+    font-size: 11pt;
+}
+ul ul ul {
+    font-size: 9pt;
+}
+
+#formleft {
+    padding: 5px 0px 0px 0px;
+    text-align: right;
+    position: absolute;
+    width: 35%;
+    left: 0;
+}
+
+#formleft div {
+    padding: 8px 0px 0px 0px;
+}
+
+#formright {
+    padding: 5px 0px 0px 0px;
+    position: absolute;
+    width: 65%;
+    right: 0;
+}
+
+#form {
+    position: relative;
+    font-size: 10pt;
+}
+#newsitem {
+    margin: 20px 0px 0px 0px;
+}
+
+#newsitemimage {
+    display:inline;
+}
+
+#newsitemdate {
+    display:inline;
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+#newsitemcontent {
+    font-size: 11pt;
+    padding: 0px 0px 0px 18px;
+}
+
+

@@ -1,28 +1,24 @@
-﻿<?php
-
-
-    $fmain = file_get_contents('templates/main.tpl'); //считывем шаблоны
+<?php
+	$fmain = file_get_contents('templates/main.tpl');
+	
 	$fmainmenu = file_get_contents('templates/main_menu.tpl'); 
-  	$fmain = str_replace('{MAIN_MENU}',$fmainmenu,$fmain);//заменяем {MAIN_MENU} на содержимое шаблона main_menu.tpl
-	
+  	$fmain = str_replace('{MAIN_MENU}',$fmainmenu,$fmain);
     
-	$text = file_get_contents('templates/text.tpl');//считывем тест
-	$fmain = str_replace('{text}',$text,$fmain);// производим замену плайсхолдера {text} на текст с шаблона 
-	
+	$text = file_get_contents('templates/text.tpl');
+	$fmain = str_replace('{text}',$text,$fmain);
     
-    // замена плейсхолдеров 
+    
 	$fmain = str_replace('{TODAY_D}',date("d"),$fmain);
 	$fmain = str_replace('{TODAY_M}',date("m"),$fmain);
 	$fmain = str_replace('{TODAY_Y}',date("y"),$fmain);
 	$fmain = str_replace('{NOW_H}',date("H"),$fmain);
 	$fmain = str_replace('{NOW_M}',date("i"),$fmain);
 	$fmain = str_replace('{NOW_S}',date("s"),$fmain);
-	
-    // считывание новостей
-	$fnews = file_get_contents('templates/news.tpl');	
-	
+
+	$fnews = file_get_contents('templates/news.tpl');		
 	$fnews_str = file_get_contents('templates/news_str.tpl');	
 	$array_news = file('news.inf');	
+	
 	$str_all = "";	
 	for($i = 0; $i < count($array_news); $i++)
 	{
@@ -40,7 +36,7 @@
 	$fnews = str_replace('{news_str}',$str_all,$fnews);	
 	$fmain = str_replace('{news}',$fnews,$fmain);
 	
-	//читаем конфиг
+	
 	$mcfg = file('site.cfg');
 	$cfg0 = str_word_count($mcfg[0],1);
 

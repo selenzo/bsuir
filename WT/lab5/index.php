@@ -47,9 +47,7 @@
         </div>
         <div class="jobContent">
             <?php
-            $html = '<!--[if IE]>
-<link href="/css/invstroyIEfix.css" rel="stylesheet" type="text/css" />
-<![endif]-->';
+            $html = '';
             echo preg_replace('|<!--(?!<!)[^\[>].*?-->|im', "", $html);
             ?>
         </div>

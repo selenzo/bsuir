@@ -1,19 +1,18 @@
 <?php
 
 
-$fmain = file_get_contents('templates/main.tpl'); //считывем шаблоны
+$fmain = file_get_contents('templates/main.tpl');
 $fmainmenu = getContains();
 $header = file_get_contents('templates/header.tpl');
 $fmain = str_replace('{HEADER}', $header, $fmain);
-$fmain = str_replace('{HEADER_TITLE}', "Основы разработки сайтов", $fmain); //заменяем {MAIN_MENU} на содержимое шаблона main_menu.tpl
-$fmain = str_replace('{MAIN_MENU}', $fmainmenu, $fmain); //заменяем {MAIN_MENU} на содержимое шаблона main_menu.tpl
+$fmain = str_replace('{HEADER_TITLE}', "Основы разработки сайтов", $fmain);
+$fmain = str_replace('{MAIN_MENU}', $fmainmenu, $fmain);
 
 
-$text = file_get_contents('templates/text.tpl'); //считывем тест
-$fmain = str_replace('{text}', $text, $fmain); // производим замену плайсхолдера {text} на текст с шаблона
+$text = file_get_contents('templates/text.tpl');
+$fmain = str_replace('{text}', $text, $fmain);
 
 
-// замена плейсхолдеров
 $fmain = str_replace('{TODAY_D}', date("d"), $fmain);
 $fmain = str_replace('{TODAY_M}', date("m"), $fmain);
 $fmain = str_replace('{TODAY_M}', date("m"), $fmain);
@@ -22,7 +21,7 @@ $fmain = str_replace('{NOW_H}', date("H"), $fmain);
 $fmain = str_replace('{NOW_M}', date("i"), $fmain);
 $fmain = str_replace('{NOW_S}', date("s"), $fmain);
 
-// считывание новостей
+
 $fnews = file_get_contents('templates/news.tpl');
 $N = 3;
 $str_all = get_db_news($N);
@@ -31,7 +30,7 @@ $str_all = get_db_news($N);
 $fnews = str_replace('{news_str}', $str_all, $fnews);
 $fmain = str_replace('{news}', $fnews, $fmain);
 
-//читаем конфиг
+
 $mcfg = file('site.cfg');
 $cfg0 = str_word_count($mcfg[0], 1);
 
@@ -48,7 +47,7 @@ function get_db_news($num)
     $fnews_str = file_get_contents('templates/news_str.tpl');
 
     $lnk = mysql_connect("localhost", "root", "mysql") or die("Could not connect" . mysql_error());
-    /* Выбираем базу данных. Если произойдет ошибка - вывести ее */
+
     mysql_select_db("news") or die (mysql_error());
     mysql_select_db("news", $lnk);
     mysql_set_charset('utf8');
@@ -83,7 +82,6 @@ $result = mysql_query("SELECT * FROM pages WHERE ID = $id");
 
 function getContains()
 {
-
 
 return '<ul class="mainmenu">'.
     '<li><a href="/catalog/">'. getItemMenu(1).'</a>'.

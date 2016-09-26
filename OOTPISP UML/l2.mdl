@@ -1,0 +1,390 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"55EDB61D0398"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"55EDB61D039A"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"55EDB61D03B8"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"55EDB61D0399"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"55EDB61D039B"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"55EDB61D03A8"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"55EDB61D039B"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"55EDB61D03B7"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"55EDB61D0399")
+    process_structure 	(object Processes
+	quid       	"55EDB61D039C"
+	ProcsNDevs 	(list
+	    (object Device "NewDevice"
+		quid       	"55EDB8EC0231"
+		characteristics 	"")
+	    (object Device "РС Клиента"
+		quid       	"55EDB94C0011"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"55EDB961006C"
+			supplier   	"Интернет"
+			quidu      	"55EDB95D01D9"
+			supplier_is_device 	TRUE))
+		characteristics 	"")
+	    (object Device "Сервер IIS"
+		quid       	"55EDB94F02E9"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"55EDB9690030"
+			supplier   	"Hub"
+			quidu      	"55EDB95101BD"
+			supplier_is_device 	TRUE))
+		characteristics 	"")
+	    (object Device "Hub"
+		quid       	"55EDB95101BD"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"55EDB96B0194"
+			supplier   	"PC Руководителя"
+			quidu      	"55EDB95502C0"
+			supplier_is_device 	TRUE)
+		    (object Connection_Relationship
+			quid       	"55EDB96E0038"
+			supplier   	"РС Администратора"
+			quidu      	"55EDB9530082"
+			supplier_is_device 	TRUE))
+		characteristics 	"")
+	    (object Device "РС Администратора"
+		quid       	"55EDB9530082"
+		characteristics 	"")
+	    (object Device "PC Руководителя"
+		quid       	"55EDB95502C0"
+		characteristics 	"")
+	    (object Device "Сервер БД"
+		quid       	"55EDB95701F2"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"55EDB97003CD"
+			supplier   	"Hub"
+			quidu      	"55EDB95101BD"
+			supplier_is_device 	TRUE))
+		characteristics 	"")
+	    (object Device "Интернет"
+		quid       	"55EDB95D01D9"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"55EDB9650027"
+			supplier   	"Сервер IIS"
+			quidu      	"55EDB94F02E9"
+			supplier_is_device 	TRUE))
+		characteristics 	"")
+	    (object Process_Diagram "Deployment View"
+		quid       	"55EDB61D039E"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object DeviceView "РС Клиента" @1
+			location   	(200, 1267)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(58, 1186)
+			    nlines     	2
+			    max_width  	212
+			    justify    	0
+			    label      	"РС Клиента")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"55EDB94C0011"
+			width      	287
+			height     	231
+			annotation 	0)
+		    (object DeviceView "Сервер IIS" @2
+			location   	(744, 694)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(633, 639)
+			    nlines     	2
+			    max_width  	150
+			    justify    	0
+			    label      	"Сервер IIS")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"55EDB94F02E9"
+			width      	225
+			height     	180
+			annotation 	0)
+		    (object DeviceView "Hub" @3
+			location   	(1418, 694)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1307, 639)
+			    nlines     	2
+			    max_width  	150
+			    justify    	0
+			    label      	"Hub")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"55EDB95101BD"
+			width      	225
+			height     	180
+			annotation 	0)
+		    (object DeviceView "РС Администратора" @4
+			location   	(2245, 694)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(2025, 554)
+			    nlines     	2
+			    max_width  	369
+			    justify    	0
+			    label      	"РС Администратора")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"55EDB9530082"
+			width      	444
+			height     	350
+			annotation 	0)
+		    (object DeviceView "PC Руководителя" @5
+			location   	(1419, 162)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(1252, 63)
+			    nlines     	2
+			    max_width  	263
+			    justify    	0
+			    label      	"PC Руководителя")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"55EDB95502C0"
+			width      	338
+			height     	268
+			annotation 	0)
+		    (object DeviceView "Сервер БД" @6
+			location   	(1418, 1392)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(1242, 1283)
+			    nlines     	2
+			    max_width  	281
+			    justify    	0
+			    label      	"Сервер БД")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"55EDB95701F2"
+			width      	356
+			height     	287
+			annotation 	0)
+		    (object DeviceView "Интернет" @7
+			location   	(200, 462)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(55, 381)
+			    nlines     	2
+			    max_width  	219
+			    justify    	0
+			    label      	"Интернет")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"55EDB95D01D9"
+			width      	294
+			height     	231
+			annotation 	0)
+		    (object ConnectionView "" @8
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"55EDB961006C"
+			client     	@1
+			supplier   	@7
+			vertices   	(list Points
+			    (200, 1167)
+			    (200, 577))
+			line_style 	0)
+		    (object ConnectionView "" @9
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"55EDB9650027"
+			client     	@7
+			supplier   	@2
+			vertices   	(list Points
+			    (316, 462)
+			    (632, 694))
+			line_style 	0)
+		    (object ConnectionView "" @10
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"55EDB9690030"
+			client     	@2
+			supplier   	@3
+			vertices   	(list Points
+			    (825, 694)
+			    (1306, 694))
+			line_style 	0)
+		    (object ConnectionView "" @11
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"55EDB96B0194"
+			client     	@3
+			supplier   	@5
+			vertices   	(list Points
+			    (1418, 619)
+			    (1419, 296))
+			line_style 	0)
+		    (object ConnectionView "" @12
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"55EDB96E0038"
+			client     	@3
+			supplier   	@4
+			vertices   	(list Points
+			    (1499, 694)
+			    (2023, 694))
+			line_style 	0)
+		    (object ConnectionView "" @13
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"55EDB97003CD"
+			client     	@6
+			supplier   	@3
+			vertices   	(list Points
+			    (1418, 1264)
+			    (1418, 784))
+			line_style 	0)))))
+    properties 	(object Properties
+	quid       	"55EDB61D039D"))
