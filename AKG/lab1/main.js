@@ -71,30 +71,11 @@ function Canvas() {
             }
         }
 
-
-
-        //        x += Rand();
-        //        y += Rand();
         temp = Rand();
         x += (x + temp > 320 ? -2 : x + temp < 0 ? 2 : temp);
         temp = Rand();
         y += (y + temp > 320 ? -2 : y + temp < 0 ? 2 : temp);
 
-
-        //        if (x > 320) {
-        //            x -= 2;
-        //        }
-        //        if (x < 0) {
-        //            x += 2;
-        //        }
-        //
-        //        if (y > 270) {
-        //            y -= 2;
-        //        }
-        //        if (y < 0) {
-        //            y += 2;
-        //        }
-        console.log(x);
         DrawPoly(polyCoords);
 
         canvas.getContext('2d').drawImage(m_canvas, 80 - 80 * scale + x, 115 - 115 * scale + y);
