@@ -2,7 +2,7 @@ function Canvas() {
     var _obj = {},
         canvas = null,
         ctx = null,
-        colors = ["#000000", "#ff0000", "#00ff00", "#00ffff", "#0000ff", "#003300", "#ffff00", "#ff00ff", "#333300", "#ff66cc"];
+        colors = ["#000000", "#ff0000", "#00ff00", "#00ffff", "#0000ff", "#137413", "#ffff00", "#ff00ff", "#f7a762", "#ff66cc"];
 
     function DrawPixel(x, y, c, size) {
         ctx.fillStyle = colors[c];
@@ -132,9 +132,15 @@ window.onload = function () {
             centers[j].y = points[point].y;
 
         }
-        a.Clear();
+
+
+            a.Clear();
         a.DrawArray(points, 2);
         a.DrawArray(centers, 10);
+
+
+
+
         console.log(tickCount);
     }
 
