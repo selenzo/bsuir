@@ -114,10 +114,6 @@ window.onload = function () {
                 sum += temp;
             }
         }
-        console.log("c " + c);
-        console.log("sum " + sum + " sum/c " + sum / (c * 2 + 1));
-
-
         temp1 = 0;
 
         max = 0;
@@ -133,9 +129,6 @@ window.onload = function () {
             }
         }
 
-        console.log("max" + max);
-
-
         temp2 = 0;
         var min = 0;
         for (var i = 0; i < c; i++) {
@@ -145,7 +138,6 @@ window.onload = function () {
                 temp2 = i;
             }
         }
-         console.log("min" + min);
 
         if (min > sum / (c * 2 )) {
 
@@ -159,109 +151,8 @@ window.onload = function () {
             run = false;
         }
     }
-
-
-
-    //    for (var i = 0; i < c; i++) {
-    //        var temp = Math.floor((n - 1) / (i + 1));
-    //        centers[i] = {
-    //            x: points[temp].x,
-    //            y: points[temp].y,
-    //            c: i
-    //        }
-    //    }
-
-    //
-    //    function Tick() {
-    //        tickCount++;
-    //
-    //        //задание цвета относительно центров
-    //        for (var i = 0; i < n; i++) {
-    //            var min = 100000;
-    //            var temp_j = c + 1;
-    //            var temp = 0;
-    //            for (var j = 0; j < c; j++) {
-    //                temp = Math.sqrt(Math.pow(points[i].x - centers[j].x, 2) + Math.pow(points[i].y - centers[j].y, 2));
-    //
-    //                if (temp < min) {
-    //                    min = temp;
-    //                    temp_j = j;
-    //                }
-    //            }
-    //            points[i].c = temp_j;
-    //        }
-    //
-    //        //вычисление нового центра как средняя точка между максимально удаленными объектами
-    //        for (var j = 0; j < c; j++) {
-    //            var max = 0;
-    //            var temp1 = {
-    //                x: n + 1,
-    //                y: n + 1
-    //            };
-    //            var temp2 = {
-    //                x: n + 1,
-    //                y: n + 1
-    //            };
-    //            for (var i = 0; i < n - 1; i++) {
-    //                for (var g = i; g < n; g++) {
-    //
-    //                    if (points[i].c === j && j === points[g].c) {
-    //                        var temp = Math.sqrt(Math.pow(points[i].x - points[g].x, 2) + Math.pow(points[i].y - points[g].y, 2));
-    //                        if (temp > max) {
-    //                            temp1.x = points[i].x;
-    //                            temp1.y = points[i].y;
-    //                            temp2.x = points[g].x;
-    //                            temp2.y = points[g].y;
-    //                            max = temp;
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //
-    //            var tempX = (temp1.x + temp2.x) / 2;
-    //            var tempY = (temp1.y + temp2.y) / 2;
-    //            //        console.log(tempX);
-    //
-    //            var min = 100000;
-    //            var temp_x = n + 1;
-    //            var temp_y = n + 1;
-    //            var point = n + 1;
-    //            for (var i = 0; i < n; i++) {
-    //                if (points[i].c === j) {
-    //                    temp = Math.sqrt(Math.pow(points[i].x - tempX, 2) + Math.pow(points[i].y - tempY, 2));
-    //
-    //                    if (temp < min) {
-    //                        min = temp;
-    //                        temp_x = points[i].x;
-    //                        temp_y = points[i].y;
-    //                        point = i;
-    //                    }
-    //                }
-    //
-    //            }
-    //            //        console.log(point);
-    //            centers[j].x = points[point].x;
-    //            centers[j].y = points[point].y;
-    //
-    //        }
-    //
-    //
-    //            a.Clear();
-    //        a.DrawArray(points, 2);
-    //        a.DrawArray(centers, 10);
-    //
-    //
-    //
-    //
-    //        console.log(tickCount);
-    //    }
-    //
-    //    setInterval(Tick, 500);
-    //    Tick();
         a.DrawArray2(points, centers);
     a.DrawArray(centers, 10);
-//    a.DrawArray(points, 2);
-
 
 
 }
