@@ -15,7 +15,7 @@ function Canvas() {
         }
     }
 
-    _obj.Clear = function() {
+    _obj.Clear = function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
@@ -78,7 +78,7 @@ window.onload = function () {
             }
             points[i].c = temp_j;
         }
-
+        //TODO: дичь, можно переписать через нахождение центра масс
         //вычисление нового центра как средняя точка между максимально удаленными объектами
         for (var j = 0; j < c; j++) {
             var max = 0;
@@ -127,25 +127,16 @@ window.onload = function () {
                 }
 
             }
-            //        console.log(point);
             centers[j].x = points[point].x;
             centers[j].y = points[point].y;
 
         }
 
-
-            a.Clear();
+        a.Clear();
         a.DrawArray(points, 2);
         a.DrawArray(centers, 10);
 
-
-
-
         console.log(tickCount);
     }
-
     setInterval(Tick, 500);
-//    Tick();
-
-
 }

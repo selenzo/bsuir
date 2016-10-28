@@ -50,7 +50,7 @@ function randomInteger(min, max) {
 
 window.onload = function () {
     var tickCount = 0;
-    var n = 5000;
+    var n = 10000;
     var run = true;
     var c = 2;
     var a = Canvas();

@@ -8,7 +8,7 @@ window.onload = function () {
     //количество точек
     var pointsCount = 10000;
     //вероятности p(c1) и p(c2)
-    var pc1 = 0.6;
+    var pc1 = 0.3;
     var pc2 = 1 - pc1;
     //наборы точек
     var points1 = Array(pointsCount).fillRandom(100, 600);
@@ -40,7 +40,7 @@ window.onload = function () {
         canvas.DrawLine(i - 1, height - result1[i - 1] * k, 1, i, height - result1[i] * k, 2);
         canvas.DrawLine(i - 1, height - result2[i - 1] * k, 4, i, height - result2[i] * k, 2);
 
-        X = (Math.abs(result1[i] * 100 - result2[i] * 100) < 0.001) ? i : X;
+        X = (Math.abs(result1[i] * 100 - result2[i] * 100) < 0.0005) ? i : X;
     }
 
     for (i = 0; i < width; i++) {
