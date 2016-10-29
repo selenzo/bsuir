@@ -6,6 +6,8 @@ import java.awt.geom.*;
 import java.util.Random;
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 
 public class Main {
@@ -52,106 +54,237 @@ public class Main {
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                createAndShowGUI();
+                task7();
+            }
+        });
+    }
+
+    public static void task13() {
+        JFrame jFrame = new JFrame("task12");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task13 task13 = new Task13();
+        jFrame.setLayout(null);
+        jFrame.add(task13);
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+    public static void task12() {
+        JFrame jFrame = new JFrame("task12");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task12 task12 = new Task12();
+        jFrame.setLayout(null);
+        jFrame.add(task12);
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+    public static void task11() {
+        JFrame jFrame = new JFrame("task11");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task11 task11 = new Task11();
+        jFrame.setLayout(null);
+        jFrame.add(task11);
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+
+    public static void task10() {
+        JFrame jFrame = new JFrame("task10");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task10 task10 = new Task10();
+        jFrame.setLayout(null);
+        jFrame.add(task10);
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+    public static void task9() {
+        JFrame jFrame = new JFrame("task9");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task9 task9 = new Task9();
+        jFrame.setLayout(null);
+
+        JLabel jLabel = new JLabel();
+        jLabel.setText("w=");
+        jLabel.setSize(20,10);
+        jLabel.setLocation(10, 15);
+
+        JButton jButton1 = new JButton();
+        jButton1.setText("Start");
+        jButton1.setSize(80,20);
+        jButton1.setLocation(100,10);
+        jButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                task9.StartStop(true);
             }
         });
 
-//
-//        Timer timer = new Timer(40, new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                jFrame.repaint();
-//            }
-//        });
-//        timer.start();
-//
-//
-////        jFrame.setSize(500, 500);
-//
-//        int dx = 2, dy = 2;
-//        int rad = 90;
-////        Graphics2D g = (Graphics2D)jFrame.getRootPane().getGraphics();
-////        Shape bigCircle = new Ellipse2D.Double(x, y,  rad, rad);
-////        g.draw(bigCircle);
-//
-//
-//
-////        jFrame.getRootPane().setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.RED));
-//
-//        Timer timer2 = new Timer(40, new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-////                SwingUtilities.updateComponentTreeUI(jFrame);
-//
-////                jFrame.repaint();
-//                Graphics2D graphics2D = (Graphics2D)jFrame.getGraphics();
-//                jFrame.update(graphics2D);
-//
-//                if (dxd) {
-//                    if(500 > x + rad + 10) {
-//                        x +=5;
-//                    } else {
-//                        System.out.println(x);
-//                        dxd = false;
-//                    }
-//                } else {
-//                    if(0 < x - 10) {
-//                        x -=5;
-//                    } else {
-//                        System.out.println(x);
-//                        dxd = true;
-//                    }
-//                }
-//                if (dyd) {
-//                    if(500 > y + rad + 10) {
-//                        y +=5;
-//                    } else {
-//                        System.out.println(y);
-//                        dyd = false;
-//                    }
-//                } else {
-//                    if(0 < y - 30) {
-//                        y -=5;
-//                    } else {
-//                        System.out.println(y);
-//                        dyd = true;
-//                    }
-//                }
-//
-//                Shape bigCircle = new Ellipse2D.Double(x, y,  rad, rad);
-//                graphics2D.draw(bigCircle);
-//
-//            }
-//        });
-        //timer.start();
+        JButton jButton2 = new JButton();
+        jButton2.setText("Stop");
+        jButton2.setSize(80,20);
+        jButton2.setLocation(190,10);
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                task9.StartStop(false);
+            }
+        });
 
+        SpinnerNumberModel spinnerNumberModel = new SpinnerNumberModel(0.1,0,10,0.1);
+        JSpinner jSpinner = new JSpinner(spinnerNumberModel);
+        jSpinner.setSize(60,20);
+        jSpinner.setLocation(30,10);
+        jSpinner.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                 task9.w = (double)jSpinner.getValue();
+                System.out.println(task9.w);
+            }
+        });
+
+
+
+        jFrame.add(task9);
+        jFrame.add(jLabel);
+        jFrame.add(jSpinner);
+        jFrame.add(jButton1);
+        jFrame.add(jButton2);
+
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+    public static void task8() {
+        JFrame jFrame = new JFrame("task5");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task8 task8 = new Task8();
+        JButton jButton1 = new JButton();
+        jButton1.setText("+1");
+        jButton1.setSize(80,30);
+        jButton1.setLocation(350,30);
+        jButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                task8.SetDx(1);
+
+            }
+        });
+
+        JButton jButton2 = new JButton();
+        jButton2.setText("-1");
+        jButton2.setSize(80,30);
+        jButton2.setLocation(350,70);
+        jButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                task8.SetDx(-1);
+            }
+        });
+
+        jFrame.setLayout(null);
+        jFrame.add(task8);
+        jFrame.add(jButton1);
+        jFrame.add(jButton2);
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+    public static void task7() {
+        new Swn();
+//
+//        JFrame jFrame = new JFrame("task7");
+//        jFrame.setVisible(true);
+//        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//
+//        Task7 task7 = new Task7();
+//        jFrame.setLayout(null);
+//        jFrame.add(task7);
+//
+//        jFrame.setResizable(false);
+//        jFrame.setSize(500,500);
+    }
+
+    public static void task6() {
+        JFrame jFrame = new JFrame("task5");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task6 task6 = new Task6();
+        jFrame.setLayout(null);
+        jFrame.add(task6);
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+    public static void task5() {
+        JFrame jFrame = new JFrame("task4");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task5 task5 = new Task5();
+        jFrame.setLayout(null);
+        jFrame.add(task5);
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+    public static void task4() {
+        JFrame jFrame = new JFrame("task3");
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        Task4 task4 = new Task4();
+        jFrame.setLayout(null);
+        jFrame.add(task4);
+
+        jFrame.setResizable(false);
+        jFrame.setSize(500,500);
+    }
+
+    public static void task3() {
+        JFrame jFrame = new JFrame("task3");
+//        jFrame.setPreferredSize(new Dimension(500,500));
+//        jFrame.setMaximumSize(new Dimension(500,500));
+//        jFrame.setMinimumSize(new Dimension(500,500));
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+//    jFrame.setBounds(100,100,300,300);
+        Task3 task3 = new Task3();
+//        GridBagLayout layout=new GridBagLayout();
+//        jFrame.setLayout(BorderLayout.CENTER);
+        jFrame.setLayout(null);
+        jFrame.add(task3);
+
+        jFrame.setResizable(false);
+
+        jFrame.setSize(500,500);
 
     }
-    /*
-    * JFrame fr=new JFrame("Вращение треугольника вокруг своего центра тяжести");
-        fr.setPreferredSize( new Dimension(300,300));
-        final JPanel pan= new JPanel();
-        fr.add(pan);
-        fr.setVisible(true);
-        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fr.pack();
-        Timer tm= new Timer(500, new ActionListener(){
-            int i=0;
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                Graphics2D gr=(Graphics2D)pan.getRootPane().getGraphics();
-                pan.update(gr);
-                GeneralPath path=new GeneralPath();
-                path.append(new Polygon(new int []{60,-80,50},new int[]{-60,-50,40},3),true);
-                int x=(60-80+50)/3,y=(-60-50+40)/3;
-                gr.translate(150, 150);
-                AffineTransform tranforms = AffineTransform.getRotateInstance((i++)*0.07, x, y);
-                gr.transform(tranforms);
-                gr.draw(path);
-            }});
-        tm.start();
-    *
-    * */
+
 
     public static void Task2() {
         JFrame jFrame = new JFrame("task2");

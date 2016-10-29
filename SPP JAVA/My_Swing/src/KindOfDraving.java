@@ -1,0 +1,3 @@
+
+
+	enum KindOfDraving  {PENCIL, LINE, SQARE, ELLIPS, ERASER, COPY, CUT, PASTE, SHAPE, NONE}

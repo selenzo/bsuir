@@ -24,7 +24,6 @@ public class MyFrame extends JComponent {
             public void actionPerformed(ActionEvent e) {
                 t = true;
                 repaint();
-                System.out.println(getBounds());
             }
         });
         timer.start();
