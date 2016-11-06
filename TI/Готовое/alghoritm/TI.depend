@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1412332775 source:c:\users\selenzo\skydrive\projects\ti\main.cpp
+	"main.h"
+
+1412332829 c:\users\selenzo\skydrive\projects\ti\main.h
+	<iostream>
+	<fstream>
+	<cstring>
+	"alghoritm.h"
+
+1412332746 source:c:\users\selenzo\skydrive\projects\ti\alghoritm.cpp
+	"alghoritm.h"
+
+1412326911 c:\users\selenzo\skydrive\projects\ti\alghoritm.h
+	<cstdlib>
+	<iostream>
+
+1412347927 source:e:\temp\ti\alghoritm.cpp
+	"alghoritm.h"
+
+1412348735 e:\temp\ti\alghoritm.h
+	<cstdlib>
+	<iostream>
+	<fstream>
+
+1412346604 source:e:\temp\ti\main.cpp
+	"main.h"
+
+1412336430 e:\temp\ti\main.h
+	<iostream>
+	<fstream>
+	<cstring>
+	"alghoritm.h"
+
