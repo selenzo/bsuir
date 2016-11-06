@@ -15,8 +15,12 @@
 	$fmain = str_replace('{NOW_M}',date("i"),$fmain);
 	$fmain = str_replace('{NOW_S}',date("s"),$fmain);
 
-	$fnews = file_get_contents('templates/news.tpl');		
-	$fnews_str = file_get_contents('templates/news_str.tpl');	
+	$fnews = file_get_contents('templates/news.tpl');
+
+    $flogo = file_get_contents('templates/logo.tpl');
+  	$fmain = str_replace('{LOGO}',$flogo,$fmain);
+
+$fnews_str = file_get_contents('templates/news_str.tpl');
 	$array_news = file('news.inf');	
 	
 	$str_all = "";	
@@ -37,10 +41,14 @@
 	$fmain = str_replace('{news}',$fnews,$fmain);
 	
 	
-	$mcfg = file('site.cfg');
-	$cfg0 = str_word_count($mcfg[0],1);
+$mcfg = file('site.cfg');
+$cfg0 = str_word_count($mcfg[0], 1);
 
-	$fmain = str_replace('{main_color}',$cfg0[2],$fmain);
+$cfg1 = str_word_count($mcfg[1], 1);
+
+$fmain = str_replace('{main_color}', $cfg0[2], $fmain);
+
+$fmain = str_replace('{copyright_color}', $cfg1[2], $fmain);
 	
 	echo($fmain);
 	

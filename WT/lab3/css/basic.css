@@ -19,6 +19,13 @@ form {
     padding: 0;
 }
 
+#textt {
+
+    font-size: 16px;
+    font-family:"Times New Roman";
+    width: 76%;
+}
+
 table {
     border: 0px;
 }

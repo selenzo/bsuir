@@ -1,5 +1,5 @@
-div{
-border:1px bold #f12313;
+div {
+    border: 1px bold #f12313;
 }
 
 body {
@@ -12,43 +12,43 @@ body {
 }
 
 #logo {
-	position: relative;
-	overflow:hidden;
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 14.7%;
     background-image: url(img/logo.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgb(168, 221, 255);    
-    
+    background-color: rgb(168, 221, 255);
 }
 
 #logotext {
-position:absolute;
-	bottom:0;
-right:0;
-	
-/*    bottom: 0;*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*    bottom: 0;*/
 }
 
 #menu {
     position: absolute;
     background-color: antiquewhite;
-    width: 16%;
+    width: 19%;
     background-image: url(img/image6.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    /*    background-size: 100% 100%;*/
+    /*    background-repeat: no-repeat;*/
     vertical-align: top;
-    height: 81%;
+    height: 80%;
 }
 
 #menu input {
-    width: 100px;
+    width: 80px;
+    border: 1px solid rgb(212, 208, 200);
     margin: 3px 0px 0px 3px;
     background-color: rgb(198, 233, 255);
 }
 
 #menu button {
+    border: 1px solid rgb(212, 208, 200);
     margin: 3px 0px 0px 3px;
     background-color: rgb(198, 233, 255);
 }
@@ -56,8 +56,8 @@ right:0;
 #news {
     position: absolute;
     right: 0;
-    width: 25%;
-    height: 77%;
+    width: 28%;
+    height: 76%;
     vertical-align: top;
     padding: 10px 0px 0px 5px;
     font-size: 14pt;
@@ -68,34 +68,36 @@ right:0;
     font-size: 10pt;
     position: absolute;
     /*    background-color: blueviolet;*/
-    left: 16%;
-    right: 25%;
-    height: 77%;
-    padding: 5px 5px 0px 5px;
+    left: 19%;
+    right: 28%;
+/*    min-width: 716px;*/
+    height: 75%;
+    /*    padding: 5px 5px 0px 5px;*/
 }
 
 #main {
-    height: 81%;
+    height: 80%;
     width: 100%;
 }
 
 #reklama {
     width: 100%;
-    height: 4%;
+    height: 5%;
     background-color: rgb(198, 233, 255);
     text-align: center;
 }
 
 #copyright {
     position: absolute;
-    background-color: blue;
+    background-color: rgb(4, 0, 176);
     right: 0;
-    bottom: 4%;
-    width: 84%;
-    height: 4%;
+    bottom: 5%;
+    width: 72.1%;
+    height: 5%;
     text-align: center;
     color: white;
     font-weight: bold;
+    padding-right: 120px;
 }
 
 #line {
@@ -104,7 +106,7 @@ right:0;
 }
 
 #menupanel {
-    padding: 15px 0px 15px 20px;
+    padding: 15px 0px 15px 5px;
     border-spacing: 0;
     font-size: 11pt;
     text-decoration: none;
@@ -129,6 +131,7 @@ ul {
 ul ul {
     font-size: 11pt;
 }
+
 ul ul ul {
     font-size: 9pt;
 }
@@ -157,16 +160,17 @@ ul ul ul {
     position: relative;
     font-size: 10pt;
 }
+
 #newsitem {
     margin: 20px 0px 0px 0px;
 }
 
 #newsitemimage {
-    display:inline;
+    display: inline;
 }
 
 #newsitemdate {
-    display:inline;
+    display: inline;
     font-size: 11pt;
     font-weight: normal;
 }
@@ -175,5 +179,3 @@ ul ul ul {
     font-size: 11pt;
     padding: 0px 0px 0px 18px;
 }
-
-

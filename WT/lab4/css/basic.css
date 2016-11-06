@@ -1,5 +1,9 @@
 @import"../../css/reset.css";
 
+#my-menu > li ul {display: none;}
+#my-menu > li > a {cursor: pointer;}
+#my-menu li {padding-left: 0; list-style-type: none; font-size:18px;}
+
 body {
     color: black;
     background: #ffffff;
@@ -74,6 +78,7 @@ a:active {
 }
 
 .mainmenu li {
+
     padding-top: 2px;
     margin-top: 2px;
 }
@@ -145,5 +150,12 @@ h4 {
 #content {
     width: 900px;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 0px 0;
+}
+
+#textt {
+
+    font-size: 16px;
+    font-family:"Times New Roman";
+    width: 71%;
 }

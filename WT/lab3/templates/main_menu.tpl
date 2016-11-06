@@ -1,4 +1,5 @@
-﻿   <ul class="mainmenu">
+   <ul class="mainmenu">
+   <span>+</span>
     <li><a href="/catalog/">Продукция</a>
      <ul class="mainmenuin1">
       <li><a href="/catalog/tyres/">Шины

@@ -1,8 +1,9 @@
 body {
-    background-color: white;
+    background-color: rgb(237, 248, 255);
     border-spacing: 0;
     margin: 0px 0px 0px 0px;
     font-family: Arial, Georgia, Serif;
+    min-width: 1366px;
 }
 
 img {
@@ -30,7 +31,7 @@ img {
 
 .formTable td {
     line-height: 18pt;
-    width: 50%;
+/*    width: 0%;*/
     padding: 8px 5px 0px 0px;
 }
 
@@ -47,6 +48,15 @@ ul {
     font-size: 12pt;
     padding: 5px 0px 0px 20px;
     margin: 0px 0px 0px 0px;
+}
+
+
+ul ul ul a {
+    font-size: 10pt;
+}
+
+ul ul a {
+    font-size: 11pt;
 }
 
 .head {
@@ -73,23 +83,24 @@ ul {
 }
 
 .copyright {
+    background-color: rgb(4, 0, 176);
     height: 4%;
-    background-color: blue;
     text-align: center;
     color: white;
+
 }
 
 .content {
     /*    height: 85%;*/
-    
-    width: 50%;
-    background-color: white;
+    width: 52%;
+    background-color: rgb(237, 248, 255);
     vertical-align: top;
-    padding: 0px 5px 5px 5px;
+    padding: 0px 0px 0px 0px;
+
 }
 
 .news {
-    width: 20%;
+/*    width: 20%;*/
     vertical-align: top;
     padding: 10px 0px 0px 5px;
     font-size: 14pt;
@@ -106,7 +117,7 @@ ul {
 }
 
 .menu {
-    width: 15%;
+    width: 19%;
     background-image: url(img/image6.jpg);
     vertical-align: top;
 }
@@ -114,15 +125,18 @@ ul {
 .menuPanel {
     height: 30%;
     vertical-align: top;
-    padding: 0px 0px 5px 0px;
+    padding: 10px 0px 15px 0px;
 }
 
 .formTableButton input {
-    width: 100px;
+    width: 80px;
+    border: 1px solid rgb(212,208,200);
     background-color: rgb(198, 233, 255);
 }
 
 .formTableButton button {
+    width: 60px;
+    border: 1px solid rgb(212,208,200);
     margin: 2px 0px 0px 0px;
     background-color: rgb(198, 233, 255);
 }
@@ -130,4 +144,5 @@ ul {
 .formTableText {
     vertical-align: top;
     text-align: right;
+    font-size: 12px;
 }

@@ -46,7 +46,7 @@ function get_db_news($num)
 {
     $fnews_str = file_get_contents('templates/news_str.tpl');
 
-    $lnk = mysql_connect("localhost", "root", "mysql") or die("Could not connect" . mysql_error());
+    $lnk = mysql_connect("localhost", "root", "") or die("Could not connect" . mysql_error());
 
     mysql_select_db("news") or die (mysql_error());
     mysql_select_db("news", $lnk);
@@ -70,7 +70,7 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 
 function getItemMenu($id)
 {
-    $lnk = mysql_connect("localhost", "root", "mysql") or die("Could not connect" . mysql_error());
+    $lnk = mysql_connect("localhost", "root", "") or die("Could not connect" . mysql_error());
     mysql_select_db("news") or die (mysql_error());
     mysql_select_db("news", $lnk);
 mysql_set_charset('utf8');
@@ -83,26 +83,40 @@ $result = mysql_query("SELECT * FROM pages WHERE ID = $id");
 function getContains()
 {
 
-return '<ul class="mainmenu">'.
-    '<li><a href="/catalog/">'. getItemMenu(1).'</a>'.
-     '<ul class="mainmenuin1">'.
-      '<li><a href="/catalog/tyres/">'.getItemMenu(4).''.
-       '<ul class="mainmenuin2">'.
-        '<li><a href="/track/">'.getItemMenu(7).'</a></li>'.
-        '<li><a href="/car/">'.getItemMenu(8).'</a>'.
-'<ul class="mainmenuin2">'.
-        '<li><a href="/car/">'.getItemMenu(10).'</a>'.
-'</ul></li>'.
-        '<li><a href="/farm/">'.getItemMenu(9).'</a></li>'.
-       '</ul>'.
-      '</li>'.
-      '<li><a href="/catalog/akb/">'.getItemMenu(5).'</li>'.
-      '<li><a href="/catalog/parts/">'.getItemMenu(6).'</li>'.
-     '</ul>'.
-    '</li>'.
-   '<li><a href="/news/">'.getItemMenu(2).'</a></li>'.
-   '<li><a href="/contacts/">'. getItemMenu(3).'</a></li>'.
-  '</ul>';
+    return '<ul id="my-menu">
+<li><a href="#0">Главная</a></li>
+<li><a #0="">'. getItemMenu(4).'</a>
+<ul>
+<li><a href="#0">'. getItemMenu(7).'</a></li>
+<li><a href="#0">'. getItemMenu(8).'</a></li>
+<li><a href="#0">'. getItemMenu(9).'</a></li>
+</ul>
+</li>
+<li><a #0="">'. getItemMenu(5).'</a>
+</li>
+</li>
+</ul>';
+//
+//return '<ul class="mainmenu" id="my-menu">'.
+//    '<li class="menuOpen" >'. getItemMenu(1).''.
+//     '<ul class="mainmenuin1">'.
+//      '<li><a href="/catalog/tyres/">'.getItemMenu(4).''.
+//       '<ul class="mainmenuin2">'.
+//        '<li><a href="/track/">'.getItemMenu(7).'</a></li>'.
+//        '<li><a href="/car/">'.getItemMenu(8).'</a>'.
+//'<ul class="mainmenuin2">'.
+//        '<li><a href="/car/">'.getItemMenu(10).'</a>'.
+//'</ul></li>'.
+//        '<li><a href="/farm/">'.getItemMenu(9).'</a></li>'.
+//       '</ul>'.
+//      '</li>'.
+//      '<li><a href="/catalog/akb/">'.getItemMenu(5).'</li>'.
+//      '<li><a href="/catalog/parts/">'.getItemMenu(6).'</li>'.
+//     '</ul>'.
+//    '</li>'.
+//   '<li><a href="/news/">'.getItemMenu(2).'</a></li>'.
+//   '<li><a href="/contacts/">'. getItemMenu(3).'</a></li>'.
+//  '</ul>';
 }
 
 ?>

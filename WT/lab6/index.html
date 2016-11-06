@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../lab4/css/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+
+        window.onload = function () {
+            console.log('ready');
+            $.get('http://localhost/lab6/index.php', function (data) {
+
+                console.log(data);
+                $(data).find("entrie").each(function () { // or "item" or whatever suits your feed
+                    var el = $(this);
+//
+                    console.log("------------------------");
+                    console.log("title      : " + el.find("title").text());
+                    console.log("author     : " + el.find("author").text());
+                    console.log("description: " + el.find("description").text());
+                });
+            });
+
+
+        };
+    </script>
+
+</body>
+
+</html>
