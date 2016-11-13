@@ -13,7 +13,7 @@
     </style>
 
 </head>
-<body>ч
+<body>
 <div id="content">
     <div class="job">
         <div class="jobTitle">

@@ -12,7 +12,7 @@ $html = '<?xml version="1.0" encoding="windows-1251" ?>
   <lastBuildDate>Sun, 18 Jan 2009 16:49:01 +0200</lastBuildDate>
 ';
 
-$lnk = mysql_connect("localhost", "root", "mysql") or die("Could not connect" . mysql_error());
+$lnk = mysql_connect("localhost", "root", "") or die("Could not connect" . mysql_error());
 mysql_select_db("news") or die (mysql_error());
 mysql_select_db("news", $lnk);
 mysql_set_charset('utf8');
