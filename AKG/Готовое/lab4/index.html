@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <script src="script\animation.js"></script>
+</head>
+
+<body>
+    <div style="position: relative;">
+        <canvas style="border:1px solid #ccc; position: absolute; left: 0; top: 20; z-index: 0;" id="canvas"> </canvas>
+        <canvas style="position: absolute; left: 0; top: 20; z-index: 1;" id="canvas1"></canvas>
+    </div>
+    <div style="position: absolute; top: 5; left: 10px;">
+        X: <input type="number" id="speedX" value="50" min=-500 max=500 width=30px/> Y: <input type="number" id="speedY" value="50"
+            min=-500 max=500 width=30px/>
+        <button id="startButton" onclick="startAnimation()"></button>
+    </div>
+</body>
+
+</html>
