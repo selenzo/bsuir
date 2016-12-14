@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <title>three.js webgl - geometry - cube</title>
     <meta charset="utf-8">
@@ -14,6 +15,7 @@
             margin: 0px;
             overflow: hidden;
         }
+
         #info {
             color: #fff;
             position: absolute;
@@ -54,18 +56,36 @@
 
         function init() {
 
-            camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, 1, 5000);
+            camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / -2, 1, 10000);
             //                                    camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 2000);
             camera.position.z = 800;
+            camera.position.y = 200;
             camera.position.x = 200;
+
+            //            camera.position.y = 200;
 
             scene = new THREE.Scene();
 
+            camera.lookAt(scene.position);
             material2 = new THREE.LineDashedMaterial({
                 color: 0xffffff,
                 dashSize: dash,
                 gapSize: 0.00001
             });
+
+            tmp = new THREE.Geometry();
+            tmp.vertices.push(new THREE.Vector3(0, 0, 0));
+            tmp.vertices.push(new THREE.Vector3(0, 0, 800));
+            tmp.computeLineDistances();
+            arr[5] = new THREE.Line(tmp, material2);
+            scene.add(arr[5]);
+
+            tmp = new THREE.Geometry();
+            tmp.vertices.push(new THREE.Vector3(0, 0, 0));
+            tmp.vertices.push(new THREE.Vector3(0, 400, 0));
+            tmp.computeLineDistances();
+            arr[4] = new THREE.Line(tmp, material2);
+            scene.add(arr[4]);
 
             tmp = new THREE.Geometry();
             tmp.vertices.push(new THREE.Vector3(0, 0, 0));
@@ -125,9 +145,10 @@
             }
 
             for (var i = 0; i < 6; i++) {
-                arrayLand[i].line.rotation.y = 0.2;
-                arrayEdges[i].line.rotation.y = 0.2;
-                arrayBottom[i].line.rotation.y = 0.2;
+                var tm = 0.2;
+                arrayLand[i].line.rotation.y = tm;
+                arrayEdges[i].line.rotation.y = tm;
+                arrayBottom[i].line.rotation.y = tm;
             }
 
             renderer = new THREE.WebGLRenderer({
@@ -171,42 +192,109 @@
                 arrayEdges[i].material.gapSize = 0.0001;
                 arrayBottom[i].material.gapSize = 0.0001;
             }
+            if (rotation < 1.05 || rotation >= 6.037) {
+                arrayLand[0].material.gapSize = size;
+                arrayLand[1].material.gapSize = size;
+                arrayLand[2].material.gapSize = size;
 
-            if (rotation < 3.14) {
-                if (mid) {
-                    arrayLand[0].material.gapSize = size;
-                    arrayLand[1].material.gapSize = size;
-                    arrayLand[2].material.gapSize = size;
-
-                    arrayEdges[1].material.gapSize = size;
-                    arrayEdges[2].material.gapSize = size;
-                }
-                if (!mid) {
-                    arrayLand[3].material.gapSize = size;
-                    arrayLand[4].material.gapSize = size;
-                    arrayLand[5].material.gapSize = size;
-
-                    arrayEdges[4].material.gapSize = size;
-                    arrayEdges[5].material.gapSize = size;
-                }
-            } else {
-                if (mid) {
-                    arrayBottom[3].material.gapSize = size;
-                    arrayBottom[4].material.gapSize = size;
-                    arrayBottom[5].material.gapSize = size;
-
-                    arrayEdges[4].material.gapSize = size;
-                    arrayEdges[5].material.gapSize = size;
-                }
-                if (!mid) {
-                    arrayBottom[0].material.gapSize = size;
-                    arrayBottom[1].material.gapSize = size;
-                    arrayBottom[2].material.gapSize = size;
-
-                    arrayEdges[1].material.gapSize = size;
-                    arrayEdges[2].material.gapSize = size;
-                }
+                arrayEdges[1].material.gapSize = size;
+                arrayEdges[2].material.gapSize = size;
             }
+            if (rotation >= 1.05 && rotation < 1.38) {
+                arrayLand[0].material.gapSize = size;
+                arrayLand[1].material.gapSize = size;
+                arrayLand[5].material.gapSize = size;
+
+                arrayEdges[1].material.gapSize = size;
+                arrayEdges[0].material.gapSize = size;
+            }
+            if (rotation >= 1.38 && rotation < 2.13) {
+                arrayLand[0].material.gapSize = size;
+                arrayLand[4].material.gapSize = size;
+                arrayLand[5].material.gapSize = size;
+
+                arrayEdges[5].material.gapSize = size;
+                arrayEdges[0].material.gapSize = size;
+            }
+
+            if (rotation >= 2.13 && rotation < 2.9) {
+                arrayLand[3].material.gapSize = size;
+                arrayLand[4].material.gapSize = size;
+                arrayLand[5].material.gapSize = size;
+
+                arrayEdges[5].material.gapSize = size;
+                arrayEdges[4].material.gapSize = size;
+            }
+            if (rotation >= 2.9 && rotation < 3.65) {
+                arrayBottom[3].material.gapSize = size;
+                arrayBottom[4].material.gapSize = size;
+                arrayBottom[5].material.gapSize = size;
+
+                arrayEdges[5].material.gapSize = size;
+                arrayEdges[4].material.gapSize = size;
+            }
+            if (rotation >= 3.65 && rotation < 4.42) {
+                arrayBottom[0].material.gapSize = size;
+                arrayBottom[4].material.gapSize = size;
+                arrayBottom[5].material.gapSize = size;
+
+                arrayEdges[5].material.gapSize = size;
+                arrayEdges[0].material.gapSize = size;
+            }
+            if (rotation >= 4.42 && rotation < 4.75) {
+                arrayBottom[0].material.gapSize = size;
+                arrayBottom[1].material.gapSize = size;
+                arrayBottom[5].material.gapSize = size;
+
+                arrayEdges[1].material.gapSize = size;
+                arrayEdges[0].material.gapSize = size;
+            }
+            if (rotation >= 4.75 && rotation < 6.037) {
+                arrayBottom[0].material.gapSize = size;
+                arrayBottom[1].material.gapSize = size;
+                arrayBottom[2].material.gapSize = size;
+
+                arrayEdges[2].material.gapSize = size;
+                arrayEdges[1].material.gapSize = size;
+            }
+
+            //            if (rotation < 3.14) {
+            //                if (mid) {
+            //                    arrayLand[0].material.gapSize = size;
+            //                    arrayLand[1].material.gapSize = size;
+            //                    arrayLand[2].material.gapSize = size;
+            //
+            //                    arrayEdges[1].material.gapSize = size;
+            //                    arrayEdges[2].material.gapSize = size;
+            //                }
+            //                if (!mid) {
+            //                    arrayLand[3].material.gapSize = size;
+            //                    arrayLand[4].material.gapSize = size;
+            //                    arrayLand[5].material.gapSize = size;
+            //
+            //                    arrayEdges[4].material.gapSize = size;
+            //                    arrayEdges[5].material.gapSize = size;
+            //                }
+            //            } else {
+            //                if (mid) {
+            //                    arrayBottom[3].material.gapSize = size;
+            //                    arrayBottom[4].material.gapSize = size;
+            //                    arrayBottom[5].material.gapSize = size;
+            //
+            //                    arrayEdges[4].material.gapSize = size;
+            //                    arrayEdges[5].material.gapSize = size;
+            //                }
+            //                if (!mid) {
+            //                    arrayBottom[0].material.gapSize = size;
+            //                    arrayBottom[1].material.gapSize = size;
+            //                    arrayBottom[2].material.gapSize = size;
+            //
+            //                    arrayEdges[1].material.gapSize = size;
+            //                    arrayEdges[2].material.gapSize = size;
+            //                }
+            //            }
+
+
             renderer.render(scene, camera);
         }
     </script>
