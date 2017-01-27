@@ -11,7 +11,7 @@ window.onload = function () {
 
     var ctx1 = canvas1.getContext("2d");
     ctx1.beginPath();
-    ctx1.fillStyle = "rgba(0, 255, 255, 0)";
+    ctx1.fillStyle = "rgba(0, 255, 255, 0.5)";
     ctx1.moveTo(565, 275);
     ctx1.lineTo(630, 275);
     ctx1.lineTo(630, 425);

@@ -31,7 +31,16 @@ function drawTriangle(currentX, currentY, scale, color) {
     ctx.lineTo(currentX + 80 * scale, currentY + 230 * scale);
     ctx.lineTo(currentX, currentY + 160 * scale);
     ctx.lineTo(currentX, currentY + 70 * scale);
+    ctx.lineTo(currentX + 80 * scale, currentY);
     ctx.fill();
+}
+
+
+function drawTrail(currentX, currentY, scale) {
+    drawTriangle(currentX, currentY, scale, "rgba(255, 255, 255, 1)");
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.5)";
+    ctx.lineWidth = 1;
+    ctx.stroke();
 }
 
 function startAnimation() {
@@ -80,12 +89,19 @@ function animation() {
             currentX += stepX;
             currentY += stepY;
             ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+            trails.forEach(function(element) {
+                    drawTrail(element._x, element._y, element._s);
+                }, this);
+
             draw(currentX, currentY, 0.9991);
+
             if (animate) {
                 window.requestAnimationFrame(moveToPoint);
             }
         }
         else {
+            trails.push({_x:currentX, _y:currentY, _s:currentScale});
+
             animate = setTimeout(animation, 300);
         }
     }

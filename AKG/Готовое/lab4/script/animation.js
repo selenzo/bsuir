@@ -9,21 +9,45 @@ window.onload = function () {
     W = canvas.width = canvas1.width = window.innerWidth - 25;
     H = canvas.height = canvas1.height = window.innerHeight - 50;
 
-    var ctx1 = canvas1.getContext("2d");
-    ctx1.beginPath();
-    ctx1.fillStyle = "rgba(144, 0, 155, 1)";
-    ctx1.moveTo(670, 250);
-    ctx1.lineTo(878, 550);
-    ctx1.lineTo(670, 550);
-    ctx1.lineTo(774, 400);
-    ctx1.lineTo(568, 400);
-    ctx1.lineTo(670, 550);
-    ctx1.lineTo(466, 550);
-    ctx1.lineTo(670, 250);
-    ctx1.fill();
-    ctx1.strokeStyle = "rgba(0, 0, 0, 0.5)";
-    ctx1.lineWidth = 1;
-    ctx1.stroke();
+    var ctx2 = canvas1.getContext("2d");
+    ctx2.beginPath();
+
+    ctx2.fillStyle = "rgba(255, 255, 255, 1)";
+    ctx2.moveTo(0, 0);
+    ctx2.lineTo(W, 0);
+    ctx2.lineTo(W, H);
+    ctx2.lineTo(0, H);
+    ctx2.lineTo(466, 550);
+    ctx2.lineTo(878, 550);
+    ctx2.lineTo(774, 400);
+    ctx2.lineTo(670, 550);
+    ctx2.lineTo(568, 400);
+    ctx2.lineTo(774, 400);
+    ctx2.lineTo(670, 250);
+    ctx2.lineTo(466, 550);
+    ctx2.lineTo(0, H);
+    ctx2.fill();
+
+    ctx2.strokeStyle = "rgba(0, 0, 0, 1)";
+    ctx2.lineWidth = 1;
+    ctx2.stroke();
+
+//    var ctx1 = canvas1.getContext("2d");
+//    ctx1.beginPath();
+//
+//    ctx1.fillStyle = "rgba(144, 0, 155, 1)";
+//    ctx1.moveTo(670, 250);
+//    ctx1.lineTo(878, 550);
+//    ctx1.lineTo(670, 550);
+//    ctx1.lineTo(774, 400);
+//    ctx1.lineTo(568, 400);
+//    ctx1.lineTo(670, 550);
+//    ctx1.lineTo(466, 550);
+//    ctx1.lineTo(670, 250);
+//    ctx1.fill();
+//    ctx1.strokeStyle = "rgba(0, 0, 0, 1)";
+//    ctx1.lineWidth = 1;
+//    ctx1.stroke();
     reset();
 };
 

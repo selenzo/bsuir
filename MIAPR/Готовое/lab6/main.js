@@ -1,6 +1,6 @@
 /*jshint -W117, esversion: 6*/
 window.onload = function () {
-    var max = true;
+    var max = false;
     var canvas = Canvas();
     canvas.Init("canvas");
     var n = 4;
