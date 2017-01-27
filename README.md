@@ -1,2 +1,2 @@
 # bsuir
-bsuir labs 2015-2016
+bsuir labs 2013-2017
