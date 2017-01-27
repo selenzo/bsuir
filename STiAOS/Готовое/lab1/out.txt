@@ -1,0 +1,11 @@
+1.   код ASCII 32 = 2
+2. A код ASCII 65 = 5
+3. D код ASCII 68 = 2
+4. E код ASCII 69 = 3
+5. I код ASCII 73 = 1
+6. M код ASCII 77 = 1
+7. P код ASCII 80 = 1
+8. R код ASCII 82 = 1
+9. T код ASCII 84 = 1
+10. V код ASCII 86 = 2
+итого: 19
