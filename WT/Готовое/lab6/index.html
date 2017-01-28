@@ -37,6 +37,7 @@
                 <a href="adsdsd">
                     <p>Заглавие новости 1</p>
                 </a>
+                <p><img src="rss.jpg" alt="" style="width:100px;"></p>
                 <p>Краткое содержание новости 1</p>
                 <p id="right">2013-10-11</p>
             </li>
@@ -52,7 +53,8 @@
                 $(data).find("item").each(function () { // or "item" or whatever suits your feed
                     var el = $(this);
 
-                    str+='<li><a href="'+el.find("link").text()+'"><p>'+el.find("title").text()+'</p></a><p>'+el.find("description").text()+'</p><p id="right">'+el.find("pubDate").text()+'</p></li>';
+                    str+='<li><a href="'+el.find("link").text()+'"><p>'+el.find("title").text()+'</p></a><p><img src="rss.jpg" alt="" style="width:30px;">'+el.find("description").text()+'</p><p
+                    id="right">'+el.find("pubDate").text()+'</p></li>';
 
                     console.log(el.text());
                 });
