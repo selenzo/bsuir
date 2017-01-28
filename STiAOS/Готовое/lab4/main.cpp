@@ -35,7 +35,7 @@ void SeeBytes(string url) {
         countEquals += (int) ArrayEqual(arrayKey, arrayTemp);
     }
     inputFile.close();
-    cout << "File: " << url << '\t' << '\t' << '\t' << "Bytes: " << length << '\t' << "Equals: " << countEquals << endl;
+    cout << "PID: " << getpid() << '\t' << "File: " << url << '\t' << '\t' << '\t' << "Bytes: " << length << '\t' << "Equals: " << countEquals << endl;
 }
 
 int isFile(const char *path)
@@ -70,7 +70,7 @@ int main()
     DIR *dir;
     struct dirent *entry;
     struct stat statbuf;
-    string url = "d:\\work\\github\\bsuir\\STiAOS\\Готовое\\lab4";
+    string url = "d:\\work\\github\\bsuir\\STiAOS\\Р“РѕС‚РѕРІРѕРµ\\lab4";
     vector<string> files;
     dir = opendir(url.c_str());
     int deepMax = 3;
@@ -91,7 +91,3 @@ int main()
      }
 	return 0;
 }
-
-
-
-
