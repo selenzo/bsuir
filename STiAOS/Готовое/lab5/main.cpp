@@ -71,13 +71,10 @@ int main()
     DIR *dir;
     struct dirent *entry;
     struct stat statbuf;
-    string url = "d:\\work\\github\\bsuir\\STiAOS\\Готовое\\lab5";
+    string url = "d:\\temp\\lab5";
     vector<string> files;
     dir = opendir(url.c_str());
-
     while ( (entry = readdir(dir)) != NULL) {
-
-
         if (isFile(entry->d_name)) {
                 files.push_back(entry->d_name);
         }
