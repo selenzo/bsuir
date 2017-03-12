@@ -1,0 +1,8 @@
+C:\Users\Antonio\Documents\Visual Studio 2017\Projects\lab6\lab6\bin\Debug\lab6.exe
+C:\Users\Antonio\Documents\Visual Studio 2017\Projects\lab6\lab6\bin\Debug\lab6.pdb
+C:\Users\Antonio\Documents\Visual Studio 2017\Projects\lab6\lab6\obj\Debug\lab6.csprojResolveAssemblyReference.cache
+C:\Users\Antonio\Documents\Visual Studio 2017\Projects\lab6\lab6\obj\Debug\lab6.Form1.resources
+C:\Users\Antonio\Documents\Visual Studio 2017\Projects\lab6\lab6\obj\Debug\lab6.Properties.Resources.resources
+C:\Users\Antonio\Documents\Visual Studio 2017\Projects\lab6\lab6\obj\Debug\lab6.csproj.GenerateResource.Cache
+C:\Users\Antonio\Documents\Visual Studio 2017\Projects\lab6\lab6\obj\Debug\lab6.exe
+C:\Users\Antonio\Documents\Visual Studio 2017\Projects\lab6\lab6\obj\Debug\lab6.pdb

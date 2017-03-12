@@ -1,0 +1,10 @@
+D:\work\github\bsuir\STiAOS\lab7\lab7\bin\Debug\lab7.exe
+D:\work\github\bsuir\STiAOS\lab7\lab7\bin\Debug\lab7.pdb
+D:\work\github\bsuir\STiAOS\lab7\lab7\obj\Debug\lab7.Form1.resources
+D:\work\github\bsuir\STiAOS\lab7\lab7\obj\Debug\lab7.Form2.resources
+D:\work\github\bsuir\STiAOS\lab7\lab7\obj\Debug\lab7.Properties.Resources.resources
+D:\work\github\bsuir\STiAOS\lab7\lab7\obj\Debug\lab7.csproj.GenerateResource.Cache
+D:\work\github\bsuir\STiAOS\lab7\lab7\obj\Debug\lab7.exe
+D:\work\github\bsuir\STiAOS\lab7\lab7\obj\Debug\lab7.pdb
+D:\work\github\bsuir\STiAOS\lab7\lab7\obj\Debug\lab7.Form3.resources
+D:\work\github\bsuir\STiAOS\lab7\lab7\obj\Debug\lab7.Form4.resources
