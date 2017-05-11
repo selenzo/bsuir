@@ -1,0 +1,260 @@
+Microchip MPLAB XC8 Compiler V1.41 ()
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.41\dat\en_msgs.txt -cs \
+  -h+dist/default/production\lab2.X.production.sym \
+  --cmf=dist/default/production\lab2.X.production.cmf -z -Q16F84A \
+  -oC:\Users\Antonio\AppData\Local\Temp\s5jk.2 \
+  -Mdist/default/production/lab2.X.production.map -E1 -ver=XC8 \
+  -ASTACK=037h-04dh -pstack=STACK -ACODE=00h-03FFh -ASTRCODE=00h-03FFh \
+  -ASTRING=00h-0FFhx4 -ACONST=00h-0FFhx4 -AENTRY=00h-0FFhx4 \
+  -ABANK0=0Ch-04Dh -ARAM=0Ch-04Dh -AABS1=0Ch-04Fh -ACOMMON=04Eh-04Fh \
+  -ASFR0=00h-0Bh -ASFR1=080h-0CDh -preset_vec=00h,intentry,init,end_init \
+  -ppowerup=CODE -pcinit=CODE -pfunctab=CODE -ACONFIG=02007h-02007h \
+  -pconfig=CONFIG -DCONFIG=2 -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 \
+  -AEEDATA=00h-03Fh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
+  C:\Users\Antonio\AppData\Local\Temp\s5jk.obj \
+  dist/default/production\lab2.X.production.obj 
+
+Object code version is 3.11
+
+Machine type is 16F84A
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\Antonio\AppData\Local\Temp\s5jk.obj
+                end_init                              0        0        1        0       0
+dist/default/production\lab2.X.production.obj
+                cinit                               3EA      3EA       16      7D4       0
+                maintext                            25C      25C      18E      4B8       0
+                cstackBANK0                           C        C       21        C       1
+                dataBANK0                            2D       2D        A        C       1
+                idataBANK0                          252      252        A      4A4       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              0        0        1         0
+                cinit                               3EA      3EA       16         0
+                maintext                            25C      25C      18E         0
+                idataBANK0                          252      252        A         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   BANK0          
+                cstackBANK0                           C        C       21         1
+                dataBANK0                            2D       2D        A         1
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               4E       4E        2         1
+
+        CLASS   COMMON         
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+        CLASS   BANK1          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000001  000001         0       0  CODE        2
+                cstackBANK0                    00000C  00002B  000037         C       1  BANK0       1
+                idataBANK0                     000252  00000A  00025C       4A4       0  CODE        2
+                maintext                       00025C  00018E  0003EA       4B8       0  CODE        2
+                cinit                          0003EA  000016  000400       7D4       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            037-04D            17           1
+        CODE             001-251           251           2
+        CONFIG           2007-2007             1           2
+        CONST            001-251           100           2
+        EEDATA           2100-213F            40           2
+        ENTRY            001-251           100           2
+        IDLOC            2000-2003             4           2
+        RAM              037-04D            17           1
+        SFR0             000-00B             C           1
+        SFR1             080-0CD            4E           1
+        STACK            037-04D            17           1
+        STRCODE          001-251           251           2
+        STRING           001-251           100           2
+
+                                  Symbol Table
+
+__Habs1                  abs1        000
+__Hbank0                 bank0       000
+__Hbank1                 bank1       000
+__Hcinit                 cinit       400
+__Hclrtext               clrtext     000
+__Hcode                  code        000
+__Hcommon                common      000
+__Hconfig                config      000
+__HcstackBANK0           cstackBANK0 000
+__HdataBANK0             dataBANK0   000
+__Heeprom_data           eeprom_data 000
+__Hend_init              end_init    001
+__Hfunctab               functab     000
+__HidataBANK0            idataBANK0  000
+__Hidloc                 idloc       000
+__Hinit                  init        000
+__Hintentry              intentry    000
+__Hmaintext              maintext    000
+__Hpowerup               powerup     000
+__Hram                   ram         000
+__Hreset_vec             reset_vec   000
+__Hsfr0                  sfr0        000
+__Hsfr1                  sfr1        000
+__Hspace_0               (abs)       400
+__Hspace_1               (abs)       037
+__Hspace_2               (abs)       000
+__Hspace_3               (abs)       000
+__Hstack                 stack       000
+__Hstrings               strings     000
+__Htext                  text        000
+__Labs1                  abs1        000
+__Lbank0                 bank0       000
+__Lbank1                 bank1       000
+__Lcinit                 cinit       3EA
+__Lclrtext               clrtext     000
+__Lcode                  code        000
+__Lcommon                common      000
+__Lconfig                config      000
+__LcstackBANK0           cstackBANK0 000
+__LdataBANK0             dataBANK0   000
+__Leeprom_data           eeprom_data 000
+__Lend_init              end_init    000
+__Lfunctab               functab     000
+__LidataBANK0            idataBANK0  000
+__Lidloc                 idloc       000
+__Linit                  init        000
+__Lintentry              intentry    000
+__Lmaintext              maintext    000
+__Lpowerup               powerup     000
+__Lram                   ram         000
+__Lreset_vec             reset_vec   000
+__Lsfr0                  sfr0        000
+__Lsfr1                  sfr1        000
+__Lspace_0               (abs)       000
+__Lspace_1               (abs)       000
+__Lspace_2               (abs)       000
+__Lspace_3               (abs)       000
+__Lstack                 stack       000
+__Lstrings               strings     000
+__Ltext                  text        000
+__S0                     (abs)       400
+__S1                     (abs)       037
+__S2                     (abs)       000
+__S3                     (abs)       000
+___int_sp                stack       000
+___latbits               (abs)       000
+___sp                    stack       000
+__end_of__initialization cinit       3FE
+__end_of_main            maintext    3EA
+__initialization         cinit       3EA
+__pcstackBANK0           cstackBANK0 00C
+__pdataBANK0             dataBANK0   02D
+__pidataBANK0            idataBANK0  252
+__pmaintext              maintext    25C
+__size_of_main           (abs)       000
+_main                    maintext    25C
+btemp                    (abs)       04E
+end_of_initialization    cinit       3FE
+intlevel0                functab     000
+intlevel1                functab     000
+intlevel2                functab     000
+intlevel3                functab     000
+intlevel4                functab     000
+intlevel5                functab     000
+main@F286                dataBANK0   02D
+main@a                   cstackBANK0 019
+main@i                   cstackBANK0 023
+main@i_24                cstackBANK0 029
+main@i_27                cstackBANK0 02B
+main@j                   cstackBANK0 025
+main@j_28                cstackBANK0 027
+main@min                 cstackBANK0 017
+main@temp                cstackBANK0 013
+main@temp_29             cstackBANK0 015
+reset_vec                reset_vec   000
+stackhi                  (abs)       000
+stacklo                  (abs)       000
+start                    init        000
+start_initialization     cinit       3EA
+wtemp0                   (abs)       04E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 11 in file "newmain.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  temp            2    9[BANK0 ] int 
+  temp            2    7[BANK0 ] int 
+  j               2   27[BANK0 ] int 
+  j               2   25[BANK0 ] int 
+  i               2   31[BANK0 ] int 
+  i               2   29[BANK0 ] int 
+  i               2   23[BANK0 ] int 
+  a              10   13[BANK0 ] int [5]
+  min             2   11[BANK0 ] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0
+      Params:         0       0
+      Locals:         0      26
+      Temps:          0       7
+      Totals:         0      33
+Total ram usage:       33 bytes
+ This function calls:
+		Nothing
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+newmain.c
+		_main          		CODE           	025C	0000	399
+
+newmain.c estimated size: 399
+
+shared
+		__initialization		CODE           	03EA	0000	21
+
+shared estimated size: 21
+

@@ -1,0 +1,393 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.41 build -162212810 
+                                                                                               Thu Mar 30 18:10:51 2017
+
+Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
+     1                           	processor	16F84A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	intentry,global,class=CODE,delta=2
+    10                           	dabs	1,0x4E,2
+    11  0000                     
+    12                           ; Version 1.41
+    13                           ; Generated 25/01/2017 GMT
+    14                           ; 
+    15                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    16                           ; All rights reserved.
+    17                           ; 
+    18                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    19                           ; 
+    20                           ; Redistribution and use in source and binary forms, with or without modification, are
+    21                           ; permitted provided that the following conditions are met:
+    22                           ; 
+    23                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    24                           ;        conditions and the following disclaimer.
+    25                           ; 
+    26                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    27                           ;        of conditions and the following disclaimer in the documentation and/or other
+    28                           ;        materials provided with the distribution.
+    29                           ; 
+    30                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    31                           ;        software without specific prior written permission.
+    32                           ; 
+    33                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    34                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    35                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    36                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    37                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    38                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    39                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    40                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    41                           ; 
+    42                           ; 
+    43                           ; Code-generator required, PIC16F84A Definitions
+    44                           ; 
+    45                           ; SFR Addresses
+    46  0000                     	;# 
+    47  0001                     	;# 
+    48  0002                     	;# 
+    49  0003                     	;# 
+    50  0004                     	;# 
+    51  0005                     	;# 
+    52  0006                     	;# 
+    53  0008                     	;# 
+    54  0009                     	;# 
+    55  000A                     	;# 
+    56  000B                     	;# 
+    57  0081                     	;# 
+    58  0085                     	;# 
+    59  0086                     	;# 
+    60  0088                     	;# 
+    61  0089                     	;# 
+    62  0000                     	;# 
+    63  0001                     	;# 
+    64  0002                     	;# 
+    65  0003                     	;# 
+    66  0004                     	;# 
+    67  0005                     	;# 
+    68  0006                     	;# 
+    69  0008                     	;# 
+    70  0009                     	;# 
+    71  000A                     	;# 
+    72  000B                     	;# 
+    73  0081                     	;# 
+    74  0085                     	;# 
+    75  0086                     	;# 
+    76  0088                     	;# 
+    77  0089                     	;# 
+    78  0000                     	;# 
+    79  0001                     	;# 
+    80  0002                     	;# 
+    81  0003                     	;# 
+    82  0004                     	;# 
+    83  0005                     	;# 
+    84  0006                     	;# 
+    85  0008                     	;# 
+    86  0009                     	;# 
+    87  000A                     	;# 
+    88  000B                     	;# 
+    89  0081                     	;# 
+    90  0085                     	;# 
+    91  0086                     	;# 
+    92  0088                     	;# 
+    93  0089                     	;# 
+    94  0000                     	;# 
+    95  0001                     	;# 
+    96  0002                     	;# 
+    97  0003                     	;# 
+    98  0004                     	;# 
+    99  0005                     	;# 
+   100  0006                     	;# 
+   101  0008                     	;# 
+   102  0009                     	;# 
+   103  000A                     	;# 
+   104  000B                     	;# 
+   105  0081                     	;# 
+   106  0085                     	;# 
+   107  0086                     	;# 
+   108  0088                     	;# 
+   109  0089                     	;# 
+   110  0000                     	;# 
+   111  0001                     	;# 
+   112  0002                     	;# 
+   113  0003                     	;# 
+   114  0004                     	;# 
+   115  0005                     	;# 
+   116  0006                     	;# 
+   117  0008                     	;# 
+   118  0009                     	;# 
+   119  000A                     	;# 
+   120  000B                     	;# 
+   121  0081                     	;# 
+   122  0085                     	;# 
+   123  0086                     	;# 
+   124  0088                     	;# 
+   125  0089                     	;# 
+   126  0006                     _PORTB	set	6
+   127  0085                     _TRISA	set	133
+   128  0086                     _TRISB	set	134
+   129                           
+   130                           	psect	cinit
+   131  0010                     start_initialization:	
+   132                           ; #config settings
+   133                           
+   134  0010                     __initialization:	
+   135  0010                     end_of_initialization:	
+   136                           ;End of C runtime variable initialization code
+   137                           
+   138  0010                     __end_of__initialization:	
+   139  0010  0183               	clrf	3
+   140  0011  281D               	ljmp	_main	;jump to C main() function
+   141                           
+   142                           	psect	cstackCOMMON
+   143  0000                     __pcstackCOMMON:	
+   144  0000                     ??_main:	
+   145                           
+   146                           	psect	cstackBANK0
+   147  000C                     __pcstackBANK0:	
+   148                           ; 1 bytes @ 0x0
+   149                           
+   150  000C                     ?_isr:	
+   151  000C                     ??_isr:	
+   152                           ; 1 bytes @ 0x0
+   153                           
+   154  000C                     ?_main:	
+   155                           ; 1 bytes @ 0x0
+   156                           
+   157                           
+   158                           ; 1 bytes @ 0x0
+   159  000C                     	ds	4
+   160                           
+   161                           	psect	maintext
+   162  001D                     __pmaintext:	
+   163 ;;
+   164 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   165 ;;
+   166 ;; *************** function _main *****************
+   167 ;; Defined at:
+   168 ;;		line 26 in file "main.c"
+   169 ;; Parameters:    Size  Location     Type
+   170 ;;		None
+   171 ;; Auto vars:     Size  Location     Type
+   172 ;;		None
+   173 ;; Return value:  Size  Location     Type
+   174 ;;                  1    wreg      void 
+   175 ;; Registers used:
+   176 ;;		wreg
+   177 ;; Tracked objects:
+   178 ;;		On entry : B00/0
+   179 ;;		On exit  : 0/0
+   180 ;;		Unchanged: 0/0
+   181 ;; Data sizes:     COMMON   BANK0
+   182 ;;      Params:         0       0
+   183 ;;      Locals:         0       0
+   184 ;;      Temps:          0       0
+   185 ;;      Totals:         0       0
+   186 ;;Total ram usage:        0 bytes
+   187 ;; Hardware stack levels required when called:    1
+   188 ;; This function calls:
+   189 ;;		Nothing
+   190 ;; This function is called by:
+   191 ;;		Startup code after reset
+   192 ;; This function uses a non-reentrant model
+   193 ;;
+   194                           
+   195                           
+   196                           ;psect for function _main
+   197  001D                     _main:	
+   198                           
+   199                           ;main.c: 30: TRISB = 0xF0;
+   200                           
+   201                           ;incstack = 0
+   202                           ; Regs used in _main: [wreg]
+   203  001D  30F0               	movlw	240
+   204  001E  1683               	bsf	3,5	;RP0=1, select bank1
+   205  001F  0086               	movwf	6	;volatile
+   206                           
+   207                           ;main.c: 31: TRISA = 0xF0;
+   208  0020  30F0               	movlw	240
+   209  0021  0085               	movwf	5	;volatile
+   210                           
+   211                           ;main.c: 33: PORTB = 0x02;
+   212  0022  3002               	movlw	2
+   213  0023  1283               	bcf	3,5	;RP0=0, select bank0
+   214  0024  0086               	movwf	6	;volatile
+   215  0025                     l12:	
+   216                           ;main.c: 35: while(1)
+   217                           
+   218                           
+   219                           ;main.c: 36: {
+   220  0025  2825               	goto	l12
+   221  0026                     __end_of_main:	
+   222                           
+   223                           	psect	text1
+   224  0012                     __ptext1:	
+   225 ;; *************** function _isr *****************
+   226 ;; Defined at:
+   227 ;;		line 23 in file "interrupts.c"
+   228 ;; Parameters:    Size  Location     Type
+   229 ;;		None
+   230 ;; Auto vars:     Size  Location     Type
+   231 ;;		None
+   232 ;; Return value:  Size  Location     Type
+   233 ;;                  1    wreg      void 
+   234 ;; Registers used:
+   235 ;;		None
+   236 ;; Tracked objects:
+   237 ;;		On entry : 0/0
+   238 ;;		On exit  : 0/0
+   239 ;;		Unchanged: 0/0
+   240 ;; Data sizes:     COMMON   BANK0
+   241 ;;      Params:         0       0
+   242 ;;      Locals:         0       0
+   243 ;;      Temps:          0       4
+   244 ;;      Totals:         0       4
+   245 ;;Total ram usage:        4 bytes
+   246 ;; Hardware stack levels used:    1
+   247 ;; This function calls:
+   248 ;;		Nothing
+   249 ;; This function is called by:
+   250 ;;		Interrupt level 1
+   251 ;; This function uses a non-reentrant model
+   252 ;;
+   253                           
+   254                           
+   255                           ;psect for function _isr
+   256  0012                     _isr:	
+   257  0012  080F               	movf	??_isr+3,w
+   258  0013  00CF               	movwf	79
+   259  0014  080E               	movf	??_isr+2,w
+   260  0015  008A               	movwf	10
+   261  0016  080D               	movf	??_isr+1,w
+   262  0017  0084               	movwf	4
+   263  0018  0E0C               	swapf	??_isr^0,w
+   264  0019  0083               	movwf	3
+   265  001A  0ECE               	swapf	78,f
+   266  001B  0E4E               	swapf	78,w
+   267  001C  0009               	retfie
+   268  001D                     __end_of_isr:	
+   269  004E                     btemp	set	78	;btemp
+   270  004E                     wtemp0	set	78
+   271                           
+   272                           	psect	intentry
+   273  0004                     __pintentry:	
+   274                           ;incstack = 0
+   275                           ; Regs used in _isr: []
+   276                           
+   277  0004                     interrupt_function:	
+   278  004E                     saved_w	set	btemp
+   279  0004  00CE               	movwf	btemp
+   280  0005  0E03               	swapf	3,w
+   281  0006  1283               	bcf	3,5	;RP0=0, select bank0
+   282  0007  008C               	movwf	??_isr
+   283  0008  0804               	movf	4,w
+   284  0009  008D               	movwf	??_isr+1
+   285  000A  080A               	movf	10,w
+   286  000B  008E               	movwf	??_isr+2
+   287  000C  084F               	movf	btemp+1,w
+   288  000D  008F               	movwf	??_isr+3
+   289  000E  2812               	ljmp	_isr
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66      4       4
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _isr in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _isr in BANK0
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (1) _isr                                                  4     4      0       0
+                                              0 BANK0      4     4      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ _isr (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              40      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               42      4       4       3        6.1%
+ABS                  0      0       0       4        0.0%
+BITBANK0            42      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.41 build -162212810 
+Symbol Table                                                                                   Thu Mar 30 18:10:51 2017
+
+                     l12 0025                      _isr 0012                      fsr0 0004  
+                   ?_isr 000C                     _main 001D                     btemp 004E  
+                   start 000F                    ??_isr 000C                    ?_main 000C  
+                  _PORTB 0006                    _TRISA 0085                    _TRISB 0086  
+                  pclath 000A                    status 0003                    wtemp0 004E  
+        __initialization 0010             __end_of_main 0026                   ??_main 0000  
+                 saved_w 004E  __end_of__initialization 0010           __pcstackCOMMON 0000  
+             __pmaintext 001D               __pintentry 0004                  __ptext1 0012  
+           __size_of_isr 000B     end_of_initialization 0010      start_initialization 0010  
+            __end_of_isr 001D                ___latbits 0000            __pcstackBANK0 000C  
+      interrupt_function 0004            __size_of_main 0009                 intlevel1 0000  

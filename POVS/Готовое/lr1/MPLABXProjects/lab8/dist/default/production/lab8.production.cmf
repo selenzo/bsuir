@@ -1,0 +1,347 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\lab8.production.obj
+cinit CODE 0 3FC 3FC 4 2
+text1 CODE 0 334 334 28 2
+text2 CODE 0 2FF 2FF E 2
+text3 CODE 0 31C 31C 18 2
+text4 CODE 0 30D 30D F 2
+text5 CODE 0 2F3 2F3 C 2
+text6 CODE 0 2E8 2E8 B 2
+text7 CODE 0 393 393 69 2
+maintext CODE 0 35C 35C 37 2
+cstackBANK0 BANK0 1 C C 8 1
+bssBANK0 BANK0 1 14 14 2 1
+swtext1 CONST 0 1 1 6 2
+$C:\Users\vik\AppData\Local\Temp\sp4.obj
+end_init CODE 0 0 0 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 16-4D 1
+BANK0 16-4D 1
+CONST 7-2E7 2
+ENTRY 7-2E7 2
+IDLOC 2000-2003 2
+STACK 16-4D 1
+CODE 7-2E7 2
+SFR0 0-B 1
+SFR1 80-CD 1
+CONFIG 2007-2007 2
+EEDATA 2100-213F 2
+STRCODE 7-2E7 2
+STRING 7-2E7 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\lab8.production.obj
+3FC cinit CODE >97:C:\Users\vik\AppData\Local\Temp\sp4.
+3FC cinit CODE >100:C:\Users\vik\AppData\Local\Temp\sp4.
+3FC cinit CODE >114:C:\Users\vik\AppData\Local\Temp\sp4.
+3FD cinit CODE >115:C:\Users\vik\AppData\Local\Temp\sp4.
+3FE cinit CODE >121:C:\Users\vik\AppData\Local\Temp\sp4.
+3FE cinit CODE >123:C:\Users\vik\AppData\Local\Temp\sp4.
+3FF cinit CODE >124:C:\Users\vik\AppData\Local\Temp\sp4.
+393 text7 CODE >82:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+393 text7 CODE >84:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+396 text7 CODE >85:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+397 text7 CODE >87:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+399 text7 CODE >89:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+39B text7 CODE >91:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+39D text7 CODE >93:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+39F text7 CODE >85:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3B6 text7 CODE >95:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3B8 text7 CODE >96:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3B9 text7 CODE >98:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3BB text7 CODE >100:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3BD text7 CODE >102:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3BF text7 CODE >104:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3C1 text7 CODE >96:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3D8 text7 CODE >106:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3DA text7 CODE >107:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3DB text7 CODE >109:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3DD text7 CODE >111:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3DF text7 CODE >113:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3E1 text7 CODE >115:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3E3 text7 CODE >107:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+3FA text7 CODE >117:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2E8 text6 CODE >23:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2E8 text6 CODE >24:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2ED text6 CODE >25:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2F0 text6 CODE >26:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2F1 text6 CODE >27:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2F3 text5 CODE >29:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2F3 text5 CODE >31:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2F7 text5 CODE >32:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2FB text5 CODE >33:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2FD text5 CODE >34:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+30D text4 CODE >36:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+30D text4 CODE >37:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+312 text4 CODE >38:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+315 text4 CODE >39:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+316 text4 CODE >40:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+31C text3 CODE >42:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+31C text3 CODE >43:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+32A text3 CODE >44:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+32E text3 CODE >45:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+331 text3 CODE >46:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+332 text3 CODE >48:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2FF text2 CODE >50:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+2FF text2 CODE >51:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+302 text2 CODE >52:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+309 text2 CODE >54:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+30B text2 CODE >55:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+1 swtext1 CONST >60:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+334 text1 CODE >58:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+336 text1 CODE >60:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+337 text1 CODE >62:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+33A text1 CODE >63:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+33B text1 CODE >65:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+33E text1 CODE >66:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+33F text1 CODE >68:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+342 text1 CODE >69:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+343 text1 CODE >71:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+346 text1 CODE >72:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+347 text1 CODE >74:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+34A text1 CODE >75:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+34B text1 CODE >77:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+34C text1 CODE >79:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+34D text1 CODE >60:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+35B text1 CODE >80:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+35C maintext CODE >120:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+35C maintext CODE >123:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+35F maintext CODE >124:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+361 maintext CODE >125:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+363 maintext CODE >126:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+365 maintext CODE >128:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+365 maintext CODE >130:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+36B maintext CODE >131:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+370 maintext CODE >132:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+379 maintext CODE >133:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+37E maintext CODE >135:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+382 maintext CODE >136:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+386 maintext CODE >137:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+387 maintext CODE >138:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+388 maintext CODE >130:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+390 maintext CODE >142:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+392 maintext CODE >128:D:\downloads\savenko\MPLABXProjects\lab8\newmain.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 0 0 ABS 0 - dist/default/production\lab8.production.obj
+__Hspace_0 400 0 ABS 0 - -
+__Hspace_1 16 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+ltemp0 4E 0 ABS 0 - dist/default/production\lab8.production.obj
+ltemp1 52 0 ABS 0 - dist/default/production\lab8.production.obj
+ltemp2 56 0 ABS 0 - dist/default/production\lab8.production.obj
+ltemp3 50 0 ABS 0 - dist/default/production\lab8.production.obj
+main@i 12 0 BANK0 1 cstackBANK0 dist/default/production\lab8.production.obj
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack C:\Users\vik\AppData\Local\Temp\sp4.obj
+_code 15 0 BANK0 1 bssBANK0 dist/default/production\lab8.production.obj
+_main 6B8 0 CODE 0 maintext dist/default/production\lab8.production.obj
+_type 14 0 BANK0 1 bssBANK0 dist/default/production\lab8.production.obj
+btemp 4E 0 ABS 0 - dist/default/production\lab8.production.obj
+_PlaySequence 668 0 CODE 0 text1 dist/default/production\lab8.production.obj
+ltemp 4E 0 ABS 0 - dist/default/production\lab8.production.obj
+start 0 0 CODE 0 init C:\Users\vik\AppData\Local\Temp\sp4.obj
+ttemp 4E 0 ABS 0 - dist/default/production\lab8.production.obj
+wtemp 4E 0 ABS 0 - dist/default/production\lab8.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\lab8.production.obj
+__end_of_CaptureKey 7F8 0 CODE 0 text7 dist/default/production\lab8.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+ttemp0 4E 0 ABS 0 - dist/default/production\lab8.production.obj
+ttemp1 51 0 ABS 0 - dist/default/production\lab8.production.obj
+ttemp2 54 0 ABS 0 - dist/default/production\lab8.production.obj
+ttemp3 57 0 ABS 0 - dist/default/production\lab8.production.obj
+ttemp4 4F 0 ABS 0 - dist/default/production\lab8.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\vik\AppData\Local\Temp\sp4.obj
+intlevel1 0 0 CODE 0 functab C:\Users\vik\AppData\Local\Temp\sp4.obj
+intlevel2 0 0 CODE 0 functab C:\Users\vik\AppData\Local\Temp\sp4.obj
+intlevel3 0 0 CODE 0 functab C:\Users\vik\AppData\Local\Temp\sp4.obj
+intlevel4 0 0 CODE 0 functab C:\Users\vik\AppData\Local\Temp\sp4.obj
+intlevel5 0 0 CODE 0 functab C:\Users\vik\AppData\Local\Temp\sp4.obj
+wtemp0 4E 0 ABS 0 - dist/default/production\lab8.production.obj
+wtemp1 50 0 ABS 0 - dist/default/production\lab8.production.obj
+wtemp2 52 0 ABS 0 - dist/default/production\lab8.production.obj
+wtemp3 54 0 ABS 0 - dist/default/production\lab8.production.obj
+wtemp4 56 0 ABS 0 - dist/default/production\lab8.production.obj
+wtemp5 58 0 ABS 0 - dist/default/production\lab8.production.obj
+wtemp6 4F 0 ABS 0 - dist/default/production\lab8.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+__size_of_PlaySequence 0 0 ABS 0 - dist/default/production\lab8.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__end_of_PlaySequence 6B8 0 CODE 0 text1 dist/default/production\lab8.production.obj
+__Lmaintext 0 0 ABS 0 maintext -
+start_initialization 7F8 0 CODE 0 cinit dist/default/production\lab8.production.obj
+PlaySequence@data F 0 BANK0 1 cstackBANK0 dist/default/production\lab8.production.obj
+__pcstackBANK0 C 0 BANK0 1 cstackBANK0 dist/default/production\lab8.production.obj
+__size_of_CaptureKey 0 0 ABS 0 - dist/default/production\lab8.production.obj
+_generateCode1 5D0 0 CODE 0 text6 dist/default/production\lab8.production.obj
+_generateCode2 5E6 0 CODE 0 text5 dist/default/production\lab8.production.obj
+_generateCode3 61A 0 CODE 0 text4 dist/default/production\lab8.production.obj
+_generateCode4 638 0 CODE 0 text3 dist/default/production\lab8.production.obj
+_generateCode5 5FE 0 CODE 0 text2 dist/default/production\lab8.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\vik\AppData\Local\Temp\sp4.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 BANK1 1 bank1 -
+__Hcinit 800 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 0 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 BANK1 1 bank1 -
+__Lcinit 7F8 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 400 0 ABS 0 - -
+__S1 16 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\vik\AppData\Local\Temp\sp4.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__size_of_generateCode1 0 0 ABS 0 - dist/default/production\lab8.production.obj
+__size_of_generateCode2 0 0 ABS 0 - dist/default/production\lab8.production.obj
+__size_of_generateCode3 0 0 ABS 0 - dist/default/production\lab8.production.obj
+__size_of_generateCode4 0 0 ABS 0 - dist/default/production\lab8.production.obj
+__size_of_generateCode5 0 0 ABS 0 - dist/default/production\lab8.production.obj
+__pmaintext 6B8 0 CODE 0 maintext dist/default/production\lab8.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 0 config -
+__end_of_generateCode1 5E6 0 CODE 0 text6 dist/default/production\lab8.production.obj
+__end_of_generateCode2 5FE 0 CODE 0 text5 dist/default/production\lab8.production.obj
+__end_of_generateCode3 638 0 CODE 0 text4 dist/default/production\lab8.production.obj
+__end_of_generateCode4 668 0 CODE 0 text3 dist/default/production\lab8.production.obj
+__end_of_generateCode5 61A 0 CODE 0 text2 dist/default/production\lab8.production.obj
+stackhi 0 0 ABS 0 - C:\Users\vik\AppData\Local\Temp\sp4.obj
+stacklo 0 0 ABS 0 - C:\Users\vik\AppData\Local\Temp\sp4.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 7FC 0 CODE 0 cinit dist/default/production\lab8.production.obj
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+generateCode4@res E 0 BANK0 1 cstackBANK0 dist/default/production\lab8.production.obj
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+main@temp_btn 13 0 BANK0 1 cstackBANK0 dist/default/production\lab8.production.obj
+__ptext1 668 0 CODE 0 text1 dist/default/production\lab8.production.obj
+__ptext2 5FE 0 CODE 0 text2 dist/default/production\lab8.production.obj
+__ptext3 638 0 CODE 0 text3 dist/default/production\lab8.production.obj
+__ptext4 61A 0 CODE 0 text4 dist/default/production\lab8.production.obj
+__ptext5 5E6 0 CODE 0 text5 dist/default/production\lab8.production.obj
+__ptext6 5D0 0 CODE 0 text6 dist/default/production\lab8.production.obj
+__ptext7 726 0 CODE 0 text7 dist/default/production\lab8.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization 7FC 0 CODE 0 cinit dist/default/production\lab8.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\lab8.production.obj
+__Hend_init 2 0 CODE 0 end_init -
+__end_of_main 726 0 CODE 0 maintext dist/default/production\lab8.production.obj
+_PORTA 5 0 ABS 0 - dist/default/production\lab8.production.obj
+_PORTB 6 0 ABS 0 - dist/default/production\lab8.production.obj
+_TRISA 85 0 ABS 0 - dist/default/production\lab8.production.obj
+_TRISB 86 0 ABS 0 - dist/default/production\lab8.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_CaptureKey 726 0 CODE 0 text7 dist/default/production\lab8.production.obj
+__initialization 7F8 0 CODE 0 cinit dist/default/production\lab8.production.obj
+__pbssBANK0 14 0 BANK0 1 bssBANK0 dist/default/production\lab8.production.obj
+__pswtext1 2 0 CONST 0 swtext1 dist/default/production\lab8.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 4E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 3FC 7F8 4 2
+text1 0 334 668 28 2
+text2 0 2FF 5FE E 2
+text3 0 31C 638 18 2
+text4 0 30D 61A F 2
+text5 0 2F3 5E6 C 2
+text6 0 2E8 5D0 B 2
+text7 0 393 726 69 2
+maintext 0 35C 6B8 37 2
+cstackBANK0 1 C C A 1
+reset_vec 0 0 0 1 2
+swtext1 0 1 2 6 2

@@ -1,0 +1,933 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.41 build -162212810 
+                                                                                               Fri Feb 10 13:49:15 2017
+
+Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
+     1                           	processor	16F84A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     8                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     9                           	psect	maintext,global,class=CODE,split=1,delta=2
+    10                           	psect	text1,local,class=CODE,merge=1,delta=2
+    11                           	psect	text2,local,class=CODE,merge=1,delta=2
+    12                           	psect	text3,local,class=CODE,merge=1,delta=2
+    13                           	psect	text4,local,class=CODE,merge=1,delta=2
+    14                           	psect	text5,local,class=CODE,merge=1,delta=2
+    15                           	dabs	1,0x4E,2
+    16  0000                     
+    17                           ; Version 1.41
+    18                           ; Generated 25/01/2017 GMT
+    19                           ; 
+    20                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    21                           ; All rights reserved.
+    22                           ; 
+    23                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    24                           ; 
+    25                           ; Redistribution and use in source and binary forms, with or without modification, are
+    26                           ; permitted provided that the following conditions are met:
+    27                           ; 
+    28                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    29                           ;        conditions and the following disclaimer.
+    30                           ; 
+    31                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    32                           ;        of conditions and the following disclaimer in the documentation and/or other
+    33                           ;        materials provided with the distribution.
+    34                           ; 
+    35                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    36                           ;        software without specific prior written permission.
+    37                           ; 
+    38                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    39                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    40                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    41                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    42                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    43                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    44                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    45                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    46                           ; 
+    47                           ; 
+    48                           ; Code-generator required, PIC16F84A Definitions
+    49                           ; 
+    50                           ; SFR Addresses
+    51  0000                     	;# 
+    52  0001                     	;# 
+    53  0002                     	;# 
+    54  0003                     	;# 
+    55  0004                     	;# 
+    56  0005                     	;# 
+    57  0006                     	;# 
+    58  0008                     	;# 
+    59  0009                     	;# 
+    60  000A                     	;# 
+    61  000B                     	;# 
+    62  0081                     	;# 
+    63  0085                     	;# 
+    64  0086                     	;# 
+    65  0088                     	;# 
+    66  0089                     	;# 
+    67  0000                     	;# 
+    68  0001                     	;# 
+    69  0002                     	;# 
+    70  0003                     	;# 
+    71  0004                     	;# 
+    72  0005                     	;# 
+    73  0006                     	;# 
+    74  0008                     	;# 
+    75  0009                     	;# 
+    76  000A                     	;# 
+    77  000B                     	;# 
+    78  0081                     	;# 
+    79  0085                     	;# 
+    80  0086                     	;# 
+    81  0088                     	;# 
+    82  0089                     	;# 
+    83                           
+    84                           	psect	idataBANK0
+    85  031A                     __pidataBANK0:	
+    86                           
+    87                           ;initializer for main@F451
+    88  031A  3441               	retlw	65
+    89  031B  346C               	retlw	108
+    90  031C  3465               	retlw	101
+    91  031D  3478               	retlw	120
+    92  031E  3420               	retlw	32
+    93  031F  344D               	retlw	77
+    94  0320  3469               	retlw	105
+    95  0321  346B               	retlw	107
+    96  0322  3468               	retlw	104
+    97  0323  3461               	retlw	97
+    98  0324  346C               	retlw	108
+    99  0325  3469               	retlw	105
+   100  0326  346E               	retlw	110
+   101  0327  3400               	retlw	0
+   102                           
+   103                           ;initializer for main@F449
+   104  0328  3442               	retlw	66
+   105  0329  3453               	retlw	83
+   106  032A  3455               	retlw	85
+   107  032B  3449               	retlw	73
+   108  032C  3452               	retlw	82
+   109  032D  3400               	retlw	0
+   110  0006                     _PORTB	set	6
+   111  0086                     _TRISB	set	134
+   112  0085                     _TRISA	set	133
+   113                           
+   114                           	psect	cinit
+   115  03D6                     start_initialization:	
+   116                           ; #config settings
+   117                           
+   118  03D6                     __initialization:	
+   119                           
+   120                           ; Initialize objects allocated to BANK0
+   121  03D6  231A               	fcall	__pidataBANK0	;fetch initializer
+   122  03D7  00AF               	movwf	__pdataBANK0& (0+127)
+   123  03D8  231B               	fcall	__pidataBANK0+1	;fetch initializer
+   124  03D9  00B0               	movwf	(__pdataBANK0+1)& (0+127)
+   125  03DA  231C               	fcall	__pidataBANK0+2	;fetch initializer
+   126  03DB  00B1               	movwf	(__pdataBANK0+2)& (0+127)
+   127  03DC  231D               	fcall	__pidataBANK0+3	;fetch initializer
+   128  03DD  00B2               	movwf	(__pdataBANK0+3)& (0+127)
+   129  03DE  231E               	fcall	__pidataBANK0+4	;fetch initializer
+   130  03DF  00B3               	movwf	(__pdataBANK0+4)& (0+127)
+   131  03E0  231F               	fcall	__pidataBANK0+5	;fetch initializer
+   132  03E1  00B4               	movwf	(__pdataBANK0+5)& (0+127)
+   133  03E2  2320               	fcall	__pidataBANK0+6	;fetch initializer
+   134  03E3  00B5               	movwf	(__pdataBANK0+6)& (0+127)
+   135  03E4  2321               	fcall	__pidataBANK0+7	;fetch initializer
+   136  03E5  00B6               	movwf	(__pdataBANK0+7)& (0+127)
+   137  03E6  2322               	fcall	__pidataBANK0+8	;fetch initializer
+   138  03E7  00B7               	movwf	(__pdataBANK0+8)& (0+127)
+   139  03E8  2323               	fcall	__pidataBANK0+9	;fetch initializer
+   140  03E9  00B8               	movwf	(__pdataBANK0+9)& (0+127)
+   141  03EA  2324               	fcall	__pidataBANK0+10	;fetch initializer
+   142  03EB  00B9               	movwf	(__pdataBANK0+10)& (0+127)
+   143  03EC  2325               	fcall	__pidataBANK0+11	;fetch initializer
+   144  03ED  00BA               	movwf	(__pdataBANK0+11)& (0+127)
+   145  03EE  2326               	fcall	__pidataBANK0+12	;fetch initializer
+   146  03EF  00BB               	movwf	(__pdataBANK0+12)& (0+127)
+   147  03F0  2327               	fcall	__pidataBANK0+13	;fetch initializer
+   148  03F1  00BC               	movwf	(__pdataBANK0+13)& (0+127)
+   149  03F2  2328               	fcall	__pidataBANK0+14	;fetch initializer
+   150  03F3  00BD               	movwf	(__pdataBANK0+14)& (0+127)
+   151  03F4  2329               	fcall	__pidataBANK0+15	;fetch initializer
+   152  03F5  00BE               	movwf	(__pdataBANK0+15)& (0+127)
+   153  03F6  232A               	fcall	__pidataBANK0+16	;fetch initializer
+   154  03F7  00BF               	movwf	(__pdataBANK0+16)& (0+127)
+   155  03F8  232B               	fcall	__pidataBANK0+17	;fetch initializer
+   156  03F9  00C0               	movwf	(__pdataBANK0+17)& (0+127)
+   157  03FA  232C               	fcall	__pidataBANK0+18	;fetch initializer
+   158  03FB  00C1               	movwf	(__pdataBANK0+18)& (0+127)
+   159  03FC  232D               	fcall	__pidataBANK0+19	;fetch initializer
+   160  03FD  00C2               	movwf	(__pdataBANK0+19)& (0+127)
+   161  03FE                     end_of_initialization:	
+   162                           ;End of C runtime variable initialization code
+   163                           
+   164  03FE                     __end_of__initialization:	
+   165  03FE  0183               	clrf	3
+   166  03FF  2B91               	ljmp	_main	;jump to C main() function
+   167                           
+   168                           	psect	dataBANK0
+   169  002F                     __pdataBANK0:	
+   170  002F                     main@F451:	
+   171  002F                     	ds	14
+   172  003D                     main@F449:	
+   173  003D                     	ds	6
+   174                           
+   175                           	psect	cstackCOMMON
+   176  0000                     __pcstackCOMMON:	
+   177  0000                     ??_LCDInit:	
+   178                           
+   179                           	psect	cstackBANK0
+   180  000C                     __pcstackBANK0:	
+   181                           ; 1 bytes @ 0x0
+   182                           
+   183  000C                     ?_LCDInit:	
+   184  000C                     ?_main:	
+   185                           ; 1 bytes @ 0x0
+   186                           
+   187  000C                     ?_SendByte:	
+   188                           ; 1 bytes @ 0x0
+   189                           
+   190  000C                     ??_SendByte:	
+   191                           ; 1 bytes @ 0x0
+   192                           
+   193  000C                     ?_LCDSendCommand:	
+   194                           ; 1 bytes @ 0x0
+   195                           
+   196  000C                     ?_LCDSendData:	
+   197                           ; 1 bytes @ 0x0
+   198                           
+   199                           
+   200                           ; 1 bytes @ 0x0
+   201  000C                     	ds	1
+   202  000D                     SendByte@data:	
+   203                           
+   204                           ; 1 bytes @ 0x1
+   205  000D                     	ds	1
+   206  000E                     ??_LCDSendCommand:	
+   207  000E                     ??_LCDSendData:	
+   208                           ; 1 bytes @ 0x2
+   209                           
+   210                           
+   211                           ; 1 bytes @ 0x2
+   212  000E                     	ds	1
+   213  000F                     LCDSendCommand@command:	
+   214  000F                     LCDSendData@data:	
+   215                           ; 1 bytes @ 0x3
+   216                           
+   217                           
+   218                           ; 1 bytes @ 0x3
+   219  000F                     	ds	1
+   220  0010                     LCDSendCommand@temp:	
+   221  0010                     LCDSendData@temp:	
+   222                           ; 1 bytes @ 0x4
+   223                           
+   224                           
+   225                           ; 1 bytes @ 0x4
+   226  0010                     	ds	1
+   227  0011                     ?_LCDPutString:	
+   228  0011                     LCDPutString@row:	
+   229                           ; 1 bytes @ 0x5
+   230                           
+   231                           
+   232                           ; 1 bytes @ 0x5
+   233  0011                     	ds	1
+   234  0012                     LCDPutString@column:	
+   235                           
+   236                           ; 1 bytes @ 0x6
+   237  0012                     	ds	1
+   238  0013                     ??_LCDPutString:	
+   239                           
+   240                           ; 1 bytes @ 0x7
+   241  0013                     	ds	2
+   242  0015                     LCDPutString@temp:	
+   243                           
+   244                           ; 1 bytes @ 0x9
+   245  0015                     	ds	1
+   246  0016                     LCDPutString@ptrdata:	
+   247                           
+   248                           ; 1 bytes @ 0xA
+   249  0016                     	ds	1
+   250  0017                     ??_main:	
+   251                           
+   252                           ; 1 bytes @ 0xB
+   253  0017                     	ds	4
+   254  001B                     main@lastname:	
+   255                           
+   256                           ; 14 bytes @ 0xF
+   257  001B                     	ds	14
+   258  0029                     main@univercity:	
+   259                           
+   260                           ; 6 bytes @ 0x1D
+   261  0029                     	ds	6
+   262                           
+   263                           	psect	maintext
+   264  0391                     __pmaintext:	
+   265 ;;
+   266 ;;Main: autosize = 0, tempsize = 4, incstack = 0, save=0
+   267 ;;
+   268 ;; *************** function _main *****************
+   269 ;; Defined at:
+   270 ;;		line 15 in file "newmain.c"
+   271 ;; Parameters:    Size  Location     Type
+   272 ;;		None
+   273 ;; Auto vars:     Size  Location     Type
+   274 ;;  lastname       14   15[BANK0 ] unsigned char [14]
+   275 ;;  univercity      6   29[BANK0 ] unsigned char [6]
+   276 ;; Return value:  Size  Location     Type
+   277 ;;                  1    wreg      void 
+   278 ;; Registers used:
+   279 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   280 ;; Tracked objects:
+   281 ;;		On entry : B00/0
+   282 ;;		On exit  : 0/0
+   283 ;;		Unchanged: 0/0
+   284 ;; Data sizes:     COMMON   BANK0
+   285 ;;      Params:         0       0
+   286 ;;      Locals:         0      20
+   287 ;;      Temps:          0       4
+   288 ;;      Totals:         0      24
+   289 ;;Total ram usage:       24 bytes
+   290 ;; Hardware stack levels required when called:    3
+   291 ;; This function calls:
+   292 ;;		_LCDInit
+   293 ;;		_LCDPutString
+   294 ;; This function is called by:
+   295 ;;		Startup code after reset
+   296 ;; This function uses a non-reentrant model
+   297 ;;
+   298                           
+   299                           
+   300                           ;psect for function _main
+   301  0391                     _main:	
+   302                           
+   303                           ;newmain.c: 17: TRISA = 0xFF;
+   304                           
+   305                           ;incstack = 0
+   306                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   307  0391  30FF               	movlw	255
+   308  0392  1683               	bsf	3,5	;RP0=1, select bank1
+   309  0393  0085               	movwf	5	;volatile
+   310                           
+   311                           ;newmain.c: 18: TRISB = 0x00;
+   312  0394  0186               	clrf	6	;volatile
+   313                           
+   314                           ;newmain.c: 19: PORTB = 0x00;
+   315  0395  1283               	bcf	3,5	;RP0=0, select bank0
+   316  0396  0186               	clrf	6	;volatile
+   317                           
+   318                           ;newmain.c: 20: LCDInit();
+   319  0397  230D               	fcall	_LCDInit
+   320                           
+   321                           ;newmain.c: 21: uint8_t univercity[] = {"BSUIR"};
+   322  0398  3029               	movlw	main@univercity& (0+255)
+   323  0399  0084               	movwf	4
+   324  039A  1283               	bcf	3,5	;RP0=0, select bank0
+   325  039B  083D               	movf	main@F449,w
+   326  039C  1383               	bcf	3,7	;select IRP bank0
+   327  039D  0080               	movwf	0
+   328  039E  0A84               	incf	4,f
+   329  039F  083E               	movf	main@F449+1,w
+   330  03A0  0080               	movwf	0
+   331  03A1  0A84               	incf	4,f
+   332  03A2  083F               	movf	main@F449+2,w
+   333  03A3  0080               	movwf	0
+   334  03A4  0A84               	incf	4,f
+   335  03A5  0840               	movf	main@F449+3,w
+   336  03A6  0080               	movwf	0
+   337  03A7  0A84               	incf	4,f
+   338  03A8  0841               	movf	main@F449+4,w
+   339  03A9  0080               	movwf	0
+   340  03AA  0A84               	incf	4,f
+   341  03AB  0842               	movf	main@F449+5,w
+   342  03AC  0080               	movwf	0
+   343                           
+   344                           ;newmain.c: 22: uint8_t lastname[] = {"Alex Mikhalin"};
+   345  03AD  301B               	movlw	main@lastname& (0+255)
+   346  03AE  0084               	movwf	4
+   347  03AF  302F               	movlw	low main@F451
+   348  03B0  0097               	movwf	??_main
+   349  03B1  0804               	movf	4,w
+   350  03B2  0098               	movwf	??_main+1
+   351  03B3  300E               	movlw	14
+   352  03B4  0099               	movwf	??_main+2
+   353  03B5                     u70:	
+   354  03B5  0817               	movf	??_main,w
+   355  03B6  0084               	movwf	4
+   356  03B7  1383               	bcf	3,7	;select IRP bank0
+   357  03B8  0800               	movf	0,w
+   358  03B9  009A               	movwf	??_main+3
+   359  03BA  0A97               	incf	??_main,f
+   360  03BB  0818               	movf	??_main+1,w
+   361  03BC  0084               	movwf	4
+   362  03BD  081A               	movf	??_main+3,w
+   363  03BE  0080               	movwf	0
+   364  03BF  0A98               	incf	??_main+1,f
+   365  03C0  0B99               	decfsz	??_main+2,f
+   366  03C1  2BB5               	goto	u70
+   367                           
+   368                           ;newmain.c: 23: LCDPutString(univercity,1,7);
+   369  03C2  0191               	clrf	LCDPutString@row
+   370  03C3  0A91               	incf	LCDPutString@row,f
+   371  03C4  3007               	movlw	7
+   372  03C5  0097               	movwf	??_main
+   373  03C6  0817               	movf	??_main,w
+   374  03C7  0092               	movwf	LCDPutString@column
+   375  03C8  3029               	movlw	(low (main@univercity| 0))& (0+255)
+   376  03C9  236A               	fcall	_LCDPutString
+   377                           
+   378                           ;newmain.c: 24: LCDPutString(lastname,2,3);
+   379  03CA  3002               	movlw	2
+   380  03CB  1283               	bcf	3,5	;RP0=0, select bank0
+   381  03CC  0097               	movwf	??_main
+   382  03CD  0817               	movf	??_main,w
+   383  03CE  0091               	movwf	LCDPutString@row
+   384  03CF  3003               	movlw	3
+   385  03D0  0098               	movwf	??_main+1
+   386  03D1  0818               	movf	??_main+1,w
+   387  03D2  0092               	movwf	LCDPutString@column
+   388  03D3  301B               	movlw	(low (main@lastname| 0))& (0+255)
+   389  03D4  236A               	fcall	_LCDPutString
+   390  03D5                     l17:	
+   391                           ;newmain.c: 25: while(1)
+   392                           
+   393                           
+   394                           ;newmain.c: 26: {
+   395  03D5  2BD5               	goto	l17
+   396  03D6                     __end_of_main:	
+   397                           
+   398                           	psect	text1
+   399  036A                     __ptext1:	
+   400 ;; *************** function _LCDPutString *****************
+   401 ;; Defined at:
+   402 ;;		line 84 in file "hd44780.c"
+   403 ;; Parameters:    Size  Location     Type
+   404 ;;  ptrdata         1    wreg     PTR unsigned char 
+   405 ;;		 -> main@lastname(14), main@univercity(6), 
+   406 ;;  row             1    5[BANK0 ] unsigned char 
+   407 ;;  column          1    6[BANK0 ] unsigned char 
+   408 ;; Auto vars:     Size  Location     Type
+   409 ;;  ptrdata         1   10[BANK0 ] PTR unsigned char 
+   410 ;;		 -> main@lastname(14), main@univercity(6), 
+   411 ;;  temp            1    9[BANK0 ] unsigned char 
+   412 ;; Return value:  Size  Location     Type
+   413 ;;                  1    wreg      void 
+   414 ;; Registers used:
+   415 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   416 ;; Tracked objects:
+   417 ;;		On entry : 0/0
+   418 ;;		On exit  : 0/0
+   419 ;;		Unchanged: 0/0
+   420 ;; Data sizes:     COMMON   BANK0
+   421 ;;      Params:         0       2
+   422 ;;      Locals:         0       2
+   423 ;;      Temps:          0       2
+   424 ;;      Totals:         0       6
+   425 ;;Total ram usage:        6 bytes
+   426 ;; Hardware stack levels used:    1
+   427 ;; Hardware stack levels required when called:    2
+   428 ;; This function calls:
+   429 ;;		_LCDSendCommand
+   430 ;;		_LCDSendData
+   431 ;; This function is called by:
+   432 ;;		_main
+   433 ;; This function uses a non-reentrant model
+   434 ;;
+   435                           
+   436                           
+   437                           ;psect for function _LCDPutString
+   438  036A                     _LCDPutString:	
+   439                           
+   440                           ;incstack = 0
+   441                           ; Regs used in _LCDPutString: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   442                           ;LCDPutString@ptrdata stored from wreg
+   443  036A  1283               	bcf	3,5	;RP0=0, select bank0
+   444  036B  0096               	movwf	LCDPutString@ptrdata
+   445                           
+   446                           ;hd44780.c: 86: uint8_t temp = (row - 1)*0x40 + column - 1;
+   447  036C  0811               	movf	LCDPutString@row,w
+   448  036D  0093               	movwf	??_LCDPutString
+   449  036E  3006               	movlw	6
+   450  036F                     u55:	
+   451  036F  1003               	clrc
+   452  0370  0D93               	rlf	??_LCDPutString,f
+   453  0371  3EFF               	addlw	-1
+   454  0372  1D03               	skipz
+   455  0373  2B6F               	goto	u55
+   456  0374  0812               	movf	LCDPutString@column,w
+   457  0375  0713               	addwf	??_LCDPutString,w
+   458  0376  3EBF               	addlw	191
+   459  0377  0094               	movwf	??_LCDPutString+1
+   460  0378  0814               	movf	??_LCDPutString+1,w
+   461  0379  0095               	movwf	LCDPutString@temp
+   462                           
+   463                           ;hd44780.c: 87: LCDSendCommand(temp | 0x80);
+   464  037A  0815               	movf	LCDPutString@temp,w
+   465  037B  3880               	iorlw	128
+   466  037C  232E               	fcall	_LCDSendCommand
+   467  037D                     l601:	
+   468                           ;hd44780.c: 88: while (*(ptrdata) != '\0')
+   469                           
+   470  037D  1283               	bcf	3,5	;RP0=0, select bank0
+   471  037E  0816               	movf	LCDPutString@ptrdata,w
+   472  037F  0084               	movwf	4
+   473  0380  1383               	bcf	3,7	;select IRP bank0
+   474  0381  0800               	movf	0,w
+   475  0382  1903               	btfsc	3,2
+   476  0383  0008               	return
+   477                           
+   478                           ;hd44780.c: 89: {
+   479                           ;hd44780.c: 90: LCDSendData(*(ptrdata));
+   480  0384  1283               	bcf	3,5	;RP0=0, select bank0
+   481  0385  0816               	movf	LCDPutString@ptrdata,w
+   482  0386  0084               	movwf	4
+   483  0387  1383               	bcf	3,7	;select IRP bank0
+   484  0388  0800               	movf	0,w
+   485  0389  234B               	fcall	_LCDSendData
+   486                           
+   487                           ;hd44780.c: 91: ptrdata = ptrdata + 1;
+   488  038A  1283               	bcf	3,5	;RP0=0, select bank0
+   489  038B  0816               	movf	LCDPutString@ptrdata,w
+   490  038C  3E01               	addlw	1
+   491  038D  0093               	movwf	??_LCDPutString
+   492  038E  0813               	movf	??_LCDPutString,w
+   493  038F  0096               	movwf	LCDPutString@ptrdata
+   494  0390  2B7D               	goto	l601
+   495  0391                     __end_of_LCDPutString:	
+   496                           
+   497                           	psect	text2
+   498  034B                     __ptext2:	
+   499 ;; *************** function _LCDSendData *****************
+   500 ;; Defined at:
+   501 ;;		line 54 in file "hd44780.c"
+   502 ;; Parameters:    Size  Location     Type
+   503 ;;  data            1    wreg     unsigned char 
+   504 ;; Auto vars:     Size  Location     Type
+   505 ;;  data            1    3[BANK0 ] unsigned char 
+   506 ;;  temp            1    4[BANK0 ] unsigned char 
+   507 ;; Return value:  Size  Location     Type
+   508 ;;                  1    wreg      void 
+   509 ;; Registers used:
+   510 ;;		wreg, status,2, status,0, pclath, cstack
+   511 ;; Tracked objects:
+   512 ;;		On entry : 0/0
+   513 ;;		On exit  : 0/0
+   514 ;;		Unchanged: 0/0
+   515 ;; Data sizes:     COMMON   BANK0
+   516 ;;      Params:         0       0
+   517 ;;      Locals:         0       2
+   518 ;;      Temps:          0       1
+   519 ;;      Totals:         0       3
+   520 ;;Total ram usage:        3 bytes
+   521 ;; Hardware stack levels used:    1
+   522 ;; Hardware stack levels required when called:    1
+   523 ;; This function calls:
+   524 ;;		_SendByte
+   525 ;; This function is called by:
+   526 ;;		_LCDPutString
+   527 ;;		_LCDPutChar
+   528 ;; This function uses a non-reentrant model
+   529 ;;
+   530                           
+   531                           
+   532                           ;psect for function _LCDSendData
+   533  034B                     _LCDSendData:	
+   534                           
+   535                           ;incstack = 0
+   536                           ; Regs used in _LCDSendData: [wreg+status,2+status,0+pclath+cstack]
+   537                           ;LCDSendData@data stored from wreg
+   538  034B  1283               	bcf	3,5	;RP0=0, select bank0
+   539  034C  008F               	movwf	LCDSendData@data
+   540                           
+   541                           ;hd44780.c: 56: uint8_t temp = data & 0xF0;
+   542  034D  080F               	movf	LCDSendData@data,w
+   543  034E  39F0               	andlw	240
+   544  034F  008E               	movwf	??_LCDSendData
+   545  0350  080E               	movf	??_LCDSendData,w
+   546  0351  0090               	movwf	LCDSendData@temp
+   547                           
+   548                           ;hd44780.c: 57: SendByte(temp | 0x03);
+   549  0352  0810               	movf	LCDSendData@temp,w
+   550  0353  3803               	iorlw	3
+   551  0354  2304               	fcall	_SendByte
+   552                           
+   553                           ;hd44780.c: 58: SendByte(temp | 0x01);
+   554  0355  1283               	bcf	3,5	;RP0=0, select bank0
+   555  0356  0810               	movf	LCDSendData@temp,w
+   556  0357  3801               	iorlw	1
+   557  0358  2304               	fcall	_SendByte
+   558                           
+   559                           ;hd44780.c: 59: temp = data & 0x0F;
+   560  0359  1283               	bcf	3,5	;RP0=0, select bank0
+   561  035A  080F               	movf	LCDSendData@data,w
+   562  035B  390F               	andlw	15
+   563  035C  008E               	movwf	??_LCDSendData
+   564  035D  080E               	movf	??_LCDSendData,w
+   565  035E  0090               	movwf	LCDSendData@temp
+   566                           
+   567                           ;hd44780.c: 60: temp <<= 4;
+   568  035F  0E90               	swapf	LCDSendData@temp,f
+   569  0360  30F0               	movlw	240
+   570  0361  0590               	andwf	LCDSendData@temp,f
+   571                           
+   572                           ;hd44780.c: 61: SendByte(temp | 0x03);
+   573  0362  0810               	movf	LCDSendData@temp,w
+   574  0363  3803               	iorlw	3
+   575  0364  2304               	fcall	_SendByte
+   576                           
+   577                           ;hd44780.c: 62: SendByte(temp | 0x01);
+   578  0365  1283               	bcf	3,5	;RP0=0, select bank0
+   579  0366  0810               	movf	LCDSendData@temp,w
+   580  0367  3801               	iorlw	1
+   581  0368  2304               	fcall	_SendByte
+   582  0369  0008               	return
+   583  036A                     __end_of_LCDSendData:	
+   584                           
+   585                           	psect	text3
+   586  030D                     __ptext3:	
+   587 ;; *************** function _LCDInit *****************
+   588 ;; Defined at:
+   589 ;;		line 65 in file "hd44780.c"
+   590 ;; Parameters:    Size  Location     Type
+   591 ;;		None
+   592 ;; Auto vars:     Size  Location     Type
+   593 ;;		None
+   594 ;; Return value:  Size  Location     Type
+   595 ;;                  1    wreg      void 
+   596 ;; Registers used:
+   597 ;;		wreg, status,2, status,0, pclath, cstack
+   598 ;; Tracked objects:
+   599 ;;		On entry : 0/0
+   600 ;;		On exit  : 0/0
+   601 ;;		Unchanged: 0/0
+   602 ;; Data sizes:     COMMON   BANK0
+   603 ;;      Params:         0       0
+   604 ;;      Locals:         0       0
+   605 ;;      Temps:          0       0
+   606 ;;      Totals:         0       0
+   607 ;;Total ram usage:        0 bytes
+   608 ;; Hardware stack levels used:    1
+   609 ;; Hardware stack levels required when called:    2
+   610 ;; This function calls:
+   611 ;;		_LCDSendCommand
+   612 ;;		_SendByte
+   613 ;; This function is called by:
+   614 ;;		_main
+   615 ;; This function uses a non-reentrant model
+   616 ;;
+   617                           
+   618                           
+   619                           ;psect for function _LCDInit
+   620  030D                     _LCDInit:	
+   621                           
+   622                           ;hd44780.c: 67: SendByte(0x22);
+   623                           
+   624                           ;incstack = 0
+   625                           ; Regs used in _LCDInit: [wreg+status,2+status,0+pclath+cstack]
+   626  030D  3022               	movlw	34
+   627  030E  2304               	fcall	_SendByte
+   628                           
+   629                           ;hd44780.c: 68: SendByte(0x20);
+   630  030F  3020               	movlw	32
+   631  0310  2304               	fcall	_SendByte
+   632                           
+   633                           ;hd44780.c: 70: LCDSendCommand(0x28);
+   634  0311  3028               	movlw	40
+   635  0312  232E               	fcall	_LCDSendCommand
+   636                           
+   637                           ;hd44780.c: 71: LCDSendCommand(0x0C);
+   638  0313  300C               	movlw	12
+   639  0314  232E               	fcall	_LCDSendCommand
+   640                           
+   641                           ;hd44780.c: 72: LCDSendCommand(0x01);
+   642  0315  3001               	movlw	1
+   643  0316  232E               	fcall	_LCDSendCommand
+   644                           
+   645                           ;hd44780.c: 73: LCDSendCommand(0x06);
+   646  0317  3006               	movlw	6
+   647  0318  232E               	fcall	_LCDSendCommand
+   648  0319  0008               	return
+   649  031A                     __end_of_LCDInit:	
+   650                           
+   651                           	psect	text4
+   652  032E                     __ptext4:	
+   653 ;; *************** function _LCDSendCommand *****************
+   654 ;; Defined at:
+   655 ;;		line 43 in file "hd44780.c"
+   656 ;; Parameters:    Size  Location     Type
+   657 ;;  command         1    wreg     unsigned char 
+   658 ;; Auto vars:     Size  Location     Type
+   659 ;;  command         1    3[BANK0 ] unsigned char 
+   660 ;;  temp            1    4[BANK0 ] unsigned char 
+   661 ;; Return value:  Size  Location     Type
+   662 ;;                  1    wreg      void 
+   663 ;; Registers used:
+   664 ;;		wreg, status,2, status,0, pclath, cstack
+   665 ;; Tracked objects:
+   666 ;;		On entry : 0/0
+   667 ;;		On exit  : 0/0
+   668 ;;		Unchanged: 0/0
+   669 ;; Data sizes:     COMMON   BANK0
+   670 ;;      Params:         0       0
+   671 ;;      Locals:         0       2
+   672 ;;      Temps:          0       1
+   673 ;;      Totals:         0       3
+   674 ;;Total ram usage:        3 bytes
+   675 ;; Hardware stack levels used:    1
+   676 ;; Hardware stack levels required when called:    1
+   677 ;; This function calls:
+   678 ;;		_SendByte
+   679 ;; This function is called by:
+   680 ;;		_LCDInit
+   681 ;;		_LCDPutString
+   682 ;;		_LCDPutChar
+   683 ;; This function uses a non-reentrant model
+   684 ;;
+   685                           
+   686                           
+   687                           ;psect for function _LCDSendCommand
+   688  032E                     _LCDSendCommand:	
+   689                           
+   690                           ;incstack = 0
+   691                           ; Regs used in _LCDSendCommand: [wreg+status,2+status,0+pclath+cstack]
+   692                           ;LCDSendCommand@command stored from wreg
+   693  032E  1283               	bcf	3,5	;RP0=0, select bank0
+   694  032F  008F               	movwf	LCDSendCommand@command
+   695                           
+   696                           ;hd44780.c: 45: uint8_t temp = command & 0xF0;
+   697  0330  080F               	movf	LCDSendCommand@command,w
+   698  0331  39F0               	andlw	240
+   699  0332  008E               	movwf	??_LCDSendCommand
+   700  0333  080E               	movf	??_LCDSendCommand,w
+   701  0334  0090               	movwf	LCDSendCommand@temp
+   702                           
+   703                           ;hd44780.c: 46: SendByte(temp | 0x02);
+   704  0335  0810               	movf	LCDSendCommand@temp,w
+   705  0336  3802               	iorlw	2
+   706  0337  2304               	fcall	_SendByte
+   707                           
+   708                           ;hd44780.c: 47: SendByte(temp);
+   709  0338  1283               	bcf	3,5	;RP0=0, select bank0
+   710  0339  0810               	movf	LCDSendCommand@temp,w
+   711  033A  2304               	fcall	_SendByte
+   712                           
+   713                           ;hd44780.c: 48: temp = command & 0x0F;
+   714  033B  1283               	bcf	3,5	;RP0=0, select bank0
+   715  033C  080F               	movf	LCDSendCommand@command,w
+   716  033D  390F               	andlw	15
+   717  033E  008E               	movwf	??_LCDSendCommand
+   718  033F  080E               	movf	??_LCDSendCommand,w
+   719  0340  0090               	movwf	LCDSendCommand@temp
+   720                           
+   721                           ;hd44780.c: 49: temp <<= 4;
+   722  0341  0E90               	swapf	LCDSendCommand@temp,f
+   723  0342  30F0               	movlw	240
+   724  0343  0590               	andwf	LCDSendCommand@temp,f
+   725                           
+   726                           ;hd44780.c: 50: SendByte(temp | 0x02);
+   727  0344  0810               	movf	LCDSendCommand@temp,w
+   728  0345  3802               	iorlw	2
+   729  0346  2304               	fcall	_SendByte
+   730                           
+   731                           ;hd44780.c: 51: SendByte(temp);
+   732  0347  1283               	bcf	3,5	;RP0=0, select bank0
+   733  0348  0810               	movf	LCDSendCommand@temp,w
+   734  0349  2304               	fcall	_SendByte
+   735  034A  0008               	return
+   736  034B                     __end_of_LCDSendCommand:	
+   737                           
+   738                           	psect	text5
+   739  0304                     __ptext5:	
+   740 ;; *************** function _SendByte *****************
+   741 ;; Defined at:
+   742 ;;		line 37 in file "hd44780.c"
+   743 ;; Parameters:    Size  Location     Type
+   744 ;;  data            1    wreg     unsigned char 
+   745 ;; Auto vars:     Size  Location     Type
+   746 ;;  data            1    1[BANK0 ] unsigned char 
+   747 ;; Return value:  Size  Location     Type
+   748 ;;                  1    wreg      void 
+   749 ;; Registers used:
+   750 ;;		wreg
+   751 ;; Tracked objects:
+   752 ;;		On entry : 0/0
+   753 ;;		On exit  : 0/0
+   754 ;;		Unchanged: 0/0
+   755 ;; Data sizes:     COMMON   BANK0
+   756 ;;      Params:         0       0
+   757 ;;      Locals:         0       1
+   758 ;;      Temps:          0       1
+   759 ;;      Totals:         0       2
+   760 ;;Total ram usage:        2 bytes
+   761 ;; Hardware stack levels used:    1
+   762 ;; This function calls:
+   763 ;;		Nothing
+   764 ;; This function is called by:
+   765 ;;		_LCDSendCommand
+   766 ;;		_LCDSendData
+   767 ;;		_LCDInit
+   768 ;; This function uses a non-reentrant model
+   769 ;;
+   770                           
+   771                           
+   772                           ;psect for function _SendByte
+   773  0304                     _SendByte:	
+   774                           
+   775                           ;incstack = 0
+   776                           ; Regs used in _SendByte: [wreg]
+   777                           ;SendByte@data stored from wreg
+   778  0304  1283               	bcf	3,5	;RP0=0, select bank0
+   779  0305  008D               	movwf	SendByte@data
+   780                           
+   781                           ;hd44780.c: 39: PORTB = data;
+   782  0306  080D               	movf	SendByte@data,w
+   783  0307  0086               	movwf	6	;volatile
+   784                           
+   785                           ;hd44780.c: 40: _delay((unsigned long)((1)*(1000000/4000.0)));
+   786  0308  3053               	movlw	83
+   787  0309  008C               	movwf	??_SendByte
+   788  030A                     u97:	
+   789  030A  0B8C               	decfsz	??_SendByte,f
+   790  030B  2B0A               	goto	u97
+   791  030C  0008               	return
+   792  030D                     __end_of_SendByte:	
+   793  004E                     btemp	set	78	;btemp
+   794  004E                     wtemp0	set	78
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        20
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66     35      55
+
+Pointer List with Targets:
+
+    LCDPutString@ptrdata	PTR unsigned char  size(1) Largest target is 14
+		 -> main@lastname(BANK0[14]), main@univercity(BANK0[6]), 
+
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_LCDPutString
+    _LCDPutString->_LCDSendCommand
+    _LCDPutString->_LCDSendData
+    _LCDSendData->_SendByte
+    _LCDInit->_LCDSendCommand
+    _LCDSendCommand->_SendByte
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                24    24      0     943
+                                             11 BANK0     24    24      0
+                            _LCDInit
+                       _LCDPutString
+ ---------------------------------------------------------------------------------
+ (1) _LCDPutString                                         6     4      2     714
+                                              5 BANK0      6     4      2
+                     _LCDSendCommand
+                        _LCDSendData
+ ---------------------------------------------------------------------------------
+ (2) _LCDSendData                                          3     3      0     157
+                                              2 BANK0      3     3      0
+                           _SendByte
+ ---------------------------------------------------------------------------------
+ (1) _LCDInit                                              0     0      0     179
+                     _LCDSendCommand
+                           _SendByte
+ ---------------------------------------------------------------------------------
+ (2) _LCDSendCommand                                       3     3      0     157
+                                              2 BANK0      3     3      0
+                           _SendByte
+ ---------------------------------------------------------------------------------
+ (3) _SendByte                                             2     2      0      22
+                                              0 BANK0      2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _LCDInit
+     _LCDSendCommand
+       _SendByte
+     _SendByte
+   _LCDPutString
+     _LCDSendCommand
+       _SendByte
+     _LCDSendData
+       _SendByte
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               42     23      37       3       83.3%
+BITBANK0            42      0       0       5        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITCOMMON            0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      37       6        0.0%
+ABS                  0      0      37       4        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA              40      0       0       0        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.41 build -162212810 
+Symbol Table                                                                                   Fri Feb 10 13:49:15 2017
+
+                     l17 03D5                       u70 03B5                       u55 036F  
+                     u97 030A             ?_LCDSendData 000C                      l601 037D  
+                    fsr0 0004                      indf 0000         LCDPutString@temp 0015  
+        __end_of_LCDInit 031A   __end_of_LCDSendCommand 034B                     _main 0391  
+                   btemp 004E            ?_LCDPutString 0011                     start 0000  
+                  ?_main 000C                    _PORTB 0006                    _TRISA 0085  
+                  _TRISB 0086             main@lastname 001B          ?_LCDSendCommand 000C  
+     LCDSendCommand@temp 0010                    status 0003                    wtemp0 004E  
+         ??_LCDPutString 0013          __initialization 03D6             __end_of_main 03D6  
+     LCDPutString@column 0012                   ??_main 0017         __end_of_SendByte 030D  
+              ??_LCDInit 0000     __size_of_LCDSendData 001F  __end_of__initialization 03FE  
+         __pcstackCOMMON 0000             __pidataBANK0 031A     __end_of_LCDPutString 0391  
+    LCDPutString@ptrdata 0016                ?_SendByte 000C               __pmaintext 0391  
+                _LCDInit 030D         ??_LCDSendCommand 000E               ??_SendByte 000C  
+                __ptext1 036A                  __ptext2 034B                  __ptext3 030D  
+                __ptext4 032E                  __ptext5 0304     end_of_initialization 03FE  
+  __size_of_LCDPutString 0027           main@univercity 0029             SendByte@data 000D  
+        LCDPutString@row 0011             _LCDPutString 036A            ??_LCDSendData 000E  
+    start_initialization 03D6        __size_of_SendByte 0009              __pdataBANK0 002F  
+               ?_LCDInit 000C      __end_of_LCDSendData 036A                ___latbits 0000  
+          __pcstackBANK0 000C              _LCDSendData 034B         __size_of_LCDInit 000D  
+__size_of_LCDSendCommand 001D                 _SendByte 0304            __size_of_main 0045  
+               main@F451 002F                 main@F449 003D    LCDSendCommand@command 000F  
+        LCDSendData@data 000F          LCDSendData@temp 0010           _LCDSendCommand 032E  

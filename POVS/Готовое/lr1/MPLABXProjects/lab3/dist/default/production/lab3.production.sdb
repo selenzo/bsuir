@@ -1,0 +1,134 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F84A ]
+[d frameptr 6 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"47 C:\Users\axisg\Desktop\savenko\MPLABXProjects\lab3\newmain.c
+[v _DisplayDigit DisplayDigit `(v  1 e 1 0 ]
+"108
+[v _isr isr `II(v  1 e 1 0 ]
+"116
+[v _DisplayHours DisplayHours `(v  1 e 1 0 ]
+"122
+[v _DisplayMins DisplayMins `(v  1 e 1 0 ]
+"128
+[v _DisplaySec DisplaySec `(v  1 e 1 0 ]
+"134
+[v _main main `(v  1 e 1 0 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f84a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"160
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"203
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"441
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"484
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"608
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"618
+[v _PS0 PS0 `VEb  1 e 0 @1032 ]
+"620
+[v _PS1 PS1 `VEb  1 e 0 @1033 ]
+"622
+[v _PS2 PS2 `VEb  1 e 0 @1034 ]
+"624
+[v _PSA PSA `VEb  1 e 0 @1035 ]
+"662
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"664
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"666
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"668
+[v _T0SE T0SE `VEb  1 e 0 @1036 ]
+"106 C:\Users\axisg\Desktop\savenko\MPLABXProjects\lab3\newmain.c
+[v _sub_seconds sub_seconds `VEui  1 e 2 0 ]
+"134
+[v _main main `(v  1 e 1 0 ]
+{
+"150
+[v main@sec sec `uc  1 a 1 23 ]
+[v main@min min `uc  1 a 1 22 ]
+[v main@hours hours `uc  1 a 1 21 ]
+"177
+} 0
+"128
+[v _DisplaySec DisplaySec `(v  1 e 1 0 ]
+{
+[v DisplaySec@data data `uc  1 a 1 wreg ]
+[v DisplaySec@data data `uc  1 a 1 wreg ]
+"130
+[v DisplaySec@data data `uc  1 a 1 18 ]
+"132
+} 0
+"122
+[v _DisplayMins DisplayMins `(v  1 e 1 0 ]
+{
+[v DisplayMins@data data `uc  1 a 1 wreg ]
+[v DisplayMins@data data `uc  1 a 1 wreg ]
+"124
+[v DisplayMins@data data `uc  1 a 1 19 ]
+"126
+} 0
+"116
+[v _DisplayHours DisplayHours `(v  1 e 1 0 ]
+{
+[v DisplayHours@data data `uc  1 a 1 wreg ]
+[v DisplayHours@data data `uc  1 a 1 wreg ]
+"118
+[v DisplayHours@data data `uc  1 a 1 19 ]
+"120
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 10 ]
+[v ___awmod@counter counter `uc  1 a 1 9 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 4 ]
+[v ___awmod@dividend dividend `i  1 p 2 6 ]
+"35
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 11 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 10 ]
+[v ___awdiv@counter counter `uc  1 a 1 9 ]
+"6
+[v ___awdiv@divisor divisor `i  1 p 2 4 ]
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
+"42
+} 0
+"47 C:\Users\axisg\Desktop\savenko\MPLABXProjects\lab3\newmain.c
+[v _DisplayDigit DisplayDigit `(v  1 e 1 0 ]
+{
+[v DisplayDigit@data data `uc  1 a 1 wreg ]
+[v DisplayDigit@data data `uc  1 a 1 wreg ]
+[v DisplayDigit@position position `uc  1 p 1 13 ]
+"50
+[v DisplayDigit@data data `uc  1 a 1 15 ]
+"104
+} 0
+"108
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"114
+} 0

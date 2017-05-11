@@ -1,0 +1,53 @@
+
+
+Microchip Technology PIC Macro Assembler V1.41 build -162212810 
+                                                                                                           Thu Mar 30 18:10:51 2017
+
+
+     1                           	processor	16F84A
+     2                           	opt	pw 132
+     3                           	psect	bssASM,global,class=BANK1,space=1,delta=1
+     4                           
+     5                           ;------------------------------------------------------
+     6                           ; ???????
+     7                           ; ???????????? ?????? #1
+     8                           ;------------------------------------------------------
+     9                           ; ????????? ??????? ???????????? ??????? ? ???????? ??????? ?????
+    10                           ;------------------------------------------------------
+    11  0089                     
+    12                           	psect	bssASM
+    13                           
+    14                           ; ORG 110h
+    15                           ; lookup:
+    16                           ; DS 20h
+    17  0030                     c_adr	set	48	; ?????? ???????
+    18  002F                     	; ??????? ??????? ? ???????
+    19  002E                     	; ???????????? ??????? ? ???????
+    20  000A                     c_num	set	10	; ?????? ???????
+    21  0000                     BEGIN:	
+    22                           ; ???????????? ????????? ? ?????? ??????:
+    23                           ; ????? : ??????
+    24                           ; 0x2E : v_ptr
+    25                           ; 0x2F : v_max
+    26                           ; 0x30 : array[0]
+    27                           ; 0x31 : array[1]
+    28                           ; 0x32 : array[2]
+    29                           ; ...................
+    30                           ; 0x39 : array[9]
+    31                           
+    32  0000  1283               	bcf	3,5	; ????? Bank0 ? ?????? ??????
+    33  0001  01AF               	clrf	47	; v_ptr=0
+    34  0002  01AE               	clrf	46	; v_max=0
+    35  0003                     LOOP1:	
+    36  0003  08AF               	movf	47,f	; W=v_ptr ????????
+    37  0004  3E30               	addlw	48	; W=W+c_addr
+    38  0005  0084               	movwf	4	; FSR=W, INDF=array[W]
+    39  0006  0880               	movf	0,f	; W=INDF ????????????????????
+    40  0007  02AE               	subwf	46,f	; W=W-v_max
+
+
+Microchip Technology PIC Macro Assembler V1.41 build -162212810 
+Symbol Table                                                                                               Thu Mar 30 18:10:51 2017
+
+                       FSR 0004                        INDF 0000                       BEGIN 0000                       LOOP1 0003  
+                     c_adr 0030                       v_max 002E                       v_ptr 002F                      STATUS 0003  

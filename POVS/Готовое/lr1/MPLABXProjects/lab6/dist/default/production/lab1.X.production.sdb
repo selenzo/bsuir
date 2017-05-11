@@ -1,0 +1,95 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F84A ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"28 C:\Users\Art\MPLABXProjects\lab1.X\newmain.c
+[v _DisplayDigit DisplayDigit `(v  1 e 1 0 ]
+"78
+[v _DisplayData DisplayData `(v  1 e 1 0 ]
+"90
+[v _main main `(v  1 e 1 0 ]
+"55 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f84a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"160
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"203
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"441
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"484
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"618
+[v _PS0 PS0 `VEb  1 e 0 @1032 ]
+"620
+[v _PS1 PS1 `VEb  1 e 0 @1033 ]
+"622
+[v _PS2 PS2 `VEb  1 e 0 @1034 ]
+"624
+[v _PSA PSA `VEb  1 e 0 @1035 ]
+"662
+[v _T0CS T0CS `VEb  1 e 0 @1037 ]
+"666
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"668
+[v _T0SE T0SE `VEb  1 e 0 @1036 ]
+"90 C:\Users\Art\MPLABXProjects\lab1.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"106
+[v main@seconds seconds `uc  1 a 1 24 ]
+"105
+[v main@measure_enabled measure_enabled `uc  1 a 1 23 ]
+"106
+[v main@sub_seconds sub_seconds `uc  1 a 1 22 ]
+"118
+} 0
+"78
+[v _DisplayData DisplayData `(v  1 e 1 0 ]
+{
+[v DisplayData@data data `ui  1 p 2 16 ]
+"88
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
+"31
+} 0
+"28 C:\Users\Art\MPLABXProjects\lab1.X\newmain.c
+[v _DisplayDigit DisplayDigit `(v  1 e 1 0 ]
+{
+[v DisplayDigit@data data `uc  1 a 1 wreg ]
+[v DisplayDigit@data data `uc  1 a 1 wreg ]
+[v DisplayDigit@position position `uc  1 p 1 14 ]
+[v DisplayDigit@data data `uc  1 a 1 15 ]
+"76
+} 0

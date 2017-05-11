@@ -1,0 +1,1355 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
+                                                                                               Wed Oct 26 06:24:26 2016
+
+Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
+     1                           	processor	16F84A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	swtext1,local,class=CONST,delta=2
+    10                           	psect	text2,local,class=CODE,merge=1,delta=2
+    11                           	dabs	1,0x4E,2
+    12  0000                     	;# 
+    13  0001                     	;# 
+    14  0002                     	;# 
+    15  0003                     	;# 
+    16  0004                     	;# 
+    17  0005                     	;# 
+    18  0006                     	;# 
+    19  0008                     	;# 
+    20  0009                     	;# 
+    21  000A                     	;# 
+    22  000B                     	;# 
+    23  0081                     	;# 
+    24  0085                     	;# 
+    25  0086                     	;# 
+    26  0088                     	;# 
+    27  0089                     	;# 
+    28  0005                     _PORTA	set	5
+    29  0006                     _PORTB	set	6
+    30  0085                     _TRISA	set	133
+    31  0086                     _TRISB	set	134
+    32                           
+    33                           	psect	cinit
+    34  03FE                     start_initialization:	
+    35                           ; #config settings
+    36                           
+    37  03FE                     __initialization:	
+    38  03FE                     end_of_initialization:	
+    39                           ;End of C runtime variable initialization code
+    40                           
+    41  03FE                     __end_of__initialization:	
+    42  03FE  0183               	clrf	3
+    43  03FF  29F3               	ljmp	_main	;jump to C main() function
+    44                           
+    45                           	psect	cstackCOMMON
+    46  0000                     __pcstackCOMMON:	
+    47  0000                     ??_main:	
+    48                           
+    49                           	psect	cstackBANK0
+    50  000C                     __pcstackBANK0:	
+    51                           ; 1 bytes @ 0x0
+    52                           
+    53  000C                     ?_Play:	
+    54  000C                     ??_Play:	
+    55                           ; 1 bytes @ 0x0
+    56                           
+    57  000C                     ?_CaptureKey:	
+    58                           ; 1 bytes @ 0x0
+    59                           
+    60  000C                     ??_CaptureKey:	
+    61                           ; 1 bytes @ 0x0
+    62                           
+    63  000C                     ?_main:	
+    64                           ; 1 bytes @ 0x0
+    65                           
+    66                           
+    67                           ; 1 bytes @ 0x0
+    68  000C                     	ds	1
+    69  000D                     Play@data:	
+    70                           
+    71                           ; 1 bytes @ 0x1
+    72  000D                     	ds	1
+    73  000E                     Play@i:	
+    74                           
+    75                           ; 2 bytes @ 0x2
+    76  000E                     	ds	2
+    77  0010                     Play@i_32:	
+    78                           
+    79                           ; 2 bytes @ 0x4
+    80  0010                     	ds	2
+    81  0012                     Play@i_33:	
+    82                           
+    83                           ; 2 bytes @ 0x6
+    84  0012                     	ds	2
+    85  0014                     Play@i_34:	
+    86                           
+    87                           ; 2 bytes @ 0x8
+    88  0014                     	ds	2
+    89  0016                     Play@i_35:	
+    90                           
+    91                           ; 2 bytes @ 0xA
+    92  0016                     	ds	2
+    93  0018                     Play@i_36:	
+    94                           
+    95                           ; 2 bytes @ 0xC
+    96  0018                     	ds	2
+    97  001A                     Play@i_37:	
+    98                           
+    99                           ; 2 bytes @ 0xE
+   100  001A                     	ds	2
+   101  001C                     Play@i_38:	
+   102                           
+   103                           ; 2 bytes @ 0x10
+   104  001C                     	ds	2
+   105  001E                     Play@i_39:	
+   106                           
+   107                           ; 2 bytes @ 0x12
+   108  001E                     	ds	2
+   109  0020                     Play@i_40:	
+   110                           
+   111                           ; 2 bytes @ 0x14
+   112  0020                     	ds	2
+   113  0022                     Play@i_41:	
+   114                           
+   115                           ; 2 bytes @ 0x16
+   116  0022                     	ds	2
+   117  0024                     Play@i_42:	
+   118                           
+   119                           ; 2 bytes @ 0x18
+   120  0024                     	ds	2
+   121                           
+   122                           	psect	maintext
+   123  01F3                     __pmaintext:	
+   124 ;;
+   125 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   126 ;;
+   127 ;; *************** function _main *****************
+   128 ;; Defined at:
+   129 ;;		line 157 in file "newmain.c"
+   130 ;; Parameters:    Size  Location     Type
+   131 ;;		None
+   132 ;; Auto vars:     Size  Location     Type
+   133 ;;		None
+   134 ;; Return value:  Size  Location     Type
+   135 ;;                  1    wreg      void 
+   136 ;; Registers used:
+   137 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   138 ;; Tracked objects:
+   139 ;;		On entry : B00/0
+   140 ;;		On exit  : 0/0
+   141 ;;		Unchanged: 0/0
+   142 ;; Data sizes:     COMMON   BANK0
+   143 ;;      Params:         0       0
+   144 ;;      Locals:         0       0
+   145 ;;      Temps:          0       0
+   146 ;;      Totals:         0       0
+   147 ;;Total ram usage:        0 bytes
+   148 ;; Hardware stack levels required when called:    1
+   149 ;; This function calls:
+   150 ;;		_CaptureKey
+   151 ;;		_Play
+   152 ;; This function is called by:
+   153 ;;		Startup code after reset
+   154 ;; This function uses a non-reentrant model
+   155 ;;
+   156                           
+   157                           
+   158                           ;psect for function _main
+   159  01F3                     _main:	
+   160                           
+   161                           ;newmain.c: 159: TRISA = 0xE0;
+   162                           
+   163                           ;incstack = 0
+   164                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   165  01F3  30E0               	movlw	224
+   166  01F4  1683               	bsf	3,5	;RP0=1, select bank1
+   167  01F5  0085               	movwf	5	;volatile
+   168                           
+   169                           ;newmain.c: 160: TRISB = 0xF8;
+   170  01F6  30F8               	movlw	248
+   171  01F7  0086               	movwf	6	;volatile
+   172                           
+   173                           ;newmain.c: 161: PORTA = 0x00;
+   174  01F8  1283               	bcf	3,5	;RP0=0, select bank0
+   175  01F9  0185               	clrf	5	;volatile
+   176                           
+   177                           ;newmain.c: 162: PORTB = 0x07;
+   178  01FA  3007               	movlw	7
+   179  01FB  0086               	movwf	6	;volatile
+   180  01FC                     l1257:	
+   181                           ;newmain.c: 164: while(1)
+   182                           
+   183                           
+   184                           ;newmain.c: 165: {
+   185                           ;newmain.c: 166: Play(CaptureKey());
+   186  01FC  21FF               	fcall	_CaptureKey
+   187  01FD  2268               	fcall	_Play
+   188  01FE  29FC               	goto	l1257
+   189  01FF                     __end_of_main:	
+   190                           
+   191                           	psect	text1
+   192  0268                     __ptext1:	
+   193 ;; *************** function _Play *****************
+   194 ;; Defined at:
+   195 ;;		line 15 in file "newmain.c"
+   196 ;; Parameters:    Size  Location     Type
+   197 ;;  data            1    wreg     unsigned char 
+   198 ;; Auto vars:     Size  Location     Type
+   199 ;;  data            1    1[BANK0 ] unsigned char 
+   200 ;;  i               2   24[BANK0 ] unsigned int 
+   201 ;;  i               2   22[BANK0 ] unsigned int 
+   202 ;;  i               2   20[BANK0 ] unsigned int 
+   203 ;;  i               2   18[BANK0 ] unsigned int 
+   204 ;;  i               2   16[BANK0 ] unsigned int 
+   205 ;;  i               2   14[BANK0 ] unsigned int 
+   206 ;;  i               2   12[BANK0 ] unsigned int 
+   207 ;;  i               2   10[BANK0 ] unsigned int 
+   208 ;;  i               2    8[BANK0 ] unsigned int 
+   209 ;;  i               2    6[BANK0 ] unsigned int 
+   210 ;;  i               2    4[BANK0 ] unsigned int 
+   211 ;;  i               2    2[BANK0 ] unsigned int 
+   212 ;; Return value:  Size  Location     Type
+   213 ;;                  1    wreg      void 
+   214 ;; Registers used:
+   215 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   216 ;; Tracked objects:
+   217 ;;		On entry : 0/0
+   218 ;;		On exit  : 0/0
+   219 ;;		Unchanged: 0/0
+   220 ;; Data sizes:     COMMON   BANK0
+   221 ;;      Params:         0       0
+   222 ;;      Locals:         0      25
+   223 ;;      Temps:          0       1
+   224 ;;      Totals:         0      26
+   225 ;;Total ram usage:       26 bytes
+   226 ;; Hardware stack levels used:    1
+   227 ;; This function calls:
+   228 ;;		Nothing
+   229 ;; This function is called by:
+   230 ;;		_main
+   231 ;; This function uses a non-reentrant model
+   232 ;;
+   233                           
+   234                           
+   235                           ;psect for function _Play
+   236  0268                     _Play:	
+   237                           
+   238                           ;incstack = 0
+   239                           ; Regs used in _Play: [wreg-fsr0h+status,2+status,0]
+   240                           ;Play@data stored from wreg
+   241  0268  1283               	bcf	3,5	;RP0=0, select bank0
+   242  0269  008D               	movwf	Play@data
+   243                           
+   244                           ;newmain.c: 17: switch(data){
+   245  026A  2BEF               	goto	l1155
+   246  026B                     l961:	
+   247                           ;newmain.c: 18: case '1':
+   248                           
+   249                           
+   250                           ;newmain.c: 19: for(uint16_t i = 0; i < 50; i++){
+   251  026B  018E               	clrf	Play@i
+   252  026C  018F               	clrf	Play@i+1
+   253  026D                     L1:	
+   254  026D  3000               	movlw	0
+   255  026E  020F               	subwf	Play@i+1,w
+   256  026F  3032               	movlw	50
+   257  0270  1903               	skipnz
+   258  0271  020E               	subwf	Play@i,w
+   259  0272  1803               	btfsc	3,0
+   260  0273  0008               	return
+   261                           
+   262                           ;newmain.c: 20: PORTA |= 0x01;
+   263  0274  1405               	bsf	5,0	;volatile
+   264                           
+   265                           ;newmain.c: 21: _delay((unsigned long)((1000)*(1000000/4000000.0)));
+   266  0275  3053               	movlw	83
+   267  0276  008C               	movwf	??_Play
+   268  0277                     u497:	
+   269  0277  0B8C               	decfsz	??_Play,f
+   270  0278  2A77               	goto	u497
+   271                           
+   272                           ;newmain.c: 22: PORTA &= ~0x01;
+   273  0279  30FE               	movlw	254
+   274  027A  1283               	bcf	3,5	;RP0=0, select bank0
+   275  027B  008C               	movwf	??_Play
+   276  027C  080C               	movf	??_Play,w
+   277  027D  0585               	andwf	5,f	;volatile
+   278                           
+   279                           ;newmain.c: 23: _delay((unsigned long)((1000)*(1000000/4000000.0)));
+   280  027E  3053               	movlw	83
+   281  027F  008C               	movwf	??_Play
+   282  0280                     u507:	
+   283  0280  0B8C               	decfsz	??_Play,f
+   284  0281  2A80               	goto	u507
+   285  0282  3001               	movlw	1
+   286  0283  1283               	bcf	3,5	;RP0=0, select bank0
+   287  0284  078E               	addwf	Play@i,f
+   288  0285  1803               	skipnc
+   289  0286  0A8F               	incf	Play@i+1,f
+   290  0287  3000               	movlw	0
+   291  0288  078F               	addwf	Play@i+1,f
+   292  0289  2A6D               	goto	L1
+   293  028A                     l977:	
+   294                           ;newmain.c: 26: case '2':
+   295                           
+   296                           ;newmain.c: 24: }
+   297                           ;newmain.c: 25: break;
+   298                           
+   299                           
+   300                           ;newmain.c: 27: for(uint16_t i = 0; i < 50; i++){
+   301  028A  0190               	clrf	Play@i_32
+   302  028B  0191               	clrf	Play@i_32+1
+   303  028C                     L2:	
+   304  028C  3000               	movlw	0
+   305  028D  0211               	subwf	Play@i_32+1,w
+   306  028E  3032               	movlw	50
+   307  028F  1903               	skipnz
+   308  0290  0210               	subwf	Play@i_32,w
+   309  0291  1803               	btfsc	3,0
+   310  0292  0008               	return
+   311                           
+   312                           ;newmain.c: 28: PORTA |= 0x01;
+   313  0293  1405               	bsf	5,0	;volatile
+   314                           
+   315                           ;newmain.c: 29: _delay((unsigned long)((900)*(1000000/4000000.0)));
+   316  0294  304A               	movlw	74
+   317  0295  008C               	movwf	??_Play
+   318  0296                     u517:	
+   319  0296  0B8C               	decfsz	??_Play,f
+   320  0297  2A96               	goto	u517
+   321  0298  2A99               	nop2	;nop
+   322                           
+   323                           ;newmain.c: 30: PORTA &= ~0x01;
+   324  0299  30FE               	movlw	254
+   325  029A  1283               	bcf	3,5	;RP0=0, select bank0
+   326  029B  008C               	movwf	??_Play
+   327  029C  080C               	movf	??_Play,w
+   328  029D  0585               	andwf	5,f	;volatile
+   329                           
+   330                           ;newmain.c: 31: _delay((unsigned long)((900)*(1000000/4000000.0)));
+   331  029E  304A               	movlw	74
+   332  029F  008C               	movwf	??_Play
+   333  02A0                     u527:	
+   334  02A0  0B8C               	decfsz	??_Play,f
+   335  02A1  2AA0               	goto	u527
+   336  02A2  2AA3               	nop2	;nop
+   337  02A3  3001               	movlw	1
+   338  02A4  1283               	bcf	3,5	;RP0=0, select bank0
+   339  02A5  0790               	addwf	Play@i_32,f
+   340  02A6  1803               	skipnc
+   341  02A7  0A91               	incf	Play@i_32+1,f
+   342  02A8  3000               	movlw	0
+   343  02A9  0791               	addwf	Play@i_32+1,f
+   344  02AA  2A8C               	goto	L2
+   345  02AB                     l993:	
+   346                           ;newmain.c: 34: case '3':
+   347                           
+   348                           ;newmain.c: 32: }
+   349                           ;newmain.c: 33: break;
+   350                           
+   351                           
+   352                           ;newmain.c: 35: for(uint16_t i = 0; i < 50; i++){
+   353  02AB  0192               	clrf	Play@i_33
+   354  02AC  0193               	clrf	Play@i_33+1
+   355  02AD                     L3:	
+   356  02AD  3000               	movlw	0
+   357  02AE  0213               	subwf	Play@i_33+1,w
+   358  02AF  3032               	movlw	50
+   359  02B0  1903               	skipnz
+   360  02B1  0212               	subwf	Play@i_33,w
+   361  02B2  1803               	btfsc	3,0
+   362  02B3  0008               	return
+   363                           
+   364                           ;newmain.c: 36: PORTA |= 0x01;
+   365  02B4  1405               	bsf	5,0	;volatile
+   366                           
+   367                           ;newmain.c: 37: _delay((unsigned long)((800)*(1000000/4000000.0)));
+   368  02B5  3042               	movlw	66
+   369  02B6  008C               	movwf	??_Play
+   370  02B7                     u537:	
+   371  02B7  0B8C               	decfsz	??_Play,f
+   372  02B8  2AB7               	goto	u537
+   373  02B9  0000               	nop
+   374                           
+   375                           ;newmain.c: 38: PORTA &= ~0x01;
+   376  02BA  30FE               	movlw	254
+   377  02BB  1283               	bcf	3,5	;RP0=0, select bank0
+   378  02BC  008C               	movwf	??_Play
+   379  02BD  080C               	movf	??_Play,w
+   380  02BE  0585               	andwf	5,f	;volatile
+   381                           
+   382                           ;newmain.c: 39: _delay((unsigned long)((800)*(1000000/4000000.0)));
+   383  02BF  3042               	movlw	66
+   384  02C0  008C               	movwf	??_Play
+   385  02C1                     u547:	
+   386  02C1  0B8C               	decfsz	??_Play,f
+   387  02C2  2AC1               	goto	u547
+   388  02C3  0000               	nop
+   389  02C4  3001               	movlw	1
+   390  02C5  1283               	bcf	3,5	;RP0=0, select bank0
+   391  02C6  0792               	addwf	Play@i_33,f
+   392  02C7  1803               	skipnc
+   393  02C8  0A93               	incf	Play@i_33+1,f
+   394  02C9  3000               	movlw	0
+   395  02CA  0793               	addwf	Play@i_33+1,f
+   396  02CB  2AAD               	goto	L3
+   397  02CC                     l1009:	
+   398                           ;newmain.c: 42: case '4':
+   399                           
+   400                           ;newmain.c: 40: }
+   401                           ;newmain.c: 41: break;
+   402                           
+   403                           
+   404                           ;newmain.c: 43: for(uint16_t i = 0; i < 50; i++){
+   405  02CC  0194               	clrf	Play@i_34
+   406  02CD  0195               	clrf	Play@i_34+1
+   407  02CE                     L4:	
+   408  02CE  3000               	movlw	0
+   409  02CF  0215               	subwf	Play@i_34+1,w
+   410  02D0  3032               	movlw	50
+   411  02D1  1903               	skipnz
+   412  02D2  0214               	subwf	Play@i_34,w
+   413  02D3  1803               	btfsc	3,0
+   414  02D4  0008               	return
+   415                           
+   416                           ;newmain.c: 44: PORTA |= 0x01;
+   417  02D5  1405               	bsf	5,0	;volatile
+   418                           
+   419                           ;newmain.c: 45: _delay((unsigned long)((1000)*(1000000/4000000.0)));
+   420  02D6  3053               	movlw	83
+   421  02D7  008C               	movwf	??_Play
+   422  02D8                     u557:	
+   423  02D8  0B8C               	decfsz	??_Play,f
+   424  02D9  2AD8               	goto	u557
+   425                           
+   426                           ;newmain.c: 46: PORTA &= ~0x01;
+   427  02DA  30FE               	movlw	254
+   428  02DB  1283               	bcf	3,5	;RP0=0, select bank0
+   429  02DC  008C               	movwf	??_Play
+   430  02DD  080C               	movf	??_Play,w
+   431  02DE  0585               	andwf	5,f	;volatile
+   432                           
+   433                           ;newmain.c: 47: _delay((unsigned long)((1000)*(1000000/4000000.0)));
+   434  02DF  3053               	movlw	83
+   435  02E0  008C               	movwf	??_Play
+   436  02E1                     u567:	
+   437  02E1  0B8C               	decfsz	??_Play,f
+   438  02E2  2AE1               	goto	u567
+   439  02E3  3001               	movlw	1
+   440  02E4  1283               	bcf	3,5	;RP0=0, select bank0
+   441  02E5  0794               	addwf	Play@i_34,f
+   442  02E6  1803               	skipnc
+   443  02E7  0A95               	incf	Play@i_34+1,f
+   444  02E8  3000               	movlw	0
+   445  02E9  0795               	addwf	Play@i_34+1,f
+   446  02EA  2ACE               	goto	L4
+   447  02EB                     l1025:	
+   448                           ;newmain.c: 50: case '5':
+   449                           
+   450                           ;newmain.c: 48: }
+   451                           ;newmain.c: 49: break;
+   452                           
+   453                           
+   454                           ;newmain.c: 51: for(uint16_t i = 0; i < 50; i++){
+   455  02EB  0196               	clrf	Play@i_35
+   456  02EC  0197               	clrf	Play@i_35+1
+   457  02ED                     L5:	
+   458  02ED  3000               	movlw	0
+   459  02EE  0217               	subwf	Play@i_35+1,w
+   460  02EF  3032               	movlw	50
+   461  02F0  1903               	skipnz
+   462  02F1  0216               	subwf	Play@i_35,w
+   463  02F2  1803               	btfsc	3,0
+   464  02F3  0008               	return
+   465                           
+   466                           ;newmain.c: 52: PORTA |= 0x01;
+   467  02F4  1405               	bsf	5,0	;volatile
+   468                           
+   469                           ;newmain.c: 53: _delay((unsigned long)((900)*(1000000/4000000.0)));
+   470  02F5  304A               	movlw	74
+   471  02F6  008C               	movwf	??_Play
+   472  02F7                     u577:	
+   473  02F7  0B8C               	decfsz	??_Play,f
+   474  02F8  2AF7               	goto	u577
+   475  02F9  2AFA               	nop2	;nop
+   476                           
+   477                           ;newmain.c: 54: PORTA &= ~0x01;
+   478  02FA  30FE               	movlw	254
+   479  02FB  1283               	bcf	3,5	;RP0=0, select bank0
+   480  02FC  008C               	movwf	??_Play
+   481  02FD  080C               	movf	??_Play,w
+   482  02FE  0585               	andwf	5,f	;volatile
+   483                           
+   484                           ;newmain.c: 55: _delay((unsigned long)((900)*(1000000/4000000.0)));
+   485  02FF  304A               	movlw	74
+   486  0300  008C               	movwf	??_Play
+   487  0301                     u587:	
+   488  0301  0B8C               	decfsz	??_Play,f
+   489  0302  2B01               	goto	u587
+   490  0303  2B04               	nop2	;nop
+   491  0304  3001               	movlw	1
+   492  0305  1283               	bcf	3,5	;RP0=0, select bank0
+   493  0306  0796               	addwf	Play@i_35,f
+   494  0307  1803               	skipnc
+   495  0308  0A97               	incf	Play@i_35+1,f
+   496  0309  3000               	movlw	0
+   497  030A  0797               	addwf	Play@i_35+1,f
+   498  030B  2AED               	goto	L5
+   499  030C                     l1041:	
+   500                           ;newmain.c: 58: case '6':
+   501                           
+   502                           ;newmain.c: 56: }
+   503                           ;newmain.c: 57: break;
+   504                           
+   505                           
+   506                           ;newmain.c: 59: for(uint16_t i = 0; i < 50; i++){
+   507  030C  0198               	clrf	Play@i_36
+   508  030D  0199               	clrf	Play@i_36+1
+   509  030E                     L6:	
+   510  030E  3000               	movlw	0
+   511  030F  0219               	subwf	Play@i_36+1,w
+   512  0310  3032               	movlw	50
+   513  0311  1903               	skipnz
+   514  0312  0218               	subwf	Play@i_36,w
+   515  0313  1803               	btfsc	3,0
+   516  0314  0008               	return
+   517                           
+   518                           ;newmain.c: 60: PORTA |= 0x01;
+   519  0315  1405               	bsf	5,0	;volatile
+   520                           
+   521                           ;newmain.c: 61: _delay((unsigned long)((800)*(1000000/4000000.0)));
+   522  0316  3042               	movlw	66
+   523  0317  008C               	movwf	??_Play
+   524  0318                     u597:	
+   525  0318  0B8C               	decfsz	??_Play,f
+   526  0319  2B18               	goto	u597
+   527  031A  0000               	nop
+   528                           
+   529                           ;newmain.c: 62: PORTA &= ~0x01;
+   530  031B  30FE               	movlw	254
+   531  031C  1283               	bcf	3,5	;RP0=0, select bank0
+   532  031D  008C               	movwf	??_Play
+   533  031E  080C               	movf	??_Play,w
+   534  031F  0585               	andwf	5,f	;volatile
+   535                           
+   536                           ;newmain.c: 63: _delay((unsigned long)((800)*(1000000/4000000.0)));
+   537  0320  3042               	movlw	66
+   538  0321  008C               	movwf	??_Play
+   539  0322                     u607:	
+   540  0322  0B8C               	decfsz	??_Play,f
+   541  0323  2B22               	goto	u607
+   542  0324  0000               	nop
+   543  0325  3001               	movlw	1
+   544  0326  1283               	bcf	3,5	;RP0=0, select bank0
+   545  0327  0798               	addwf	Play@i_36,f
+   546  0328  1803               	skipnc
+   547  0329  0A99               	incf	Play@i_36+1,f
+   548  032A  3000               	movlw	0
+   549  032B  0799               	addwf	Play@i_36+1,f
+   550  032C  2B0E               	goto	L6
+   551  032D                     l1057:	
+   552                           ;newmain.c: 66: case '7':
+   553                           
+   554                           ;newmain.c: 64: }
+   555                           ;newmain.c: 65: break;
+   556                           
+   557                           
+   558                           ;newmain.c: 67: for(uint16_t i = 0; i < 50; i++){
+   559  032D  019A               	clrf	Play@i_37
+   560  032E  019B               	clrf	Play@i_37+1
+   561  032F                     L7:	
+   562  032F  3000               	movlw	0
+   563  0330  021B               	subwf	Play@i_37+1,w
+   564  0331  3032               	movlw	50
+   565  0332  1903               	skipnz
+   566  0333  021A               	subwf	Play@i_37,w
+   567  0334  1803               	btfsc	3,0
+   568  0335  0008               	return
+   569                           
+   570                           ;newmain.c: 68: PORTA |= 0x01;
+   571  0336  1405               	bsf	5,0	;volatile
+   572                           
+   573                           ;newmain.c: 69: _delay((unsigned long)((1000)*(1000000/4000000.0)));
+   574  0337  3053               	movlw	83
+   575  0338  008C               	movwf	??_Play
+   576  0339                     u617:	
+   577  0339  0B8C               	decfsz	??_Play,f
+   578  033A  2B39               	goto	u617
+   579                           
+   580                           ;newmain.c: 70: PORTA &= ~0x01;
+   581  033B  30FE               	movlw	254
+   582  033C  1283               	bcf	3,5	;RP0=0, select bank0
+   583  033D  008C               	movwf	??_Play
+   584  033E  080C               	movf	??_Play,w
+   585  033F  0585               	andwf	5,f	;volatile
+   586                           
+   587                           ;newmain.c: 71: _delay((unsigned long)((1000)*(1000000/4000000.0)));
+   588  0340  3053               	movlw	83
+   589  0341  008C               	movwf	??_Play
+   590  0342                     u627:	
+   591  0342  0B8C               	decfsz	??_Play,f
+   592  0343  2B42               	goto	u627
+   593  0344  3001               	movlw	1
+   594  0345  1283               	bcf	3,5	;RP0=0, select bank0
+   595  0346  079A               	addwf	Play@i_37,f
+   596  0347  1803               	skipnc
+   597  0348  0A9B               	incf	Play@i_37+1,f
+   598  0349  3000               	movlw	0
+   599  034A  079B               	addwf	Play@i_37+1,f
+   600  034B  2B2F               	goto	L7
+   601  034C                     l1073:	
+   602                           ;newmain.c: 74: case '8':
+   603                           
+   604                           ;newmain.c: 72: }
+   605                           ;newmain.c: 73: break;
+   606                           
+   607                           
+   608                           ;newmain.c: 75: for(uint16_t i = 0; i < 50; i++){
+   609  034C  019C               	clrf	Play@i_38
+   610  034D  019D               	clrf	Play@i_38+1
+   611  034E                     L8:	
+   612  034E  3000               	movlw	0
+   613  034F  021D               	subwf	Play@i_38+1,w
+   614  0350  3032               	movlw	50
+   615  0351  1903               	skipnz
+   616  0352  021C               	subwf	Play@i_38,w
+   617  0353  1803               	btfsc	3,0
+   618  0354  0008               	return
+   619                           
+   620                           ;newmain.c: 76: PORTA |= 0x01;
+   621  0355  1405               	bsf	5,0	;volatile
+   622                           
+   623                           ;newmain.c: 77: _delay((unsigned long)((900)*(1000000/4000000.0)));
+   624  0356  304A               	movlw	74
+   625  0357  008C               	movwf	??_Play
+   626  0358                     u637:	
+   627  0358  0B8C               	decfsz	??_Play,f
+   628  0359  2B58               	goto	u637
+   629  035A  2B5B               	nop2	;nop
+   630                           
+   631                           ;newmain.c: 78: PORTA &= ~0x01;
+   632  035B  30FE               	movlw	254
+   633  035C  1283               	bcf	3,5	;RP0=0, select bank0
+   634  035D  008C               	movwf	??_Play
+   635  035E  080C               	movf	??_Play,w
+   636  035F  0585               	andwf	5,f	;volatile
+   637                           
+   638                           ;newmain.c: 79: _delay((unsigned long)((900)*(1000000/4000000.0)));
+   639  0360  304A               	movlw	74
+   640  0361  008C               	movwf	??_Play
+   641  0362                     u647:	
+   642  0362  0B8C               	decfsz	??_Play,f
+   643  0363  2B62               	goto	u647
+   644  0364  2B65               	nop2	;nop
+   645  0365  3001               	movlw	1
+   646  0366  1283               	bcf	3,5	;RP0=0, select bank0
+   647  0367  079C               	addwf	Play@i_38,f
+   648  0368  1803               	skipnc
+   649  0369  0A9D               	incf	Play@i_38+1,f
+   650  036A  3000               	movlw	0
+   651  036B  079D               	addwf	Play@i_38+1,f
+   652  036C  2B4E               	goto	L8
+   653  036D                     l1089:	
+   654                           ;newmain.c: 82: case '9':
+   655                           
+   656                           ;newmain.c: 80: }
+   657                           ;newmain.c: 81: break;
+   658                           
+   659                           
+   660                           ;newmain.c: 83: for(uint16_t i = 0; i < 50; i++){
+   661  036D  019E               	clrf	Play@i_39
+   662  036E  019F               	clrf	Play@i_39+1
+   663  036F                     L9:	
+   664  036F  3000               	movlw	0
+   665  0370  021F               	subwf	Play@i_39+1,w
+   666  0371  3032               	movlw	50
+   667  0372  1903               	skipnz
+   668  0373  021E               	subwf	Play@i_39,w
+   669  0374  1803               	btfsc	3,0
+   670  0375  0008               	return
+   671                           
+   672                           ;newmain.c: 84: PORTA |= 0x01;
+   673  0376  1405               	bsf	5,0	;volatile
+   674                           
+   675                           ;newmain.c: 85: _delay((unsigned long)((800)*(1000000/4000000.0)));
+   676  0377  3042               	movlw	66
+   677  0378  008C               	movwf	??_Play
+   678  0379                     u657:	
+   679  0379  0B8C               	decfsz	??_Play,f
+   680  037A  2B79               	goto	u657
+   681  037B  0000               	nop
+   682                           
+   683                           ;newmain.c: 86: PORTA &= ~0x01;
+   684  037C  30FE               	movlw	254
+   685  037D  1283               	bcf	3,5	;RP0=0, select bank0
+   686  037E  008C               	movwf	??_Play
+   687  037F  080C               	movf	??_Play,w
+   688  0380  0585               	andwf	5,f	;volatile
+   689                           
+   690                           ;newmain.c: 87: _delay((unsigned long)((800)*(1000000/4000000.0)));
+   691  0381  3042               	movlw	66
+   692  0382  008C               	movwf	??_Play
+   693  0383                     u667:	
+   694  0383  0B8C               	decfsz	??_Play,f
+   695  0384  2B83               	goto	u667
+   696  0385  0000               	nop
+   697  0386  3001               	movlw	1
+   698  0387  1283               	bcf	3,5	;RP0=0, select bank0
+   699  0388  079E               	addwf	Play@i_39,f
+   700  0389  1803               	skipnc
+   701  038A  0A9F               	incf	Play@i_39+1,f
+   702  038B  3000               	movlw	0
+   703  038C  079F               	addwf	Play@i_39+1,f
+   704  038D  2B6F               	goto	L9
+   705  038E                     l1105:	
+   706                           ;newmain.c: 90: case '0':
+   707                           
+   708                           ;newmain.c: 88: }
+   709                           ;newmain.c: 89: break;
+   710                           
+   711                           
+   712                           ;newmain.c: 91: for(uint16_t i = 0; i < 50; i++){
+   713  038E  01A0               	clrf	Play@i_40
+   714  038F  01A1               	clrf	Play@i_40+1
+   715  0390                     L10:	
+   716  0390  3000               	movlw	0
+   717  0391  0221               	subwf	Play@i_40+1,w
+   718  0392  3032               	movlw	50
+   719  0393  1903               	skipnz
+   720  0394  0220               	subwf	Play@i_40,w
+   721  0395  1803               	btfsc	3,0
+   722  0396  0008               	return
+   723                           
+   724                           ;newmain.c: 92: PORTA |= 0x01;
+   725  0397  1405               	bsf	5,0	;volatile
+   726                           
+   727                           ;newmain.c: 93: _delay((unsigned long)((900)*(1000000/4000000.0)));
+   728  0398  304A               	movlw	74
+   729  0399  008C               	movwf	??_Play
+   730  039A                     u677:	
+   731  039A  0B8C               	decfsz	??_Play,f
+   732  039B  2B9A               	goto	u677
+   733  039C  2B9D               	nop2	;nop
+   734                           
+   735                           ;newmain.c: 94: PORTA &= ~0x01;
+   736  039D  30FE               	movlw	254
+   737  039E  1283               	bcf	3,5	;RP0=0, select bank0
+   738  039F  008C               	movwf	??_Play
+   739  03A0  080C               	movf	??_Play,w
+   740  03A1  0585               	andwf	5,f	;volatile
+   741                           
+   742                           ;newmain.c: 95: _delay((unsigned long)((900)*(1000000/4000000.0)));
+   743  03A2  304A               	movlw	74
+   744  03A3  008C               	movwf	??_Play
+   745  03A4                     u687:	
+   746  03A4  0B8C               	decfsz	??_Play,f
+   747  03A5  2BA4               	goto	u687
+   748  03A6  2BA7               	nop2	;nop
+   749  03A7  3001               	movlw	1
+   750  03A8  1283               	bcf	3,5	;RP0=0, select bank0
+   751  03A9  07A0               	addwf	Play@i_40,f
+   752  03AA  1803               	skipnc
+   753  03AB  0AA1               	incf	Play@i_40+1,f
+   754  03AC  3000               	movlw	0
+   755  03AD  07A1               	addwf	Play@i_40+1,f
+   756  03AE  2B90               	goto	L10
+   757  03AF                     l1121:	
+   758                           ;newmain.c: 98: case '*':
+   759                           
+   760                           ;newmain.c: 96: }
+   761                           ;newmain.c: 97: break;
+   762                           
+   763                           
+   764                           ;newmain.c: 99: for(uint16_t i = 0; i < 50; i++){
+   765  03AF  01A2               	clrf	Play@i_41
+   766  03B0  01A3               	clrf	Play@i_41+1
+   767  03B1                     L11:	
+   768  03B1  3000               	movlw	0
+   769  03B2  0223               	subwf	Play@i_41+1,w
+   770  03B3  3032               	movlw	50
+   771  03B4  1903               	skipnz
+   772  03B5  0222               	subwf	Play@i_41,w
+   773  03B6  1803               	btfsc	3,0
+   774  03B7  0008               	return
+   775                           
+   776                           ;newmain.c: 100: PORTA |= 0x01;
+   777  03B8  1405               	bsf	5,0	;volatile
+   778                           
+   779                           ;newmain.c: 101: _delay((unsigned long)((1000)*(1000000/4000000.0)));
+   780  03B9  3053               	movlw	83
+   781  03BA  008C               	movwf	??_Play
+   782  03BB                     u697:	
+   783  03BB  0B8C               	decfsz	??_Play,f
+   784  03BC  2BBB               	goto	u697
+   785                           
+   786                           ;newmain.c: 102: PORTA &= ~0x01;
+   787  03BD  30FE               	movlw	254
+   788  03BE  1283               	bcf	3,5	;RP0=0, select bank0
+   789  03BF  008C               	movwf	??_Play
+   790  03C0  080C               	movf	??_Play,w
+   791  03C1  0585               	andwf	5,f	;volatile
+   792                           
+   793                           ;newmain.c: 103: _delay((unsigned long)((1000)*(1000000/4000000.0)));
+   794  03C2  3053               	movlw	83
+   795  03C3  008C               	movwf	??_Play
+   796  03C4                     u707:	
+   797  03C4  0B8C               	decfsz	??_Play,f
+   798  03C5  2BC4               	goto	u707
+   799  03C6  3001               	movlw	1
+   800  03C7  1283               	bcf	3,5	;RP0=0, select bank0
+   801  03C8  07A2               	addwf	Play@i_41,f
+   802  03C9  1803               	skipnc
+   803  03CA  0AA3               	incf	Play@i_41+1,f
+   804  03CB  3000               	movlw	0
+   805  03CC  07A3               	addwf	Play@i_41+1,f
+   806  03CD  2BB1               	goto	L11
+   807  03CE                     l1137:	
+   808                           ;newmain.c: 106: case '#':
+   809                           
+   810                           ;newmain.c: 104: }
+   811                           ;newmain.c: 105: break;
+   812                           
+   813                           
+   814                           ;newmain.c: 107: for(uint16_t i = 0; i < 50; i++){
+   815  03CE  01A4               	clrf	Play@i_42
+   816  03CF  01A5               	clrf	Play@i_42+1
+   817  03D0                     L12:	
+   818  03D0  3000               	movlw	0
+   819  03D1  0225               	subwf	Play@i_42+1,w
+   820  03D2  3032               	movlw	50
+   821  03D3  1903               	skipnz
+   822  03D4  0224               	subwf	Play@i_42,w
+   823  03D5  1803               	btfsc	3,0
+   824  03D6  0008               	return
+   825                           
+   826                           ;newmain.c: 108: PORTA |= 0x01;
+   827  03D7  1405               	bsf	5,0	;volatile
+   828                           
+   829                           ;newmain.c: 109: _delay((unsigned long)((800)*(1000000/4000000.0)));
+   830  03D8  3042               	movlw	66
+   831  03D9  008C               	movwf	??_Play
+   832  03DA                     u717:	
+   833  03DA  0B8C               	decfsz	??_Play,f
+   834  03DB  2BDA               	goto	u717
+   835  03DC  0000               	nop
+   836                           
+   837                           ;newmain.c: 110: PORTA &= ~0x01;
+   838  03DD  30FE               	movlw	254
+   839  03DE  1283               	bcf	3,5	;RP0=0, select bank0
+   840  03DF  008C               	movwf	??_Play
+   841  03E0  080C               	movf	??_Play,w
+   842  03E1  0585               	andwf	5,f	;volatile
+   843                           
+   844                           ;newmain.c: 111: _delay((unsigned long)((800)*(1000000/4000000.0)));
+   845  03E2  3042               	movlw	66
+   846  03E3  008C               	movwf	??_Play
+   847  03E4                     u727:	
+   848  03E4  0B8C               	decfsz	??_Play,f
+   849  03E5  2BE4               	goto	u727
+   850  03E6  0000               	nop
+   851  03E7  3001               	movlw	1
+   852  03E8  1283               	bcf	3,5	;RP0=0, select bank0
+   853  03E9  07A4               	addwf	Play@i_42,f
+   854  03EA  1803               	skipnc
+   855  03EB  0AA5               	incf	Play@i_42+1,f
+   856  03EC  3000               	movlw	0
+   857  03ED  07A5               	addwf	Play@i_42+1,f
+   858  03EE  2BD0               	goto	L12
+   859  03EF                     l1155:	
+   860                           ;newmain.c: 116: }
+   861                           
+   862                           ;newmain.c: 115: return;
+   863                           
+   864                           ;newmain.c: 114: default:
+   865                           
+   866                           ;newmain.c: 112: }
+   867                           ;newmain.c: 113: break;
+   868                           
+   869  03EF  080D               	movf	Play@data,w
+   870                           
+   871                           ; Switch size 1, requested type "space"
+   872                           ; Number of cases is 12, Range of values is 35 to 57
+   873                           ; switch strategies available:
+   874                           ; Name         Instructions Cycles
+   875                           ; direct_byte           32     9 (fixed)
+   876                           ; simple_byte           37    19 (average)
+   877                           ; jumptable            263     9 (fixed)
+   878                           ;	Chosen strategy is direct_byte
+   879  03F0  3EDD               	addlw	-35
+   880  03F1  1C03               	skipc
+   881  03F2  0008               	return
+   882  03F3  0084               	movwf	4
+   883  03F4  3017               	movlw	23
+   884  03F5  0204               	subwf	4,w
+   885  03F6  1803               	skipnc
+   886  03F7  0008               	return
+   887  03F8  3000               	movlw	high S1379
+   888  03F9  008A               	movwf	10
+   889  03FA  3001               	movlw	low S1379
+   890  03FB  0704               	addwf	4,w
+   891  03FC  0082               	movwf	2
+   892  03FD                     l52:	
+   893  03FD  0008               	return
+   894  03FE                     __end_of_Play:	
+   895                           
+   896                           	psect	swtext1
+   897  0001                     __pswtext1:	
+   898  0001                     S1379:	
+   899  0001  2BCE               	ljmp	l1137
+   900  0002  2BFD               	ljmp	l52
+   901  0003  2BFD               	ljmp	l52
+   902  0004  2BFD               	ljmp	l52
+   903  0005  2BFD               	ljmp	l52
+   904  0006  2BFD               	ljmp	l52
+   905  0007  2BFD               	ljmp	l52
+   906  0008  2BAF               	ljmp	l1121
+   907  0009  2BFD               	ljmp	l52
+   908  000A  2BFD               	ljmp	l52
+   909  000B  2BFD               	ljmp	l52
+   910  000C  2BFD               	ljmp	l52
+   911  000D  2BFD               	ljmp	l52
+   912  000E  2B8E               	ljmp	l1105
+   913  000F  2A6B               	ljmp	l961
+   914  0010  2A8A               	ljmp	l977
+   915  0011  2AAB               	ljmp	l993
+   916  0012  2ACC               	ljmp	l1009
+   917  0013  2AEB               	ljmp	l1025
+   918  0014  2B0C               	ljmp	l1041
+   919  0015  2B2D               	ljmp	l1057
+   920  0016  2B4C               	ljmp	l1073
+   921  0017  2B6D               	ljmp	l1089
+   922                           
+   923                           	psect	text2
+   924  01FF                     __ptext2:	
+   925 ;; *************** function _CaptureKey *****************
+   926 ;; Defined at:
+   927 ;;		line 119 in file "newmain.c"
+   928 ;; Parameters:    Size  Location     Type
+   929 ;;		None
+   930 ;; Auto vars:     Size  Location     Type
+   931 ;;		None
+   932 ;; Return value:  Size  Location     Type
+   933 ;;                  1    wreg      unsigned char 
+   934 ;; Registers used:
+   935 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+   936 ;; Tracked objects:
+   937 ;;		On entry : 0/0
+   938 ;;		On exit  : 0/0
+   939 ;;		Unchanged: 0/0
+   940 ;; Data sizes:     COMMON   BANK0
+   941 ;;      Params:         0       0
+   942 ;;      Locals:         0       0
+   943 ;;      Temps:          0       2
+   944 ;;      Totals:         0       2
+   945 ;;Total ram usage:        2 bytes
+   946 ;; Hardware stack levels used:    1
+   947 ;; This function calls:
+   948 ;;		Nothing
+   949 ;; This function is called by:
+   950 ;;		_main
+   951 ;; This function uses a non-reentrant model
+   952 ;;
+   953                           
+   954                           
+   955                           ;psect for function _CaptureKey
+   956  01FF                     _CaptureKey:	
+   957                           
+   958                           ;newmain.c: 121: PORTB = 0x04;
+   959                           
+   960                           ;incstack = 0
+   961                           ; Regs used in _CaptureKey: [wreg-fsr0h+status,2+status,0]
+   962  01FF  3004               	movlw	4
+   963  0200  1283               	bcf	3,5	;RP0=0, select bank0
+   964  0201  0086               	movwf	6	;volatile
+   965                           
+   966                           ;newmain.c: 122: switch(PORTB & 0xF0){
+   967  0202  2A0B               	goto	l1183
+   968  0203                     l1165:	
+   969                           ;newmain.c: 123: case 0x10:
+   970                           
+   971                           
+   972                           ;newmain.c: 124: return '1';
+   973  0203  3031               	movlw	49
+   974  0204  0008               	return
+   975  0205                     l1169:	
+   976                           ;newmain.c: 125: case 0x20:
+   977                           
+   978                           
+   979                           ;newmain.c: 126: return '4';
+   980  0205  3034               	movlw	52
+   981  0206  0008               	return
+   982  0207                     l1173:	
+   983                           ;newmain.c: 127: case 0x40:
+   984                           
+   985                           
+   986                           ;newmain.c: 128: return '7';
+   987  0207  3037               	movlw	55
+   988  0208  0008               	return
+   989  0209                     l1177:	
+   990                           ;newmain.c: 129: case 0x80:
+   991                           
+   992                           
+   993                           ;newmain.c: 130: return '*';
+   994  0209  302A               	movlw	42
+   995  020A  0008               	return
+   996  020B                     l1183:	
+   997                           ;newmain.c: 131: }
+   998                           
+   999  020B  0806               	movf	6,w	;volatile
+  1000  020C  39F0               	andlw	240
+  1001  020D  008C               	movwf	??_CaptureKey
+  1002  020E  018D               	clrf	??_CaptureKey+1
+  1003                           
+  1004                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  1005                           ; Switch size 1, requested type "space"
+  1006                           ; Number of cases is 1, Range of values is 0 to 0
+  1007                           ; switch strategies available:
+  1008                           ; Name         Instructions Cycles
+  1009                           ; simple_byte            4     3 (average)
+  1010                           ; direct_byte            7     6 (fixed)
+  1011                           ; jumptable            260     6 (fixed)
+  1012                           ;	Chosen strategy is simple_byte
+  1013  020F  080D               	movf	??_CaptureKey+1,w
+  1014  0210  3A00               	xorlw	0	; case 0
+  1015  0211  1903               	skipnz
+  1016  0212  2A14               	goto	l1381
+  1017  0213  2A22               	goto	l1185
+  1018  0214                     l1381:	
+  1019                           
+  1020                           ; Switch size 1, requested type "space"
+  1021                           ; Number of cases is 4, Range of values is 16 to 128
+  1022                           ; switch strategies available:
+  1023                           ; Name         Instructions Cycles
+  1024                           ; simple_byte           13     7 (average)
+  1025                           ; direct_byte          122     9 (fixed)
+  1026                           ; jumptable            263     9 (fixed)
+  1027                           ;	Chosen strategy is simple_byte
+  1028  0214  080C               	movf	??_CaptureKey,w
+  1029  0215  3A10               	xorlw	16	; case 16
+  1030  0216  1903               	skipnz
+  1031  0217  2A03               	goto	l1165
+  1032  0218  3A30               	xorlw	48	; case 32
+  1033  0219  1903               	skipnz
+  1034  021A  2A05               	goto	l1169
+  1035  021B  3A60               	xorlw	96	; case 64
+  1036  021C  1903               	skipnz
+  1037  021D  2A07               	goto	l1173
+  1038  021E  3AC0               	xorlw	192	; case 128
+  1039  021F  1903               	skipnz
+  1040  0220  2A09               	goto	l1177
+  1041  0221  2A22               	goto	l1185
+  1042  0222                     l1185:	
+  1043                           
+  1044                           ;newmain.c: 132: PORTB = 0x02;
+  1045  0222  3002               	movlw	2
+  1046  0223  0086               	movwf	6	;volatile
+  1047                           
+  1048                           ;newmain.c: 133: switch(PORTB & 0xF0){
+  1049  0224  2A2D               	goto	l1205
+  1050  0225                     l1187:	
+  1051                           ;newmain.c: 134: case 0x10:
+  1052                           
+  1053                           
+  1054                           ;newmain.c: 135: return '2';
+  1055  0225  3032               	movlw	50
+  1056  0226  0008               	return
+  1057  0227                     l1191:	
+  1058                           ;newmain.c: 136: case 0x20:
+  1059                           
+  1060                           
+  1061                           ;newmain.c: 137: return '5';
+  1062  0227  3035               	movlw	53
+  1063  0228  0008               	return
+  1064  0229                     l1195:	
+  1065                           ;newmain.c: 138: case 0x40:
+  1066                           
+  1067                           
+  1068                           ;newmain.c: 139: return '8';
+  1069  0229  3038               	movlw	56
+  1070  022A  0008               	return
+  1071  022B                     l1199:	
+  1072                           ;newmain.c: 140: case 0x80:
+  1073                           
+  1074                           
+  1075                           ;newmain.c: 141: return '8';
+  1076  022B  3038               	movlw	56
+  1077  022C  0008               	return
+  1078  022D                     l1205:	
+  1079                           ;newmain.c: 142: }
+  1080                           
+  1081  022D  0806               	movf	6,w	;volatile
+  1082  022E  39F0               	andlw	240
+  1083  022F  008C               	movwf	??_CaptureKey
+  1084  0230  018D               	clrf	??_CaptureKey+1
+  1085                           
+  1086                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  1087                           ; Switch size 1, requested type "space"
+  1088                           ; Number of cases is 1, Range of values is 0 to 0
+  1089                           ; switch strategies available:
+  1090                           ; Name         Instructions Cycles
+  1091                           ; simple_byte            4     3 (average)
+  1092                           ; direct_byte            7     6 (fixed)
+  1093                           ; jumptable            260     6 (fixed)
+  1094                           ;	Chosen strategy is simple_byte
+  1095  0231  080D               	movf	??_CaptureKey+1,w
+  1096  0232  3A00               	xorlw	0	; case 0
+  1097  0233  1903               	skipnz
+  1098  0234  2A36               	goto	l1383
+  1099  0235  2A44               	goto	l1207
+  1100  0236                     l1383:	
+  1101                           
+  1102                           ; Switch size 1, requested type "space"
+  1103                           ; Number of cases is 4, Range of values is 16 to 128
+  1104                           ; switch strategies available:
+  1105                           ; Name         Instructions Cycles
+  1106                           ; simple_byte           13     7 (average)
+  1107                           ; direct_byte          122     9 (fixed)
+  1108                           ; jumptable            263     9 (fixed)
+  1109                           ;	Chosen strategy is simple_byte
+  1110  0236  080C               	movf	??_CaptureKey,w
+  1111  0237  3A10               	xorlw	16	; case 16
+  1112  0238  1903               	skipnz
+  1113  0239  2A25               	goto	l1187
+  1114  023A  3A30               	xorlw	48	; case 32
+  1115  023B  1903               	skipnz
+  1116  023C  2A27               	goto	l1191
+  1117  023D  3A60               	xorlw	96	; case 64
+  1118  023E  1903               	skipnz
+  1119  023F  2A29               	goto	l1195
+  1120  0240  3AC0               	xorlw	192	; case 128
+  1121  0241  1903               	skipnz
+  1122  0242  2A2B               	goto	l1199
+  1123  0243  2A44               	goto	l1207
+  1124  0244                     l1207:	
+  1125                           
+  1126                           ;newmain.c: 143: PORTB = 0x01;
+  1127  0244  3001               	movlw	1
+  1128  0245  0086               	movwf	6	;volatile
+  1129                           
+  1130                           ;newmain.c: 144: switch(PORTB & 0xF0){
+  1131  0246  2A4F               	goto	l1227
+  1132  0247                     l1209:	
+  1133                           ;newmain.c: 145: case 0x10:
+  1134                           
+  1135                           
+  1136                           ;newmain.c: 146: return '3';
+  1137  0247  3033               	movlw	51
+  1138  0248  0008               	return
+  1139  0249                     l1213:	
+  1140                           ;newmain.c: 147: case 0x20:
+  1141                           
+  1142                           
+  1143                           ;newmain.c: 148: return '6';
+  1144  0249  3036               	movlw	54
+  1145  024A  0008               	return
+  1146  024B                     l1217:	
+  1147                           ;newmain.c: 149: case 0x40:
+  1148                           
+  1149                           
+  1150                           ;newmain.c: 150: return '9';
+  1151  024B  3039               	movlw	57
+  1152  024C  0008               	return
+  1153  024D                     l1221:	
+  1154                           ;newmain.c: 151: case 0x80:
+  1155                           
+  1156                           
+  1157                           ;newmain.c: 152: return '#';
+  1158  024D  3023               	movlw	35
+  1159  024E  0008               	return
+  1160  024F                     l1227:	
+  1161                           ;newmain.c: 153: }
+  1162                           
+  1163  024F  0806               	movf	6,w	;volatile
+  1164  0250  39F0               	andlw	240
+  1165  0251  008C               	movwf	??_CaptureKey
+  1166  0252  018D               	clrf	??_CaptureKey+1
+  1167                           
+  1168                           ; Switch on 2 bytes has been partitioned into a top level switch of size 1, and 1 sub-sw
+      +                          itches
+  1169                           ; Switch size 1, requested type "space"
+  1170                           ; Number of cases is 1, Range of values is 0 to 0
+  1171                           ; switch strategies available:
+  1172                           ; Name         Instructions Cycles
+  1173                           ; simple_byte            4     3 (average)
+  1174                           ; direct_byte            7     6 (fixed)
+  1175                           ; jumptable            260     6 (fixed)
+  1176                           ;	Chosen strategy is simple_byte
+  1177  0253  080D               	movf	??_CaptureKey+1,w
+  1178  0254  3A00               	xorlw	0	; case 0
+  1179  0255  1903               	skipnz
+  1180  0256  2A58               	goto	l1385
+  1181  0257  2A66               	goto	l1229
+  1182  0258                     l1385:	
+  1183                           
+  1184                           ; Switch size 1, requested type "space"
+  1185                           ; Number of cases is 4, Range of values is 16 to 128
+  1186                           ; switch strategies available:
+  1187                           ; Name         Instructions Cycles
+  1188                           ; simple_byte           13     7 (average)
+  1189                           ; direct_byte          122     9 (fixed)
+  1190                           ; jumptable            263     9 (fixed)
+  1191                           ;	Chosen strategy is simple_byte
+  1192  0258  080C               	movf	??_CaptureKey,w
+  1193  0259  3A10               	xorlw	16	; case 16
+  1194  025A  1903               	skipnz
+  1195  025B  2A47               	goto	l1209
+  1196  025C  3A30               	xorlw	48	; case 32
+  1197  025D  1903               	skipnz
+  1198  025E  2A49               	goto	l1213
+  1199  025F  3A60               	xorlw	96	; case 64
+  1200  0260  1903               	skipnz
+  1201  0261  2A4B               	goto	l1217
+  1202  0262  3AC0               	xorlw	192	; case 128
+  1203  0263  1903               	skipnz
+  1204  0264  2A4D               	goto	l1221
+  1205  0265  2A66               	goto	l1229
+  1206  0266                     l1229:	
+  1207                           
+  1208                           ;newmain.c: 154: return 0xAA;
+  1209  0266  30AA               	movlw	170
+  1210  0267  0008               	return
+  1211  0268                     __end_of_CaptureKey:	
+  1212  004E                     btemp	set	78	;btemp
+  1213  004E                     wtemp	set	78
+  1214  004E                     wtemp0	set	78
+  1215  0050                     wtemp1	set	80
+  1216  0052                     wtemp2	set	82
+  1217  0054                     wtemp3	set	84
+  1218  0056                     wtemp4	set	86
+  1219  0058                     wtemp5	set	88
+  1220  004F                     wtemp6	set	79
+  1221  004E                     ttemp	set	78
+  1222  004E                     ttemp0	set	78
+  1223  0051                     ttemp1	set	81
+  1224  0054                     ttemp2	set	84
+  1225  0057                     ttemp3	set	87
+  1226  004F                     ttemp4	set	79
+  1227  004E                     ltemp	set	78
+  1228  004E                     ltemp0	set	78
+  1229  0052                     ltemp1	set	82
+  1230  0056                     ltemp2	set	86
+  1231  0050                     ltemp3	set	80
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66     26      26
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_Play
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0     574
+                         _CaptureKey
+                               _Play
+ ---------------------------------------------------------------------------------
+ (1) _Play                                                26    26      0     574
+                                              0 BANK0     26    26      0
+ ---------------------------------------------------------------------------------
+ (1) _CaptureKey                                           2     2      0       0
+                                              0 BANK0      2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _CaptureKey
+   _Play
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              40      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               42     1A      1A       3       39.4%
+ABS                  0      0       0       4        0.0%
+BITBANK0            42      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.38 build -256452561 
+Symbol Table                                                                                   Wed Oct 26 06:24:26 2016
+
+                      pc 0002                       l52 03FD                       fsr 0004  
+                    l961 026B                      l993 02AB                      l977 028A  
+                    u507 0280                      u517 0296                      u607 0322  
+                    u527 02A0                      u617 0339                      u537 02B7  
+                    u707 03C4                      u627 0342                      u547 02C1  
+                    u717 03DA                      u637 0358                      u557 02D8  
+                    u727 03E4                      u647 0362                      u567 02E1  
+                    u657 0379                      u577 02F7                      u497 0277  
+                    u667 0383                      u587 0301                      u677 039A  
+                    u597 0318                      u687 03A4                      u697 03BB  
+                   S1379 0001                     l1121 03AF                     l1105 038E  
+                   l1041 030C                     l1025 02EB                     l1009 02CC  
+                   l1221 024D                     l1213 0249                     l1205 022D  
+                   l1207 0244                     l1217 024B                     l1209 0247  
+                   l1137 03CE                     l1073 034C                     l1057 032D  
+                   l1227 024F                     l1155 03EF                     l1229 0266  
+                   l1173 0207                     l1165 0203                     l1191 0227  
+                   l1183 020B                     l1185 0222                     l1177 0209  
+                   l1169 0205                     l1089 036D                     l1257 01FC  
+                   l1195 0229                     l1187 0225                     l1381 0214  
+                   l1383 0236                     l1199 022B                     l1385 0258  
+                   _Play 0268                     _main 01F3                     btemp 004E  
+                   ltemp 004E                     start 0000                     ttemp 004E  
+                   wtemp 004E               _CaptureKey 01FF                    ?_Play 000C  
+                  ?_main 000C                    _PORTA 0005                    _PORTB 0006  
+                  _TRISA 0085                    _TRISB 0086                    Play@i 000E  
+                  pclath 000A                    ltemp0 004E                    ltemp1 0052  
+                  ltemp2 0056                    ltemp3 0050                    ttemp0 004E  
+                  ttemp1 0051                    ttemp2 0054                    ttemp3 0057  
+                  ttemp4 004F                    status 0003                    wtemp0 004E  
+                  wtemp1 0050                    wtemp2 0052                    wtemp3 0054  
+                  wtemp4 0056                    wtemp5 0058                    wtemp6 004F  
+        __initialization 03FE             __end_of_Play 03FE             __end_of_main 01FF  
+                 ??_Play 000C                   ??_main 0000              ?_CaptureKey 000C  
+__end_of__initialization 03FE           __pcstackCOMMON 0000      __size_of_CaptureKey 0069  
+             __pmaintext 01F3                  __ptext1 0268                  __ptext2 01FF  
+   end_of_initialization 03FE             ??_CaptureKey 000C       __end_of_CaptureKey 0268  
+    start_initialization 03FE                ___latbits 0000            __pcstackBANK0 000C  
+              __pswtext1 0001                 Play@i_40 0020                 Play@i_32 0010  
+               Play@i_41 0022                 Play@i_33 0012                 Play@i_42 0024  
+               Play@i_34 0014                 Play@i_35 0016                 Play@i_36 0018  
+               Play@i_37 001A                 Play@i_38 001C                 Play@i_39 001E  
+               Play@data 000D            __size_of_Play 0196            __size_of_main 000C  

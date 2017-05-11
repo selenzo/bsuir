@@ -1,0 +1,61 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F84A ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"28 C:\Users\axisg\Desktop\savenko\MPLABXProjects\lab4\newmain.c
+[v _CaptureKey CaptureKey `(uc  1 e 1 0 ]
+"78
+[v _main main `(v  1 e 1 0 ]
+"160 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f84a.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"203
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"441
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"484
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"78 C:\Users\axisg\Desktop\savenko\MPLABXProjects\lab4\newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"92
+[v main@temp temp `uc  1 a 1 16 ]
+"84
+[v main@data data `[4]uc  1 a 4 8 ]
+"85
+[v main@position position `uc  1 a 1 15 ]
+"86
+[v main@usr_entry_enabled usr_entry_enabled `uc  1 a 1 14 ]
+"87
+[v main@usr_entry_succeed usr_entry_succeed `uc  1 a 1 13 ]
+"88
+[v main@psw_entry_enabled psw_entry_enabled `uc  1 a 1 12 ]
+"83
+[v main@F579 F579 `[4]uc  1 s 4 F579 ]
+"151
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+{
+[v strncmp@s1 s1 `*.4DCCuc  1 a 1 wreg ]
+[v strncmp@s1 s1 `*.4DCCuc  1 a 1 wreg ]
+[v strncmp@s2 s2 `*.24DCCuc  1 p 1 0 ]
+[v strncmp@len len `ui  1 p 2 1 ]
+[v strncmp@s1 s1 `*.4DCCuc  1 a 1 5 ]
+"14
+} 0
+"28 C:\Users\axisg\Desktop\savenko\MPLABXProjects\lab4\newmain.c
+[v _CaptureKey CaptureKey `(uc  1 e 1 0 ]
+{
+"76
+} 0

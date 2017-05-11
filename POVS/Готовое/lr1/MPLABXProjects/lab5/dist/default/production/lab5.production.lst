@@ -1,0 +1,796 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.41 build -162212810 
+                                                                                               Thu Mar 30 20:10:58 2017
+
+Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
+     1                           	processor	16F84A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	strings,global,class=STRING,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2,group=2
+    10                           	dabs	1,0x4E,2
+    11  0000                     
+    12                           ; Version 1.41
+    13                           ; Generated 25/01/2017 GMT
+    14                           ; 
+    15                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    16                           ; All rights reserved.
+    17                           ; 
+    18                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    19                           ; 
+    20                           ; Redistribution and use in source and binary forms, with or without modification, are
+    21                           ; permitted provided that the following conditions are met:
+    22                           ; 
+    23                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    24                           ;        conditions and the following disclaimer.
+    25                           ; 
+    26                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    27                           ;        of conditions and the following disclaimer in the documentation and/or other
+    28                           ;        materials provided with the distribution.
+    29                           ; 
+    30                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    31                           ;        software without specific prior written permission.
+    32                           ; 
+    33                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    34                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    35                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    36                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    37                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    38                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    39                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    40                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    41                           ; 
+    42                           ; 
+    43                           ; Code-generator required, PIC16F84A Definitions
+    44                           ; 
+    45                           ; SFR Addresses
+    46  0000                     	;# 
+    47  0001                     	;# 
+    48  0002                     	;# 
+    49  0003                     	;# 
+    50  0004                     	;# 
+    51  0005                     	;# 
+    52  0006                     	;# 
+    53  0008                     	;# 
+    54  0009                     	;# 
+    55  000A                     	;# 
+    56  000B                     	;# 
+    57  0081                     	;# 
+    58  0085                     	;# 
+    59  0086                     	;# 
+    60  0088                     	;# 
+    61  0089                     	;# 
+    62                           
+    63                           	psect	strings
+    64  0001                     __pstrings:	
+    65  0001                     stringtab:	
+    66  0001                     __stringtab:	
+    67  0001                     stringcode:	
+    68                           ;	String table - string pointers are 1 byte each
+    69                           
+    70  0001                     stringdir:	
+    71  0001  3000               	movlw	high stringdir
+    72  0002  008A               	movwf	10
+    73  0003  0804               	movf	4,w
+    74  0004  0A84               	incf	4,f
+    75  0005  0782               	addwf	2,f
+    76  0006                     __stringbase:	
+    77  0006  3400               	retlw	0
+    78  0007                     __end_of__stringtab:	
+    79  0007                     _durations:	
+    80  0007  34C8               	retlw	200
+    81  0008  3400               	retlw	0
+    82  0009  34C8               	retlw	200
+    83  000A  3400               	retlw	0
+    84  000B  34C8               	retlw	200
+    85  000C  3400               	retlw	0
+    86  000D  34C8               	retlw	200
+    87  000E  3400               	retlw	0
+    88  000F  34C8               	retlw	200
+    89  0010  3400               	retlw	0
+    90  0011  3464               	retlw	100
+    91  0012  3400               	retlw	0
+    92  0013  34C8               	retlw	200
+    93  0014  3400               	retlw	0
+    94  0015  3400               	retlw	0
+    95  0016  3400               	retlw	0
+    96  0017  3400               	retlw	0
+    97  0018  3400               	retlw	0
+    98  0019  3400               	retlw	0
+    99  001A  3400               	retlw	0
+   100  001B  3400               	retlw	0
+   101  001C  3400               	retlw	0
+   102  001D  3400               	retlw	0
+   103  001E  3400               	retlw	0
+   104  001F  3400               	retlw	0
+   105  0020  3400               	retlw	0
+   106  0021  3400               	retlw	0
+   107  0022  3400               	retlw	0
+   108  0023  3400               	retlw	0
+   109  0024  3400               	retlw	0
+   110  0025  3400               	retlw	0
+   111  0026  3400               	retlw	0
+   112  0027  3400               	retlw	0
+   113  0028  3400               	retlw	0
+   114  0029  3400               	retlw	0
+   115  002A  3400               	retlw	0
+   116  002B  3400               	retlw	0
+   117  002C  3400               	retlw	0
+   118  002D  3400               	retlw	0
+   119  002E  3400               	retlw	0
+   120  002F  3400               	retlw	0
+   121  0030  3400               	retlw	0
+   122  0031  3400               	retlw	0
+   123  0032  3400               	retlw	0
+   124  0033  3400               	retlw	0
+   125  0034  3400               	retlw	0
+   126  0035  3400               	retlw	0
+   127  0036  3400               	retlw	0
+   128  0037  3400               	retlw	0
+   129  0038  3400               	retlw	0
+   130  0039  3400               	retlw	0
+   131  003A  3400               	retlw	0
+   132  003B  3400               	retlw	0
+   133  003C  3400               	retlw	0
+   134  003D  3400               	retlw	0
+   135  003E  3400               	retlw	0
+   136  003F  3400               	retlw	0
+   137  0040  3400               	retlw	0
+   138  0041  3400               	retlw	0
+   139  0042  3400               	retlw	0
+   140  0043  3400               	retlw	0
+   141  0044  3400               	retlw	0
+   142  0045  3400               	retlw	0
+   143  0046  3400               	retlw	0
+   144  0047  3400               	retlw	0
+   145  0048  3400               	retlw	0
+   146  0049  3400               	retlw	0
+   147  004A  3400               	retlw	0
+   148  004B  3400               	retlw	0
+   149  004C  3400               	retlw	0
+   150  004D  3400               	retlw	0
+   151  004E  3400               	retlw	0
+   152  004F  3400               	retlw	0
+   153  0050  3400               	retlw	0
+   154  0051  3400               	retlw	0
+   155  0052  3400               	retlw	0
+   156  0053  3400               	retlw	0
+   157  0054  3400               	retlw	0
+   158  0055                     __end_of_durations:	
+   159  0055                     _frequences:	
+   160  0055  3449               	retlw	73
+   161  0056  3401               	retlw	1
+   162  0057  3488               	retlw	136
+   163  0058  3401               	retlw	1
+   164  0059  34B8               	retlw	184
+   165  005A  3401               	retlw	1
+   166  005B  3449               	retlw	73
+   167  005C  3401               	retlw	1
+   168  005D  3488               	retlw	136
+   169  005E  3401               	retlw	1
+   170  005F  34D2               	retlw	210
+   171  0060  3401               	retlw	1
+   172  0061  34B8               	retlw	184
+   173  0062  3401               	retlw	1
+   174  0063  3400               	retlw	0
+   175  0064  3400               	retlw	0
+   176  0065  3400               	retlw	0
+   177  0066  3400               	retlw	0
+   178  0067  3400               	retlw	0
+   179  0068  3400               	retlw	0
+   180  0069  3400               	retlw	0
+   181  006A  3400               	retlw	0
+   182  006B  3400               	retlw	0
+   183  006C  3400               	retlw	0
+   184  006D  3400               	retlw	0
+   185  006E  3400               	retlw	0
+   186  006F  3400               	retlw	0
+   187  0070  3400               	retlw	0
+   188  0071  3400               	retlw	0
+   189  0072  3400               	retlw	0
+   190  0073  3400               	retlw	0
+   191  0074  3400               	retlw	0
+   192  0075  3400               	retlw	0
+   193  0076  3400               	retlw	0
+   194  0077  3400               	retlw	0
+   195  0078  3400               	retlw	0
+   196  0079  3400               	retlw	0
+   197  007A  3400               	retlw	0
+   198  007B  3400               	retlw	0
+   199  007C  3400               	retlw	0
+   200  007D  3400               	retlw	0
+   201  007E  3400               	retlw	0
+   202  007F  3400               	retlw	0
+   203  0080  3400               	retlw	0
+   204  0081  3400               	retlw	0
+   205  0082  3400               	retlw	0
+   206  0083  3400               	retlw	0
+   207  0084  3400               	retlw	0
+   208  0085  3400               	retlw	0
+   209  0086  3400               	retlw	0
+   210  0087  3400               	retlw	0
+   211  0088  3400               	retlw	0
+   212  0089  3400               	retlw	0
+   213  008A  3400               	retlw	0
+   214  008B  3400               	retlw	0
+   215  008C  3400               	retlw	0
+   216  008D  3400               	retlw	0
+   217  008E  3400               	retlw	0
+   218  008F  3400               	retlw	0
+   219  0090  3400               	retlw	0
+   220  0091  3400               	retlw	0
+   221  0092  3400               	retlw	0
+   222  0093  3400               	retlw	0
+   223  0094  3400               	retlw	0
+   224  0095  3400               	retlw	0
+   225  0096  3400               	retlw	0
+   226  0097  3400               	retlw	0
+   227  0098  3400               	retlw	0
+   228  0099  3400               	retlw	0
+   229  009A  3400               	retlw	0
+   230  009B  3400               	retlw	0
+   231  009C  3400               	retlw	0
+   232  009D  3400               	retlw	0
+   233  009E  3400               	retlw	0
+   234  009F  3400               	retlw	0
+   235  00A0  3400               	retlw	0
+   236  00A1  3400               	retlw	0
+   237  00A2  3400               	retlw	0
+   238  00A3                     __end_of_frequences:	
+   239  0006                     _PORTB	set	6
+   240  0086                     _TRISB	set	134
+   241                           
+   242                           ; #config settings
+   243  0000                     
+   244                           	psect	cinit
+   245  03FE                     start_initialization:	
+   246  03FE                     __initialization:	
+   247  03FE                     end_of_initialization:	
+   248                           ;End of C runtime variable initialization code
+   249                           
+   250  03FE                     __end_of__initialization:	
+   251  03FE  0183               	clrf	3
+   252  03FF  2B52               	ljmp	_main	;jump to C main() function
+   253                           
+   254                           	psect	cstackBANK0
+   255  000C                     __pcstackBANK0:	
+   256  000C                     ?_Play:	
+   257  000C                     ?_main:	
+   258                           ; 1 bytes @ 0x0
+   259                           
+   260  000C                     ?___lwdiv:	
+   261                           ; 1 bytes @ 0x0
+   262                           
+   263  000C                     ___lwdiv@divisor:	
+   264                           ; 2 bytes @ 0x0
+   265                           
+   266                           
+   267                           ; 2 bytes @ 0x0
+   268  000C                     	ds	2
+   269  000E                     ___lwdiv@dividend:	
+   270                           
+   271                           ; 2 bytes @ 0x2
+   272  000E                     	ds	2
+   273  0010                     ??___lwdiv:	
+   274                           
+   275                           ; 1 bytes @ 0x4
+   276  0010                     	ds	1
+   277  0011                     ___lwdiv@quotient:	
+   278                           
+   279                           ; 2 bytes @ 0x5
+   280  0011                     	ds	2
+   281  0013                     ___lwdiv@counter:	
+   282                           
+   283                           ; 1 bytes @ 0x7
+   284  0013                     	ds	1
+   285  0014                     ??_Play:	
+   286                           
+   287                           ; 1 bytes @ 0x8
+   288  0014                     	ds	3
+   289  0017                     Play@j:	
+   290                           
+   291                           ; 2 bytes @ 0xB
+   292  0017                     	ds	2
+   293  0019                     Play@time2:	
+   294                           
+   295                           ; 2 bytes @ 0xD
+   296  0019                     	ds	2
+   297  001B                     Play@i:	
+   298                           
+   299                           ; 2 bytes @ 0xF
+   300  001B                     	ds	2
+   301  001D                     Play@note:	
+   302                           
+   303                           ; 1 bytes @ 0x11
+   304  001D                     	ds	1
+   305  001E                     Play@time:	
+   306                           
+   307                           ; 2 bytes @ 0x12
+   308  001E                     	ds	2
+   309  0020                     ??_main:	
+   310                           
+   311                           ; 1 bytes @ 0x14
+   312  0020                     	ds	1
+   313  0021                     main@melody:	
+   314                           
+   315                           ; 1 bytes @ 0x15
+   316  0021                     	ds	1
+   317  0022                     main@i:	
+   318                           
+   319                           ; 1 bytes @ 0x16
+   320  0022                     	ds	1
+   321                           
+   322                           	psect	maintext
+   323  0352                     __pmaintext:	
+   324 ;;
+   325 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   326 ;;
+   327 ;; *************** function _main *****************
+   328 ;; Defined at:
+   329 ;;		line 54 in file "newmain.c"
+   330 ;; Parameters:    Size  Location     Type
+   331 ;;		None
+   332 ;; Auto vars:     Size  Location     Type
+   333 ;;  i               1   22[BANK0 ] unsigned char 
+   334 ;;  melody          1   21[BANK0 ] unsigned char 
+   335 ;; Return value:  Size  Location     Type
+   336 ;;                  1    wreg      void 
+   337 ;; Registers used:
+   338 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   339 ;; Tracked objects:
+   340 ;;		On entry : B00/0
+   341 ;;		On exit  : 0/0
+   342 ;;		Unchanged: 0/0
+   343 ;; Data sizes:     COMMON   BANK0
+   344 ;;      Params:         0       0
+   345 ;;      Locals:         0       2
+   346 ;;      Temps:          0       1
+   347 ;;      Totals:         0       3
+   348 ;;Total ram usage:        3 bytes
+   349 ;; Hardware stack levels required when called:    2
+   350 ;; This function calls:
+   351 ;;		_Play
+   352 ;; This function is called by:
+   353 ;;		Startup code after reset
+   354 ;; This function uses a non-reentrant model
+   355 ;;
+   356                           
+   357                           
+   358                           ;psect for function _main
+   359  0352                     _main:	
+   360                           
+   361                           ;newmain.c: 56: TRISB = 0x7F;
+   362                           
+   363                           ;incstack = 0
+   364                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   365  0352  307F               	movlw	127
+   366  0353  1683               	bsf	3,5	;RP0=1, select bank1
+   367  0354  0086               	movwf	6	;volatile
+   368                           
+   369                           ;newmain.c: 57: PORTB = 0x00;
+   370  0355  1283               	bcf	3,5	;RP0=0, select bank0
+   371  0356  0186               	clrf	6	;volatile
+   372                           
+   373                           ;newmain.c: 59: uint8_t melody = 0;
+   374  0357  01A1               	clrf	main@melody
+   375                           
+   376                           ;newmain.c: 60: uint8_t i =0;
+   377  0358  01A2               	clrf	main@i
+   378  0359                     l616:	
+   379                           ;newmain.c: 61: while(1)
+   380                           
+   381                           
+   382                           ;newmain.c: 62: {
+   383                           ;newmain.c: 69: for (i=0;i<39; i++){
+   384  0359  01A2               	clrf	main@i
+   385  035A                     L1:	
+   386  035A  3027               	movlw	39
+   387  035B  0222               	subwf	main@i,w
+   388  035C  1803               	btfsc	3,0
+   389  035D  2B59               	goto	l616
+   390                           
+   391                           ;newmain.c: 70: Play(i);
+   392  035E  0822               	movf	main@i,w
+   393  035F  23A3               	fcall	_Play
+   394  0360  3001               	movlw	1
+   395  0361  1283               	bcf	3,5	;RP0=0, select bank0
+   396  0362  00A0               	movwf	??_main
+   397  0363  0820               	movf	??_main,w
+   398  0364  07A2               	addwf	main@i,f
+   399  0365  2B5A               	goto	L1
+   400  0366                     __end_of_main:	
+   401                           
+   402                           	psect	text1
+   403  03A3                     __ptext1:	
+   404 ;; *************** function _Play *****************
+   405 ;; Defined at:
+   406 ;;		line 27 in file "newmain.c"
+   407 ;; Parameters:    Size  Location     Type
+   408 ;;  note            1    wreg     unsigned char 
+   409 ;; Auto vars:     Size  Location     Type
+   410 ;;  note            1   17[BANK0 ] unsigned char 
+   411 ;;  time            2   18[BANK0 ] unsigned int 
+   412 ;;  i               2   15[BANK0 ] unsigned int 
+   413 ;;  time2           2   13[BANK0 ] unsigned int 
+   414 ;;  j               2   11[BANK0 ] int 
+   415 ;; Return value:  Size  Location     Type
+   416 ;;                  1    wreg      void 
+   417 ;; Registers used:
+   418 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   419 ;; Tracked objects:
+   420 ;;		On entry : 0/0
+   421 ;;		On exit  : 0/0
+   422 ;;		Unchanged: 0/0
+   423 ;; Data sizes:     COMMON   BANK0
+   424 ;;      Params:         0       0
+   425 ;;      Locals:         0       9
+   426 ;;      Temps:          0       3
+   427 ;;      Totals:         0      12
+   428 ;;Total ram usage:       12 bytes
+   429 ;; Hardware stack levels used:    1
+   430 ;; Hardware stack levels required when called:    1
+   431 ;; This function calls:
+   432 ;;		___lwdiv
+   433 ;; This function is called by:
+   434 ;;		_main
+   435 ;; This function uses a non-reentrant model
+   436 ;;
+   437                           
+   438                           
+   439                           ;psect for function _Play
+   440  03A3                     _Play:	
+   441                           
+   442                           ;incstack = 0
+   443                           ; Regs used in _Play: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   444                           ;Play@note stored from wreg
+   445  03A3  1283               	bcf	3,5	;RP0=0, select bank0
+   446  03A4  009D               	movwf	Play@note
+   447                           
+   448                           ;newmain.c: 29: uint16_t i=0;
+   449  03A5  019B               	clrf	Play@i
+   450  03A6  019C               	clrf	Play@i+1
+   451                           
+   452                           ;newmain.c: 30: int j=0;
+   453  03A7  0197               	clrf	Play@j
+   454  03A8  0198               	clrf	Play@j+1
+   455                           
+   456                           ;newmain.c: 31: uint16_t time = (uint16_t)(20000/(frequences[note]));
+   457  03A9  081D               	movf	Play@note,w
+   458  03AA  0094               	movwf	??_Play
+   459  03AB  0714               	addwf	??_Play,w
+   460  03AC  3E4F               	addlw	low ((_frequences-__stringbase)| (0+32768))
+   461  03AD  0084               	movwf	4
+   462  03AE  2001               	fcall	stringdir
+   463  03AF  008C               	movwf	___lwdiv@divisor
+   464  03B0  2001               	fcall	stringdir
+   465  03B1  008D               	movwf	___lwdiv@divisor+1
+   466  03B2  3020               	movlw	32
+   467  03B3  008E               	movwf	___lwdiv@dividend
+   468  03B4  304E               	movlw	78
+   469  03B5  008F               	movwf	___lwdiv@dividend+1
+   470  03B6  2366               	fcall	___lwdiv
+   471  03B7  1283               	bcf	3,5	;RP0=0, select bank0
+   472  03B8  080D               	movf	?___lwdiv+1,w
+   473  03B9  009F               	movwf	Play@time+1
+   474  03BA  080C               	movf	?___lwdiv,w
+   475  03BB  009E               	movwf	Play@time
+   476                           
+   477                           ;newmain.c: 32: uint16_t time2 = time;
+   478  03BC  081F               	movf	Play@time+1,w
+   479  03BD  009A               	movwf	Play@time2+1
+   480  03BE  081E               	movf	Play@time,w
+   481  03BF  0099               	movwf	Play@time2
+   482                           
+   483                           ;newmain.c: 33: for (i=0;i<durations[note]/2;i++)
+   484  03C0  019B               	clrf	Play@i
+   485  03C1  019C               	clrf	Play@i+1
+   486  03C2                     l606:	
+   487  03C2  081D               	movf	Play@note,w
+   488  03C3  0094               	movwf	??_Play
+   489  03C4  0714               	addwf	??_Play,w
+   490  03C5  3E01               	addlw	low ((_durations-__stringbase)| (0+32768))
+   491  03C6  0084               	movwf	4
+   492  03C7  2001               	fcall	stringdir
+   493  03C8  0095               	movwf	??_Play+1
+   494  03C9  2001               	fcall	stringdir
+   495  03CA  0096               	movwf	??_Play+2
+   496  03CB  1003               	clrc
+   497  03CC  0C96               	rrf	??_Play+2,f
+   498  03CD  0C95               	rrf	??_Play+1,f
+   499  03CE  0816               	movf	??_Play+2,w
+   500  03CF  021C               	subwf	Play@i+1,w
+   501  03D0  1D03               	skipz
+   502  03D1  2BD4               	goto	u225
+   503  03D2  0815               	movf	??_Play+1,w
+   504  03D3  021B               	subwf	Play@i,w
+   505  03D4                     u225:	
+   506  03D4  1803               	btfsc	3,0
+   507  03D5  0008               	return
+   508                           
+   509                           ;newmain.c: 35: {
+   510                           ;newmain.c: 36: PORTB |= 0x80;
+   511  03D6  1786               	bsf	6,7	;volatile
+   512  03D7                     l594:	
+   513                           ;newmain.c: 37: while(time>0){
+   514                           
+   515  03D7  081E               	movf	Play@time,w
+   516  03D8  041F               	iorwf	Play@time+1,w
+   517  03D9  1903               	btfsc	3,2
+   518  03DA  2BE3               	goto	l596
+   519                           
+   520                           ;newmain.c: 39: time -=1;
+   521                           
+   522                           ;newmain.c: 38: _delay((unsigned long)((1)*(1000000/4000000.0)));
+   523  03DB  3001               	movlw	1
+   524  03DC  1283               	bcf	3,5	;RP0=0, select bank0
+   525  03DD  029E               	subwf	Play@time,f
+   526  03DE  3000               	movlw	0
+   527  03DF  1C03               	skipc
+   528  03E0  039F               	decf	Play@time+1,f
+   529  03E1  029F               	subwf	Play@time+1,f
+   530  03E2  2BD7               	goto	l594
+   531  03E3                     l596:	
+   532                           
+   533                           ;newmain.c: 40: }
+   534                           ;newmain.c: 43: PORTB &= ~0x80;
+   535  03E3  307F               	movlw	127
+   536  03E4  0094               	movwf	??_Play
+   537  03E5  0814               	movf	??_Play,w
+   538  03E6  0586               	andwf	6,f	;volatile
+   539                           
+   540                           ;newmain.c: 44: time = time2;
+   541  03E7  081A               	movf	Play@time2+1,w
+   542  03E8  009F               	movwf	Play@time+1
+   543  03E9  0819               	movf	Play@time2,w
+   544  03EA  009E               	movwf	Play@time
+   545  03EB                     l602:	
+   546                           ;newmain.c: 45: while(time>0){
+   547                           
+   548  03EB  081E               	movf	Play@time,w
+   549  03EC  041F               	iorwf	Play@time+1,w
+   550  03ED  1903               	btfsc	3,2
+   551  03EE  2BF7               	goto	l604
+   552                           
+   553                           ;newmain.c: 47: time -=1;
+   554                           
+   555                           ;newmain.c: 46: _delay((unsigned long)((1)*(1000000/4000000.0)));
+   556  03EF  3001               	movlw	1
+   557  03F0  1283               	bcf	3,5	;RP0=0, select bank0
+   558  03F1  029E               	subwf	Play@time,f
+   559  03F2  3000               	movlw	0
+   560  03F3  1C03               	skipc
+   561  03F4  039F               	decf	Play@time+1,f
+   562  03F5  029F               	subwf	Play@time+1,f
+   563  03F6  2BEB               	goto	l602
+   564  03F7                     l604:	
+   565  03F7  3001               	movlw	1
+   566  03F8  079B               	addwf	Play@i,f
+   567  03F9  1803               	skipnc
+   568  03FA  0A9C               	incf	Play@i+1,f
+   569  03FB  3000               	movlw	0
+   570  03FC  079C               	addwf	Play@i+1,f
+   571  03FD  2BC2               	goto	l606
+   572  03FE                     __end_of_Play:	
+   573                           
+   574                           	psect	text2
+   575  0366                     __ptext2:	
+   576 ;; *************** function ___lwdiv *****************
+   577 ;; Defined at:
+   578 ;;		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v1.41\sources\common\lwdiv.c"
+   579 ;; Parameters:    Size  Location     Type
+   580 ;;  divisor         2    0[BANK0 ] unsigned int 
+   581 ;;  dividend        2    2[BANK0 ] unsigned int 
+   582 ;; Auto vars:     Size  Location     Type
+   583 ;;  quotient        2    5[BANK0 ] unsigned int 
+   584 ;;  counter         1    7[BANK0 ] unsigned char 
+   585 ;; Return value:  Size  Location     Type
+   586 ;;                  2    0[BANK0 ] unsigned int 
+   587 ;; Registers used:
+   588 ;;		wreg, status,2, status,0
+   589 ;; Tracked objects:
+   590 ;;		On entry : 0/0
+   591 ;;		On exit  : 0/0
+   592 ;;		Unchanged: 0/0
+   593 ;; Data sizes:     COMMON   BANK0
+   594 ;;      Params:         0       4
+   595 ;;      Locals:         0       3
+   596 ;;      Temps:          0       1
+   597 ;;      Totals:         0       8
+   598 ;;Total ram usage:        8 bytes
+   599 ;; Hardware stack levels used:    1
+   600 ;; This function calls:
+   601 ;;		Nothing
+   602 ;; This function is called by:
+   603 ;;		_Play
+   604 ;; This function uses a non-reentrant model
+   605 ;;
+   606                           
+   607                           
+   608                           ;psect for function ___lwdiv
+   609  0366                     ___lwdiv:	
+   610                           
+   611                           ;incstack = 0
+   612                           ; Regs used in ___lwdiv: [wreg+status,2+status,0]
+   613  0366  1283               	bcf	3,5	;RP0=0, select bank0
+   614  0367  0191               	clrf	___lwdiv@quotient
+   615  0368  0192               	clrf	___lwdiv@quotient+1
+   616  0369  080C               	movf	___lwdiv@divisor,w
+   617  036A  040D               	iorwf	___lwdiv@divisor+1,w
+   618  036B  1903               	btfsc	3,2
+   619  036C  2B9E               	goto	l580
+   620  036D  0193               	clrf	___lwdiv@counter
+   621  036E  0A93               	incf	___lwdiv@counter,f
+   622  036F                     l568:	
+   623  036F  1B8D               	btfsc	___lwdiv@divisor+1,7
+   624  0370  2B7D               	goto	l570
+   625  0371  3001               	movlw	1
+   626  0372                     u145:	
+   627  0372  1003               	clrc
+   628  0373  0D8C               	rlf	___lwdiv@divisor,f
+   629  0374  0D8D               	rlf	___lwdiv@divisor+1,f
+   630  0375  3EFF               	addlw	-1
+   631  0376  1D03               	skipz
+   632  0377  2B72               	goto	u145
+   633  0378  3001               	movlw	1
+   634  0379  0090               	movwf	??___lwdiv
+   635  037A  0810               	movf	??___lwdiv,w
+   636  037B  0793               	addwf	___lwdiv@counter,f
+   637  037C  2B6F               	goto	l568
+   638  037D                     l570:	
+   639  037D  3001               	movlw	1
+   640  037E                     u165:	
+   641  037E  1003               	clrc
+   642  037F  0D91               	rlf	___lwdiv@quotient,f
+   643  0380  0D92               	rlf	___lwdiv@quotient+1,f
+   644  0381  3EFF               	addlw	-1
+   645  0382  1D03               	skipz
+   646  0383  2B7E               	goto	u165
+   647  0384  080D               	movf	___lwdiv@divisor+1,w
+   648  0385  020F               	subwf	___lwdiv@dividend+1,w
+   649  0386  1D03               	skipz
+   650  0387  2B8A               	goto	u175
+   651  0388  080C               	movf	___lwdiv@divisor,w
+   652  0389  020E               	subwf	___lwdiv@dividend,w
+   653  038A                     u175:	
+   654  038A  1C03               	skipc
+   655  038B  2B93               	goto	l576
+   656  038C  080C               	movf	___lwdiv@divisor,w
+   657  038D  028E               	subwf	___lwdiv@dividend,f
+   658  038E  080D               	movf	___lwdiv@divisor+1,w
+   659  038F  1C03               	skipc
+   660  0390  038F               	decf	___lwdiv@dividend+1,f
+   661  0391  028F               	subwf	___lwdiv@dividend+1,f
+   662  0392  1411               	bsf	___lwdiv@quotient,0
+   663  0393                     l576:	
+   664  0393  3001               	movlw	1
+   665  0394                     u185:	
+   666  0394  1003               	clrc
+   667  0395  0C8D               	rrf	___lwdiv@divisor+1,f
+   668  0396  0C8C               	rrf	___lwdiv@divisor,f
+   669  0397  3EFF               	addlw	-1
+   670  0398  1D03               	skipz
+   671  0399  2B94               	goto	u185
+   672  039A  3001               	movlw	1
+   673  039B  0293               	subwf	___lwdiv@counter,f
+   674  039C  1D03               	btfss	3,2
+   675  039D  2B7D               	goto	l570
+   676  039E                     l580:	
+   677  039E  0812               	movf	___lwdiv@quotient+1,w
+   678  039F  008D               	movwf	?___lwdiv+1
+   679  03A0  0811               	movf	___lwdiv@quotient,w
+   680  03A1  008C               	movwf	?___lwdiv
+   681  03A2  0008               	return
+   682  03A3                     __end_of___lwdiv:	
+   683  004E                     btemp	set	78	;btemp
+   684  004E                     wtemp0	set	78
+
+
+Data Sizes:
+    Strings     0
+    Constant    156
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66     23      23
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    _main->_Play
+    _Play->___lwdiv
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0     501
+                                             20 BANK0      3     3      0
+                               _Play
+ ---------------------------------------------------------------------------------
+ (1) _Play                                                12    12      0     431
+                                              8 BANK0     12    12      0
+                            ___lwdiv
+ ---------------------------------------------------------------------------------
+ (2) ___lwdiv                                              8     4      4     268
+                                              0 BANK0      8     4      4
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _Play
+     ___lwdiv
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              40      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               42     17      17       3       34.8%
+ABS                  0      0       0       4        0.0%
+BITBANK0            42      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.41 build -162212810 
+Symbol Table                                                                                   Thu Mar 30 20:10:58 2017
+
+                      pc 0002                       fsr 0004                      l602 03EB  
+                    l604 03F7                      l606 03C2                      l616 0359  
+                    l570 037D                      l580 039E                      l576 0393  
+                    l568 036F                      l594 03D7                      l596 03E3  
+                    u145 0372                      u225 03D4                      u165 037E  
+                    u175 038A                      u185 0394                      fsr0 0004  
+                   _Play 03A3                     _main 0352                     btemp 004E  
+                   start 0000                    ?_Play 000C                    ?_main 000C  
+          __CFG_WDTE$OFF 0000          __end_of___lwdiv 03A3                    _PORTB 0006  
+                  _TRISB 0086                    Play@i 001B                    Play@j 0017  
+                  main@i 0022                    pclath 000A                    status 0003  
+                  wtemp0 004E          __initialization 03FE             __end_of_Play 03FE  
+           __end_of_main 0366                   ??_Play 0014                   ??_main 0020  
+              ??___lwdiv 0010  __end_of__initialization 03FE               __pmaintext 0352  
+             __stringtab 0001               _frequences 0055                  ___lwdiv 0366  
+                __ptext1 03A3                  __ptext2 0366        __end_of_durations 0055  
+   end_of_initialization 03FE               main@melody 0021                Play@time2 0019  
+    start_initialization 03FE                ___latbits 0000            __pcstackBANK0 000C  
+       ___lwdiv@dividend 000E                 ?___lwdiv 000C                __pstrings 0001  
+       ___lwdiv@quotient 0011                _durations 0007              __stringbase 0006  
+               Play@note 001D                 Play@time 001E         __size_of___lwdiv 003D  
+     __end_of__stringtab 0007          ___lwdiv@divisor 000C          ___lwdiv@counter 0013  
+     __end_of_frequences 00A3            __size_of_Play 005B            __size_of_main 0014  
+              stringcode 0001                 stringdir 0001                 stringtab 0001  

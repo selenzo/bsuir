@@ -1,0 +1,104 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F84A ]
+[d frameptr 6 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"50 D:\downloads\savenko\MPLABXProjects\lab5\newmain.c
+[v _Play Play `(v  1 e 1 0 ]
+"71
+[v _isr isr `II(v  1 e 1 0 ]
+"81
+[v _main main `(v  1 e 1 0 ]
+"203 C:\Program Files (x86)\Microchip\xc8\v1.38\include\pic16f84a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"484
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"608
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"610
+[v _INTE INTE `VEb  1 e 0 @92 ]
+"612
+[v _INTEDG INTEDG `VEb  1 e 0 @1038 ]
+"614
+[v _INTF INTF `VEb  1 e 0 @89 ]
+"19 D:\downloads\savenko\MPLABXProjects\lab5\newmain.c
+[v _frequences frequences `DCC[42]ui  1 e 84 0 ]
+"26
+[v _durations durations `DCC[42]ui  1 e 84 0 ]
+"33
+[v _frequences2 frequences2 `DCC[42]ui  1 e 84 0 ]
+"40
+[v _durations2 durations2 `DCC[42]ui  1 e 84 0 ]
+"47
+[v _melody_freq melody_freq `[2]*.25DCCui  1 e 4 0 ]
+"48
+[v _melody_dur melody_dur `[2]*.25DCCui  1 e 4 0 ]
+"68
+[v _melody melody `VEuc  1 e 1 0 ]
+"69
+[v _counter counter `VEuc  1 e 1 0 ]
+"81
+[v _main main `(v  1 e 1 0 ]
+{
+"108
+} 0
+"50
+[v _Play Play `(v  1 e 1 0 ]
+{
+[v Play@note note `uc  1 a 1 wreg ]
+"62
+[v Play@j_44 j `ui  1 a 2 30 ]
+"58
+[v Play@j j `ui  1 a 2 28 ]
+"52
+[v Play@time time `ui  1 a 2 33 ]
+"54
+[v Play@actual_duration actual_duration `ui  1 a 2 26 ]
+"53
+[v Play@dur dur `ui  1 a 2 24 ]
+"50
+[v Play@note note `uc  1 a 1 wreg ]
+[v Play@melody melody `uc  1 p 1 19 ]
+"52
+[v Play@note note `uc  1 a 1 32 ]
+"66
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 9 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 5 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 7 ]
+"53
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.38\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 16 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 18 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 11 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 13 ]
+"31
+} 0
+"71 D:\downloads\savenko\MPLABXProjects\lab5\newmain.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"79
+} 0

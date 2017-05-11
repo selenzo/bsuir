@@ -1,0 +1,500 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.41 build -162212810 
+                                                                                               Thu Mar 30 19:12:56 2017
+
+Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
+     1                           	processor	16F84A
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     6                           	psect	maintext,global,class=CODE,split=1,delta=2
+     7                           	dabs	1,0x4E,2
+     8  0000                     
+     9                           ; Version 1.41
+    10                           ; Generated 25/01/2017 GMT
+    11                           ; 
+    12                           ; Copyright © 2017, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    13                           ; All rights reserved.
+    14                           ; 
+    15                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    16                           ; 
+    17                           ; Redistribution and use in source and binary forms, with or without modification, are
+    18                           ; permitted provided that the following conditions are met:
+    19                           ; 
+    20                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    21                           ;        conditions and the following disclaimer.
+    22                           ; 
+    23                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    24                           ;        of conditions and the following disclaimer in the documentation and/or other
+    25                           ;        materials provided with the distribution.
+    26                           ; 
+    27                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    28                           ;        software without specific prior written permission.
+    29                           ; 
+    30                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    31                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    32                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    33                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    34                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    35                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    36                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    37                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    38                           ; 
+    39                           ; 
+    40                           ; Code-generator required, PIC16F84A Definitions
+    41                           ; 
+    42                           ; SFR Addresses
+    43  0000                     	;# 
+    44  0001                     	;# 
+    45  0002                     	;# 
+    46  0003                     	;# 
+    47  0004                     	;# 
+    48  0005                     	;# 
+    49  0006                     	;# 
+    50  0008                     	;# 
+    51  0009                     	;# 
+    52  000A                     	;# 
+    53  000B                     	;# 
+    54  0081                     	;# 
+    55  0085                     	;# 
+    56  0086                     	;# 
+    57  0088                     	;# 
+    58  0089                     	;# 
+    59  0006                     _PORTB	set	6
+    60  0005                     _PORTA	set	5
+    61  0086                     _TRISB	set	134
+    62  0085                     _TRISA	set	133
+    63                           
+    64                           	psect	cinit
+    65  03FE                     start_initialization:	
+    66                           ; #config settings
+    67                           
+    68  03FE                     __initialization:	
+    69  03FE                     end_of_initialization:	
+    70                           ;End of C runtime variable initialization code
+    71                           
+    72  03FE                     __end_of__initialization:	
+    73  03FE  0183               	clrf	3
+    74  03FF  2B42               	ljmp	_main	;jump to C main() function
+    75                           
+    76                           	psect	cstackBANK0
+    77  000C                     __pcstackBANK0:	
+    78  000C                     ?_main:	
+    79  000C                     ??_main:	
+    80                           ; 1 bytes @ 0x0
+    81                           
+    82                           
+    83                           ; 1 bytes @ 0x0
+    84  000C                     	ds	3
+    85                           
+    86                           	psect	maintext
+    87  0342                     __pmaintext:	
+    88 ;;
+    89 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+    90 ;;
+    91 ;; *************** function _main *****************
+    92 ;; Defined at:
+    93 ;;		line 16 in file "newmain.c"
+    94 ;; Parameters:    Size  Location     Type
+    95 ;;		None
+    96 ;; Auto vars:     Size  Location     Type
+    97 ;;		None
+    98 ;; Return value:  Size  Location     Type
+    99 ;;                  1    wreg      void 
+   100 ;; Registers used:
+   101 ;;		wreg, status,2, status,0
+   102 ;; Tracked objects:
+   103 ;;		On entry : B00/0
+   104 ;;		On exit  : 0/0
+   105 ;;		Unchanged: 0/0
+   106 ;; Data sizes:     COMMON   BANK0
+   107 ;;      Params:         0       0
+   108 ;;      Locals:         0       0
+   109 ;;      Temps:          0       3
+   110 ;;      Totals:         0       3
+   111 ;;Total ram usage:        3 bytes
+   112 ;; This function calls:
+   113 ;;		Nothing
+   114 ;; This function is called by:
+   115 ;;		Startup code after reset
+   116 ;; This function uses a non-reentrant model
+   117 ;;
+   118                           
+   119                           
+   120                           ;psect for function _main
+   121  0342                     _main:	
+   122                           
+   123                           ;newmain.c: 18: TRISA = 0xE0;
+   124                           
+   125                           ;incstack = 0
+   126                           ; Regs used in _main: [wreg+status,2+status,0]
+   127  0342  30E0               	movlw	224
+   128  0343  1683               	bsf	3,5	;RP0=1, select bank1
+   129  0344  0085               	movwf	5	;volatile
+   130                           
+   131                           ;newmain.c: 19: TRISB = 0x00;
+   132  0345  0186               	clrf	6	;volatile
+   133  0346                     l546:	
+   134                           ;newmain.c: 20: while(1)
+   135                           
+   136                           
+   137                           ;newmain.c: 21: {
+   138                           ;newmain.c: 22: PORTA = 0x01;
+   139  0346  3001               	movlw	1
+   140  0347  1283               	bcf	3,5	;RP0=0, select bank0
+   141  0348  0085               	movwf	5	;volatile
+   142                           
+   143                           ;newmain.c: 23: PORTB = 0x30;
+   144  0349  3030               	movlw	48
+   145  034A  0086               	movwf	6	;volatile
+   146                           
+   147                           ;newmain.c: 24: _delay((unsigned long)((3000)*(1000000/4000.0)));
+   148  034B  3004               	movlw	4
+   149  034C  008E               	movwf	??_main+2
+   150  034D  30CF               	movlw	207
+   151  034E  008D               	movwf	??_main+1
+   152  034F  3001               	movlw	1
+   153  0350  008C               	movwf	??_main
+   154  0351                     u17:	
+   155  0351  0B8C               	decfsz	??_main,f
+   156  0352  2B51               	goto	u17
+   157  0353  0B8D               	decfsz	??_main+1,f
+   158  0354  2B51               	goto	u17
+   159  0355  0B8E               	decfsz	??_main+2,f
+   160  0356  2B51               	goto	u17
+   161  0357  2B58               	nop2
+   162                           
+   163                           ;newmain.c: 25: PORTA |= 0x02;
+   164  0358  1283               	bcf	3,5	;RP0=0, select bank0
+   165  0359  1485               	bsf	5,1	;volatile
+   166                           
+   167                           ;newmain.c: 26: PORTB = 0x60;
+   168  035A  3060               	movlw	96
+   169  035B  0086               	movwf	6	;volatile
+   170                           
+   171                           ;newmain.c: 27: _delay((unsigned long)((500)*(1000000/4000.0)));
+   172  035C  30A3               	movlw	163
+   173  035D  008D               	movwf	??_main+1
+   174  035E  3055               	movlw	85
+   175  035F  008C               	movwf	??_main
+   176  0360                     u27:	
+   177  0360  0B8C               	decfsz	??_main,f
+   178  0361  2B60               	goto	u27
+   179  0362  0B8D               	decfsz	??_main+1,f
+   180  0363  2B60               	goto	u27
+   181                           
+   182                           ;newmain.c: 28: PORTB |= 0x10;
+   183  0364  1283               	bcf	3,5	;RP0=0, select bank0
+   184  0365  1606               	bsf	6,4	;volatile
+   185                           
+   186                           ;newmain.c: 29: _delay((unsigned long)((500)*(1000000/4000.0)));
+   187  0366  30A3               	movlw	163
+   188  0367  008D               	movwf	??_main+1
+   189  0368  3055               	movlw	85
+   190  0369  008C               	movwf	??_main
+   191  036A                     u37:	
+   192  036A  0B8C               	decfsz	??_main,f
+   193  036B  2B6A               	goto	u37
+   194  036C  0B8D               	decfsz	??_main+1,f
+   195  036D  2B6A               	goto	u37
+   196                           
+   197                           ;newmain.c: 30: PORTB &= ~0x10;
+   198  036E  30EF               	movlw	239
+   199  036F  1283               	bcf	3,5	;RP0=0, select bank0
+   200  0370  008C               	movwf	??_main
+   201  0371  080C               	movf	??_main,w
+   202  0372  0586               	andwf	6,f	;volatile
+   203                           
+   204                           ;newmain.c: 31: _delay((unsigned long)((500)*(1000000/4000.0)));
+   205  0373  30A3               	movlw	163
+   206  0374  008D               	movwf	??_main+1
+   207  0375  3055               	movlw	85
+   208  0376  008C               	movwf	??_main
+   209  0377                     u47:	
+   210  0377  0B8C               	decfsz	??_main,f
+   211  0378  2B77               	goto	u47
+   212  0379  0B8D               	decfsz	??_main+1,f
+   213  037A  2B77               	goto	u47
+   214                           
+   215                           ;newmain.c: 32: PORTB |= 0x10;
+   216  037B  1283               	bcf	3,5	;RP0=0, select bank0
+   217  037C  1606               	bsf	6,4	;volatile
+   218                           
+   219                           ;newmain.c: 33: _delay((unsigned long)((500)*(1000000/4000.0)));
+   220  037D  30A3               	movlw	163
+   221  037E  008D               	movwf	??_main+1
+   222  037F  3055               	movlw	85
+   223  0380  008C               	movwf	??_main
+   224  0381                     u57:	
+   225  0381  0B8C               	decfsz	??_main,f
+   226  0382  2B81               	goto	u57
+   227  0383  0B8D               	decfsz	??_main+1,f
+   228  0384  2B81               	goto	u57
+   229                           
+   230                           ;newmain.c: 34: PORTB &= ~0x10;
+   231  0385  30EF               	movlw	239
+   232  0386  1283               	bcf	3,5	;RP0=0, select bank0
+   233  0387  008C               	movwf	??_main
+   234  0388  080C               	movf	??_main,w
+   235  0389  0586               	andwf	6,f	;volatile
+   236                           
+   237                           ;newmain.c: 35: _delay((unsigned long)((500)*(1000000/4000.0)));
+   238  038A  30A3               	movlw	163
+   239  038B  008D               	movwf	??_main+1
+   240  038C  3055               	movlw	85
+   241  038D  008C               	movwf	??_main
+   242  038E                     u67:	
+   243  038E  0B8C               	decfsz	??_main,f
+   244  038F  2B8E               	goto	u67
+   245  0390  0B8D               	decfsz	??_main+1,f
+   246  0391  2B8E               	goto	u67
+   247                           
+   248                           ;newmain.c: 36: PORTB |= 0x08;
+   249  0392  1283               	bcf	3,5	;RP0=0, select bank0
+   250  0393  1586               	bsf	6,3	;volatile
+   251                           
+   252                           ;newmain.c: 37: _delay((unsigned long)((500)*(1000000/4000.0)));
+   253  0394  30A3               	movlw	163
+   254  0395  008D               	movwf	??_main+1
+   255  0396  3055               	movlw	85
+   256  0397  008C               	movwf	??_main
+   257  0398                     u77:	
+   258  0398  0B8C               	decfsz	??_main,f
+   259  0399  2B98               	goto	u77
+   260  039A  0B8D               	decfsz	??_main+1,f
+   261  039B  2B98               	goto	u77
+   262                           
+   263                           ;newmain.c: 38: PORTA = 0x04;
+   264  039C  3004               	movlw	4
+   265  039D  1283               	bcf	3,5	;RP0=0, select bank0
+   266  039E  0085               	movwf	5	;volatile
+   267                           
+   268                           ;newmain.c: 39: PORTB = 0x84;
+   269  039F  3084               	movlw	132
+   270  03A0  0086               	movwf	6	;volatile
+   271                           
+   272                           ;newmain.c: 40: _delay((unsigned long)((3000)*(1000000/4000.0)));
+   273  03A1  3004               	movlw	4
+   274  03A2  008E               	movwf	??_main+2
+   275  03A3  30CF               	movlw	207
+   276  03A4  008D               	movwf	??_main+1
+   277  03A5  3001               	movlw	1
+   278  03A6  008C               	movwf	??_main
+   279  03A7                     u87:	
+   280  03A7  0B8C               	decfsz	??_main,f
+   281  03A8  2BA7               	goto	u87
+   282  03A9  0B8D               	decfsz	??_main+1,f
+   283  03AA  2BA7               	goto	u87
+   284  03AB  0B8E               	decfsz	??_main+2,f
+   285  03AC  2BA7               	goto	u87
+   286  03AD  2BAE               	nop2
+   287                           
+   288                           ;newmain.c: 41: PORTB = 0x0C;
+   289  03AE  300C               	movlw	12
+   290  03AF  1283               	bcf	3,5	;RP0=0, select bank0
+   291  03B0  0086               	movwf	6	;volatile
+   292                           
+   293                           ;newmain.c: 42: PORTA = 0x00;
+   294  03B1  0185               	clrf	5	;volatile
+   295                           
+   296                           ;newmain.c: 43: _delay((unsigned long)((500)*(1000000/4000.0)));
+   297  03B2  30A3               	movlw	163
+   298  03B3  008D               	movwf	??_main+1
+   299  03B4  3055               	movlw	85
+   300  03B5  008C               	movwf	??_main
+   301  03B6                     u97:	
+   302  03B6  0B8C               	decfsz	??_main,f
+   303  03B7  2BB6               	goto	u97
+   304  03B8  0B8D               	decfsz	??_main+1,f
+   305  03B9  2BB6               	goto	u97
+   306                           
+   307                           ;newmain.c: 44: PORTA |= 0x04;
+   308  03BA  1283               	bcf	3,5	;RP0=0, select bank0
+   309  03BB  1505               	bsf	5,2	;volatile
+   310                           
+   311                           ;newmain.c: 45: PORTB |= 0x80;
+   312  03BC  1786               	bsf	6,7	;volatile
+   313                           
+   314                           ;newmain.c: 46: _delay((unsigned long)((500)*(1000000/4000.0)));
+   315  03BD  30A3               	movlw	163
+   316  03BE  008D               	movwf	??_main+1
+   317  03BF  3055               	movlw	85
+   318  03C0  008C               	movwf	??_main
+   319  03C1                     u107:	
+   320  03C1  0B8C               	decfsz	??_main,f
+   321  03C2  2BC1               	goto	u107
+   322  03C3  0B8D               	decfsz	??_main+1,f
+   323  03C4  2BC1               	goto	u107
+   324                           
+   325                           ;newmain.c: 47: PORTA &= ~0x04;
+   326  03C5  30FB               	movlw	251
+   327  03C6  1283               	bcf	3,5	;RP0=0, select bank0
+   328  03C7  008C               	movwf	??_main
+   329  03C8  080C               	movf	??_main,w
+   330  03C9  0585               	andwf	5,f	;volatile
+   331                           
+   332                           ;newmain.c: 48: PORTB &= ~0x80;
+   333  03CA  307F               	movlw	127
+   334  03CB  008C               	movwf	??_main
+   335  03CC  080C               	movf	??_main,w
+   336  03CD  0586               	andwf	6,f	;volatile
+   337                           
+   338                           ;newmain.c: 49: _delay((unsigned long)((500)*(1000000/4000.0)));
+   339  03CE  30A3               	movlw	163
+   340  03CF  008D               	movwf	??_main+1
+   341  03D0  3055               	movlw	85
+   342  03D1  008C               	movwf	??_main
+   343  03D2                     u117:	
+   344  03D2  0B8C               	decfsz	??_main,f
+   345  03D3  2BD2               	goto	u117
+   346  03D4  0B8D               	decfsz	??_main+1,f
+   347  03D5  2BD2               	goto	u117
+   348                           
+   349                           ;newmain.c: 50: PORTA |= 0x04;
+   350  03D6  1283               	bcf	3,5	;RP0=0, select bank0
+   351  03D7  1505               	bsf	5,2	;volatile
+   352                           
+   353                           ;newmain.c: 51: PORTB |= 0x80;
+   354  03D8  1786               	bsf	6,7	;volatile
+   355                           
+   356                           ;newmain.c: 52: _delay((unsigned long)((500)*(1000000/4000.0)));
+   357  03D9  30A3               	movlw	163
+   358  03DA  008D               	movwf	??_main+1
+   359  03DB  3055               	movlw	85
+   360  03DC  008C               	movwf	??_main
+   361  03DD                     u127:	
+   362  03DD  0B8C               	decfsz	??_main,f
+   363  03DE  2BDD               	goto	u127
+   364  03DF  0B8D               	decfsz	??_main+1,f
+   365  03E0  2BDD               	goto	u127
+   366                           
+   367                           ;newmain.c: 53: PORTA &= ~0x04;
+   368  03E1  30FB               	movlw	251
+   369  03E2  1283               	bcf	3,5	;RP0=0, select bank0
+   370  03E3  008C               	movwf	??_main
+   371  03E4  080C               	movf	??_main,w
+   372  03E5  0585               	andwf	5,f	;volatile
+   373                           
+   374                           ;newmain.c: 54: PORTB &= ~0x80;
+   375  03E6  307F               	movlw	127
+   376  03E7  008C               	movwf	??_main
+   377  03E8  080C               	movf	??_main,w
+   378  03E9  0586               	andwf	6,f	;volatile
+   379                           
+   380                           ;newmain.c: 55: _delay((unsigned long)((500)*(1000000/4000.0)));
+   381  03EA  30A3               	movlw	163
+   382  03EB  008D               	movwf	??_main+1
+   383  03EC  3055               	movlw	85
+   384  03ED  008C               	movwf	??_main
+   385  03EE                     u137:	
+   386  03EE  0B8C               	decfsz	??_main,f
+   387  03EF  2BEE               	goto	u137
+   388  03F0  0B8D               	decfsz	??_main+1,f
+   389  03F1  2BEE               	goto	u137
+   390                           
+   391                           ;newmain.c: 56: PORTA |= 0x02;
+   392  03F2  1283               	bcf	3,5	;RP0=0, select bank0
+   393  03F3  1485               	bsf	5,1	;volatile
+   394                           
+   395                           ;newmain.c: 57: PORTB |= 0x40;
+   396  03F4  1706               	bsf	6,6	;volatile
+   397                           
+   398                           ;newmain.c: 58: _delay((unsigned long)((500)*(1000000/4000.0)));
+   399  03F5  30A3               	movlw	163
+   400  03F6  008D               	movwf	??_main+1
+   401  03F7  3055               	movlw	85
+   402  03F8  008C               	movwf	??_main
+   403  03F9                     u147:	
+   404  03F9  0B8C               	decfsz	??_main,f
+   405  03FA  2BF9               	goto	u147
+   406  03FB  0B8D               	decfsz	??_main+1,f
+   407  03FC  2BF9               	goto	u147
+   408  03FD  2B46               	goto	l546
+   409  03FE                     __end_of_main:	
+   410  004E                     btemp	set	78	;btemp
+   411  004E                     wtemp0	set	78
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            66      3       3
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0       0
+                                              0 BANK0      3     3      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+EEDATA              40      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               42      3       3       3        4.5%
+ABS                  0      0       0       4        0.0%
+BITBANK0            42      0       0       5        0.0%
+DATA                 0      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.41 build -162212810 
+Symbol Table                                                                                   Thu Mar 30 19:12:56 2017
+
+                     u17 0351                       u27 0360                       u37 036A  
+                     u47 0377                       u57 0381                       u67 038E  
+                     u77 0398                       u87 03A7                       u97 03B6  
+                    l546 0346                      u107 03C1                      u117 03D2  
+                    u127 03DD                      u137 03EE                      u147 03F9  
+                   _main 0342                     btemp 004E                     start 0000  
+                  ?_main 000C                    _PORTA 0005                    _PORTB 0006  
+                  _TRISA 0085                    _TRISB 0086                    status 0003  
+                  wtemp0 004E          __initialization 03FE             __end_of_main 03FE  
+                 ??_main 000C  __end_of__initialization 03FE               __pmaintext 0342  
+   end_of_initialization 03FE      start_initialization 03FE                ___latbits 0000  
+          __pcstackBANK0 000C            __size_of_main 00BC  

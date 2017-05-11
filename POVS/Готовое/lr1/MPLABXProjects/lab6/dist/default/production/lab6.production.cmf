@@ -1,0 +1,342 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\lab6.production.obj
+cinit CODE 0 3FE 3FE 2 2
+text1 CODE 0 268 268 196 2
+text2 CODE 0 1FF 1FF 69 2
+maintext CODE 0 1F3 1F3 C 2
+cstackBANK0 BANK0 1 C C 1A 1
+swtext1 CONST 0 1 1 17 2
+$C:\Users\Art\AppData\Local\Temp\s5rc.obj
+end_init CODE 0 0 0 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 26-4D 1
+BANK0 26-4D 1
+CONST 18-1F2 2
+ENTRY 18-1F2 2
+IDLOC 2000-2003 2
+STACK 26-4D 1
+CODE 18-1F2 2
+SFR0 0-B 1
+SFR1 80-CD 1
+CONFIG 2007-2007 2
+EEDATA 2100-213F 2
+STRCODE 18-1F2 2
+STRING 18-1F2 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\lab6.production.obj
+3FE cinit CODE >90:C:\Users\Art\AppData\Local\Temp\s5rc.
+3FE cinit CODE >93:C:\Users\Art\AppData\Local\Temp\s5rc.
+3FE cinit CODE >99:C:\Users\Art\AppData\Local\Temp\s5rc.
+3FE cinit CODE >101:C:\Users\Art\AppData\Local\Temp\s5rc.
+3FF cinit CODE >102:C:\Users\Art\AppData\Local\Temp\s5rc.
+1FF text2 CODE >119:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1FF text2 CODE >121:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+202 text2 CODE >122:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+203 text2 CODE >124:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+205 text2 CODE >126:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+207 text2 CODE >128:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+209 text2 CODE >130:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+20B text2 CODE >122:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+222 text2 CODE >132:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+224 text2 CODE >133:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+225 text2 CODE >135:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+227 text2 CODE >137:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+229 text2 CODE >139:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+22B text2 CODE >141:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+22D text2 CODE >133:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+244 text2 CODE >143:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+246 text2 CODE >144:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+247 text2 CODE >146:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+249 text2 CODE >148:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+24B text2 CODE >150:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+24D text2 CODE >152:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+24F text2 CODE >144:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+266 text2 CODE >154:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1 swtext1 CONST >17:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+268 text1 CODE >15:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+26A text1 CODE >17:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+26B text1 CODE >19:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+274 text1 CODE >20:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+275 text1 CODE >21:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+279 text1 CODE >22:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+27E text1 CODE >23:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+282 text1 CODE >19:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+28A text1 CODE >27:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+293 text1 CODE >28:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+294 text1 CODE >29:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+299 text1 CODE >30:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+29E text1 CODE >31:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2A3 text1 CODE >27:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2AB text1 CODE >35:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2B4 text1 CODE >36:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2B5 text1 CODE >37:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2BA text1 CODE >38:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2BF text1 CODE >39:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2C4 text1 CODE >35:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2CC text1 CODE >43:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2D5 text1 CODE >44:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2D6 text1 CODE >45:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2DA text1 CODE >46:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2DF text1 CODE >47:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2E3 text1 CODE >43:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2EB text1 CODE >51:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2F4 text1 CODE >52:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2F5 text1 CODE >53:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2FA text1 CODE >54:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+2FF text1 CODE >55:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+304 text1 CODE >51:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+30C text1 CODE >59:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+315 text1 CODE >60:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+316 text1 CODE >61:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+31B text1 CODE >62:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+320 text1 CODE >63:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+325 text1 CODE >59:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+32D text1 CODE >67:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+336 text1 CODE >68:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+337 text1 CODE >69:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+33B text1 CODE >70:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+340 text1 CODE >71:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+344 text1 CODE >67:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+34C text1 CODE >75:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+355 text1 CODE >76:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+356 text1 CODE >77:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+35B text1 CODE >78:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+360 text1 CODE >79:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+365 text1 CODE >75:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+36D text1 CODE >83:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+376 text1 CODE >84:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+377 text1 CODE >85:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+37C text1 CODE >86:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+381 text1 CODE >87:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+386 text1 CODE >83:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+38E text1 CODE >91:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+397 text1 CODE >92:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+398 text1 CODE >93:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+39D text1 CODE >94:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3A2 text1 CODE >95:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3A7 text1 CODE >91:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3AF text1 CODE >99:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3B8 text1 CODE >100:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3B9 text1 CODE >101:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3BD text1 CODE >102:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3C2 text1 CODE >103:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3C6 text1 CODE >99:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3CE text1 CODE >107:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3D7 text1 CODE >108:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3D8 text1 CODE >109:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3DD text1 CODE >110:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3E2 text1 CODE >111:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3E7 text1 CODE >107:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3EF text1 CODE >17:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+3FD text1 CODE >117:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1F3 maintext CODE >157:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1F3 maintext CODE >159:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1F6 maintext CODE >160:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1F8 maintext CODE >161:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1FA maintext CODE >162:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1FC maintext CODE >166:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+1FE maintext CODE >164:C:\Users\Art\MPLABXProjects\lab6\newmain.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 0 0 ABS 0 - dist/default/production\lab6.production.obj
+__Hspace_0 400 0 ABS 0 - -
+__Hspace_1 26 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+ltemp0 4E 0 ABS 0 - dist/default/production\lab6.production.obj
+ltemp1 52 0 ABS 0 - dist/default/production\lab6.production.obj
+ltemp2 56 0 ABS 0 - dist/default/production\lab6.production.obj
+ltemp3 50 0 ABS 0 - dist/default/production\lab6.production.obj
+__Hstrings 0 0 ABS 0 strings -
+_Play 4D0 0 CODE 0 text1 dist/default/production\lab6.production.obj
+___sp 0 0 STACK 2 stack C:\Users\Art\AppData\Local\Temp\s5rc.obj
+_main 3E6 0 CODE 0 maintext dist/default/production\lab6.production.obj
+btemp 4E 0 ABS 0 - dist/default/production\lab6.production.obj
+ltemp 4E 0 ABS 0 - dist/default/production\lab6.production.obj
+start 0 0 CODE 0 init C:\Users\Art\AppData\Local\Temp\s5rc.obj
+ttemp 4E 0 ABS 0 - dist/default/production\lab6.production.obj
+wtemp 4E 0 ABS 0 - dist/default/production\lab6.production.obj
+__size_of_Play 0 0 ABS 0 - dist/default/production\lab6.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\lab6.production.obj
+__end_of_CaptureKey 4D0 0 CODE 0 text2 dist/default/production\lab6.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+ttemp0 4E 0 ABS 0 - dist/default/production\lab6.production.obj
+ttemp1 51 0 ABS 0 - dist/default/production\lab6.production.obj
+ttemp2 54 0 ABS 0 - dist/default/production\lab6.production.obj
+ttemp3 57 0 ABS 0 - dist/default/production\lab6.production.obj
+ttemp4 4F 0 ABS 0 - dist/default/production\lab6.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\Art\AppData\Local\Temp\s5rc.obj
+intlevel1 0 0 CODE 0 functab C:\Users\Art\AppData\Local\Temp\s5rc.obj
+intlevel2 0 0 CODE 0 functab C:\Users\Art\AppData\Local\Temp\s5rc.obj
+intlevel3 0 0 CODE 0 functab C:\Users\Art\AppData\Local\Temp\s5rc.obj
+intlevel4 0 0 CODE 0 functab C:\Users\Art\AppData\Local\Temp\s5rc.obj
+intlevel5 0 0 CODE 0 functab C:\Users\Art\AppData\Local\Temp\s5rc.obj
+wtemp0 4E 0 ABS 0 - dist/default/production\lab6.production.obj
+wtemp1 50 0 ABS 0 - dist/default/production\lab6.production.obj
+wtemp2 52 0 ABS 0 - dist/default/production\lab6.production.obj
+wtemp3 54 0 ABS 0 - dist/default/production\lab6.production.obj
+wtemp4 56 0 ABS 0 - dist/default/production\lab6.production.obj
+wtemp5 58 0 ABS 0 - dist/default/production\lab6.production.obj
+wtemp6 4F 0 ABS 0 - dist/default/production\lab6.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lmaintext 0 0 ABS 0 maintext -
+Play@data D 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_32 10 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_33 12 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_34 14 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_35 16 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_36 18 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_37 1A 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_38 1C 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_39 1E 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_40 20 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_41 22 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+Play@i_42 24 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+start_initialization 7FC 0 CODE 0 cinit dist/default/production\lab6.production.obj
+__pcstackBANK0 C 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+__size_of_CaptureKey 0 0 ABS 0 - dist/default/production\lab6.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\Art\AppData\Local\Temp\s5rc.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 BANK1 1 bank1 -
+__Hcinit 800 0 CODE 0 cinit -
+__Hidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 0 0 CONFIG 0 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 BANK1 1 bank1 -
+__Lcinit 7FC 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Lstack 0 0 STACK 2 stack -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 400 0 ABS 0 - -
+__S1 26 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Art\AppData\Local\Temp\s5rc.obj
+__pmaintext 3E6 0 CODE 0 maintext dist/default/production\lab6.production.obj
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 0 config -
+stackhi 0 0 ABS 0 - C:\Users\Art\AppData\Local\Temp\s5rc.obj
+stacklo 0 0 ABS 0 - C:\Users\Art\AppData\Local\Temp\s5rc.obj
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 7FC 0 CODE 0 cinit dist/default/production\lab6.production.obj
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__ptext1 4D0 0 CODE 0 text1 dist/default/production\lab6.production.obj
+__ptext2 3FE 0 CODE 0 text2 dist/default/production\lab6.production.obj
+Play@i E 0 BANK0 1 cstackBANK0 dist/default/production\lab6.production.obj
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization 7FC 0 CODE 0 cinit dist/default/production\lab6.production.obj
+__Lfunctab 0 0 CODE 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\lab6.production.obj
+__Hend_init 2 0 CODE 0 end_init -
+__end_of_Play 7FC 0 CODE 0 text1 dist/default/production\lab6.production.obj
+__end_of_main 3FE 0 CODE 0 maintext dist/default/production\lab6.production.obj
+_PORTA 5 0 ABS 0 - dist/default/production\lab6.production.obj
+_PORTB 6 0 ABS 0 - dist/default/production\lab6.production.obj
+_TRISA 85 0 ABS 0 - dist/default/production\lab6.production.obj
+_TRISB 86 0 ABS 0 - dist/default/production\lab6.production.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+_CaptureKey 3FE 0 CODE 0 text2 dist/default/production\lab6.production.obj
+__initialization 7FC 0 CODE 0 cinit dist/default/production\lab6.production.obj
+__pswtext1 2 0 CONST 0 swtext1 dist/default/production\lab6.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 4E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 3FE 7FC 2 2
+text1 0 268 4D0 196 2
+text2 0 1FF 3FE 69 2
+maintext 0 1F3 3E6 C 2
+cstackBANK0 1 C C 1A 1
+reset_vec 0 0 0 1 2
+swtext1 0 1 2 17 2
