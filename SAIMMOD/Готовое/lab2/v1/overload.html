@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="vendor/bootstrap.css">
+</head>
+<body>
+  <div class="container" id="original-dist">
+    <div class="row">
+
+      <div class="col-md-6">
+        <canvas id="canvas-original" width="400" height="400"></canvas>
+      </div>
+
+      <div class="col-md-6">
+        <form class="form-inline" data-bind="submit: submit">
+          <label>x</label><input class="form-control" data-bind="value: x">
+          <label>a</label><input class="form-control" data-bind="value: a">
+          <div class="clear"></div>
+          <label>c</label><input class="form-control" data-bind="value: c">
+          <label>n</label><input class="form-control" data-bind="value: n">
+          <div class="clear"></div>
+          <label>i</label><input class="form-control" data-bind="value: i">
+          <label>m</label><input class="form-control" disabled data-bind="value: m">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <canvas id="graph-derivative" width="400" height="400"></canvas>
+      </div>
+
+      <div class="col-md-6">
+
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#uniform" data-toggle="tab">uniform</a></li>
+          <li><a href="#simpson" data-toggle="tab">simpson</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="uniform">
+            <form class="form-inline" data-bind="submit: submit">
+              <label>a</label><input class="form-control" data-bind="value: a">
+              <label>b</label><input class="form-control" data-bind="value: b">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+          <div class="tab-pane" id="simpson">
+            simpson
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="vendor/jquery-1.11.2.js"></script>
+  <script src="vendor/bootstrap.js"></script>
+  <script src="vendor/knockout.js"></script>
+  <script src="vendor/chart.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
