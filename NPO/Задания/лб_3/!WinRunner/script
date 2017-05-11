@@ -1,0 +1,75 @@
+
+# Calculator
+
+GUI_load("D:\\Work\\381001\\ÍÂÏ\\test\\temp.gui");
+	set_window ("Calculator", 2);
+
+#Dec2Bin Test
+#	obj_mouse_click("Button_3",0,0,LEFT);
+#	button_set("Bin",1);
+#	static_check_text("0,(static)","11");
+#	button_set("Dec",1);						
+	
+#Clear test		
+		obj_mouse_click("Button_C",0,0,LEFT);			
+		static_get_text("0,(static)",x);
+		if(x==0)
+			report_msg("C:ok");
+		else
+			report_msg("C:failed");
+		
+	#mass[20];	# For stack	
+	function SetNum(iVar)
+	{
+		auto i=0;
+		static mass[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+		
+		while(iVar>=1)
+		{
+			mass[i] = sprintf("%d", iVar%10);
+			iVar /= 10;
+			i++;
+		}
+		i--;
+		for (; i>=0; i--)
+			obj_mouse_click("Button_"&mass[i], 0, 0, LEFT);
+	}	
+	
+	
+############################################################		
+# sqr(sin) + sqr(cos) = 1       test                       #
+############################################################
+	
+	for(k=1; k<4; k++)
+	{
+		obj_mouse_click("Button_grad_"&k,0,0,LEFT);
+		for(j=0; j<10; j++)
+		{
+			iVar = rand()*360;
+			printf("%d", iVar);
+			SetNum(iVar);
+			obj_mouse_click("Button_sin",0,0,LEFT);
+			obj_mouse_click("Button_sqr",0,0,LEFT);
+			obj_mouse_click("Button_add",0,0,LEFT);
+			SetNum(iVar);
+			obj_mouse_click("Button_cos",0,0,LEFT);
+			obj_mouse_click("Button_sqr",0,0,LEFT);
+			obj_mouse_click("Button_eq",0,0,LEFT);
+			static_check_text("0,(static)", "1,");
+		}	
+	}
+	
+
+############################################################		
+#                 float test                               #
+############################################################	
+	obj_mouse_click("Button_C",0,0,LEFT);
+	obj_mouse_click("Button_2",0,0,LEFT);
+	obj_mouse_click("Button_div",0,0,LEFT);
+	obj_mouse_click("Button_3",0,0,LEFT);
+	obj_mouse_click("Button_eq",0,0,LEFT);
+	static_get_text("0,(static)", sStr);
+	
+	fVar = 2.0/3.0;
+	
+	printf("%30.30f in WinRunner vs. %s in Calc", fVar, sStr);

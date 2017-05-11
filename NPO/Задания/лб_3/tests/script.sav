@@ -1,0 +1,33 @@
+
+# Calculator
+
+	set_window ("Calculator", 2);
+
+#Dec2Bin Test
+	obj_mouse_click("Button_3",0,0,LEFT);
+	button_set("Bin",1);
+	static_check_text("0,(static)","1");
+	button_set("Dec",1);						
+	
+# Sum test
+
+	for(i=1; i<9; i++)
+	    for(j=1; j<9; j++)
+		{
+			obj_mouse_click("Button_"&i,0,0,LEFT);
+			obj_mouse_click("Button_add",0,0,LEFT);
+			obj_mouse_click("Button_"&j,0,0,LEFT);
+			obj_mouse_click("Button_eq",0,0,LEFT);									
+			static_get_text("0,(static)",s);			
+			if(s==i+j)
+				report_msg(i&"+"&j&"="&s&":ok");
+			else
+				report_msg(i&"+"&j&"="&s&":failed");
+		}
+#Clear test		
+		obj_mouse_click("Button_C",0,0,LEFT);			
+		static_get_text("0,(static)",x);
+		if(x==0)
+			report_msg("C:ok");
+		else
+			report_msg("C:failed");

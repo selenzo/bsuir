@@ -8,7 +8,7 @@ using System.Collections;
 namespace FTPCom
 {
 	// State object for receiving data from remote device.
-	public class StateObject 
+	public class StateObject
 	{
 		public Socket workSocket = null;              // Client socket.
 		public const int BufferSize = 512;            // Size of receive buffer.
@@ -20,7 +20,7 @@ namespace FTPCom
 
 
 	/// <summary>
-	/// 
+	///
 	/// </summary>
 	public class AsyncSocket
 	{
@@ -36,7 +36,7 @@ namespace FTPCom
 		public void Connect(string hostname, int port)
 		{
 			// Connect to a remote device.
-			try 
+			try
 			{
 				// Establish the remote endpoint for the socket.
 				IPHostEntry ipHostInfo = Dns.Resolve(hostname);
@@ -48,19 +48,19 @@ namespace FTPCom
 					SocketType.Stream, ProtocolType.Tcp);
 
 				// Connect to the remote endpoint.
-				m_sock.BeginConnect( remoteEP, 
+				m_sock.BeginConnect( remoteEP,
 					new AsyncCallback(ConnectCallback), m_sock);
 
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_ftpmonitor.ErrorNotify(e.Message, "AsyncSocket.Connect");
 			}
 		}
 
-		private void ConnectCallback(IAsyncResult ar) 
+		private void ConnectCallback(IAsyncResult ar)
 		{
-			try 
+			try
 			{
 				// Retrieve the socket from the state object.
 				Socket sock = (Socket) ar.AsyncState;
@@ -74,16 +74,16 @@ namespace FTPCom
 				// Signal that the connection has been made.
 				//m_ftpmonitor.ConnectionCompleted();
 				// Only if response equal 220 OK
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_ftpmonitor.ErrorNotify(e.Message, "AsyncSocket.ConnectCallback");
 			}
 		}
 
-		public void Receive() 
+		public void Receive()
 		{
-			try 
+			try
 			{
 				// Create the state object.
 				StateObject state = new StateObject();
@@ -92,17 +92,17 @@ namespace FTPCom
 				// Begin receiving the data from the remote device.
 				m_sock.BeginReceive( state.buffer, 0, StateObject.BufferSize, 0,
 					new AsyncCallback(ReceiveCallback), state);
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_ftpmonitor.ErrorNotify(e.Message, "AsyncSocket.Receive");
 			}
 		}
-		private void ReceiveCallback( IAsyncResult ar ) 
+		private void ReceiveCallback( IAsyncResult ar )
 		{
-			try 
+			try
 			{
-				// Retrieve the state object and the client socket 
+				// Retrieve the state object and the client socket
 				// from the async state object.
 				StateObject state = (StateObject) ar.AsyncState;
 				Socket sock = state.workSocket;
@@ -110,7 +110,7 @@ namespace FTPCom
 				// Read data from the remote device.
 				int bytesRead = sock.EndReceive(ar);
 
-				if (bytesRead > 0) 
+				if (bytesRead > 0)
 				{
 					string s = Encoding.ASCII.GetString(state.buffer,0,bytesRead);
 					state.sb.Append(s);
@@ -119,21 +119,21 @@ namespace FTPCom
 					if (response.EndsWith(CRLF))
 					{
 						ReceiveResponse(response, state);
-						state.sb.Remove(0, state.sb.Length);			
+						state.sb.Remove(0, state.sb.Length);
 					}
-				} 
+				}
 
 				//  Get the rest of the data.
 				sock.BeginReceive(state.buffer,0,StateObject.BufferSize,0,
 					new AsyncCallback(ReceiveCallback), state);
 
-			} 
-			catch (ObjectDisposedException e) 
+			}
+			catch (ObjectDisposedException e)
 			{
 				//Nothing
 			}
 
-			catch (Exception e) 
+			catch (Exception e)
 			{
 				m_ftpmonitor.ErrorNotify(e.Message, "AsyncSocket.ReceiveCallback");
 			}
@@ -145,10 +145,10 @@ namespace FTPCom
 			ArrayList lResponse = new ArrayList();
 
 			int i, j;
-			int maxline = 0;			
+			int maxline = 0;
 
 			i = 0;
-			do 
+			do
 			{
 				j = response.IndexOf(CRLF, i);
 				if (j > -1)
@@ -163,10 +163,10 @@ namespace FTPCom
 				maxline++;
 			} while (i < response.Length);
 
-			int idline = 0;		
+			int idline = 0;
 			int idstart = 0;
 
-			do 
+			do
 			{
 				if (((string)lResponse[idline]).Length > 3)
 				{
@@ -205,7 +205,7 @@ namespace FTPCom
 			} while (idline < lResponse.Count);
 		}
 
-		public void Send(string data) 
+		public void Send(string data)
 		{
 			try
 			{
@@ -225,9 +225,9 @@ namespace FTPCom
 			}
 		}
 
-		private void SendCallback(IAsyncResult ar) 
+		private void SendCallback(IAsyncResult ar)
 		{
-			try 
+			try
 			{
 				// Retrieve the socket from the state object.
 				Socket sock = (Socket) ar.AsyncState;
@@ -237,8 +237,8 @@ namespace FTPCom
 
 				// All bytes sended ?????
 
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_ftpmonitor.ErrorNotify(e.Message, "AsynckSocket.SendCallBack");
 			}

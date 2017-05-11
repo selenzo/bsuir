@@ -26,8 +26,8 @@ public class ExtractIcon
 	[DllImport("comctl32.dll")]
 	private static extern IntPtr ImageList_GetIcon(
 		IntPtr himl,
-		int i,  
-		uint flags 
+		int i,
+		uint flags
 		);
 
 	[StructLayout(LayoutKind.Sequential)]

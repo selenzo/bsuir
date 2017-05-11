@@ -1,4 +1,4 @@
-﻿/* Body style, for the entire document */
+/* Body style, for the entire document */
 body
 {
     background: #F3F3F4;
@@ -14,7 +14,7 @@ h1
     padding: 10px 0px 10px 10px;
     font-size: 21pt;
     background-color: #E2E2E2;
-    border-bottom: 1px #C1C1C2 solid; 
+    border-bottom: 1px #C1C1C2 solid;
     color: #201F20;
     margin: 0;
     font-weight: normal;
@@ -45,7 +45,7 @@ a
     color: #1382CE;
 }
 
-/* Table styles */ 
+/* Table styles */
 table
 {
     border-spacing: 0 0;
@@ -86,7 +86,7 @@ table td
     text-decoration: none;
 }
 
-/* Center text, used in the over views cells that contain message level counts */ 
+/* Center text, used in the over views cells that contain message level counts */
 .textCentered
 {
     text-align: center;
@@ -98,17 +98,17 @@ table td
     width: 100%;
 }
 
-/* Padding around the content after the h1 */ 
-#content 
+/* Padding around the content after the h1 */
+#content
 {
-	padding: 0px 12px 12px 12px; 
+	padding: 0px 12px 12px 12px;
 }
 
-/* The overview table expands to width, with a max width of 97% */ 
+/* The overview table expands to width, with a max width of 97% */
 #overview table
 {
     width: auto;
-    max-width: 75%; 
+    max-width: 75%;
 }
 
 /* The messages tables are always 97% width */

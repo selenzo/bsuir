@@ -3,7 +3,7 @@ using System;
 namespace FTPCom
 {
 	/// <summary>
-	/// 
+	///
 	/// </summary>
 	public class ServerFileData
 	{

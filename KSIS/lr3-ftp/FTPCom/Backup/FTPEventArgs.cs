@@ -3,7 +3,7 @@ using System;
 namespace FTPCom
 {
 	/// <summary>
-	/// 
+	///
 	/// </summary>
 	public class FTPEventArgs : System.EventArgs
 	{
@@ -14,7 +14,7 @@ namespace FTPCom
 
 		public FTPEventArgs()
 		{
-			// 
+			//
 			// TODO: Add constructor logic here
 			//
 			m_sMessage = string.Empty;

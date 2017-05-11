@@ -23,7 +23,7 @@ namespace FTPCom
 			Command = cmd;
 			Response = response;
 			sParam = sparam;
-		}	
+		}
 		public FTPCommand(string cmd, int response, string sparam, int iparam)
 		{
 			Command = cmd;
@@ -45,6 +45,6 @@ namespace FTPCom
 				s = s + " " + sParam;
 			s += CRLF;
 			return s;
-		}	
+		}
 	}
 }

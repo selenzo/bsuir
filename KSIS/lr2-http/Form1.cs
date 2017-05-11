@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,7 +45,7 @@ namespace lab2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             HttpWebRequest wr = (HttpWebRequest)WebRequest.Create("http://localhost");
             wr.Method = "HEAD";
 
@@ -63,7 +63,7 @@ namespace lab2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://localhost/auth.php");
             request.Method = "POST";

@@ -8,7 +8,7 @@ using System.Text;
 namespace FTPCom
 {
 	// State object for receiving data from remote device.
-	public class DataStateObject 
+	public class DataStateObject
 	{
 		public Socket workSocket = null;              // Client socket.
 		public const int BufferSize = 512;            // Size of receive buffer.
@@ -21,7 +21,7 @@ namespace FTPCom
 	}
 
 	/// <summary>
-	/// 
+	///
 	/// </summary>
 	public class DataAsyncSocket
 	{
@@ -38,7 +38,7 @@ namespace FTPCom
 
 		public DataAsyncSocket(FTPMonitor ftpmonitor)
 		{
-			// 
+			//
 			// TODO: Add constructor logic here
 			//
 			m_lasterror = "";
@@ -51,7 +51,7 @@ namespace FTPCom
 		public void Connect(string hostname, int port)
 		{
 			// Connect to a remote device.
-			try 
+			try
 			{
 				// Establish the remote endpoint for the socket.
 				IPHostEntry ipHostInfo = Dns.Resolve(hostname);
@@ -63,20 +63,20 @@ namespace FTPCom
 					SocketType.Stream, ProtocolType.Tcp);
 
 				// Connect to the remote endpoint.
-				m_sock.BeginConnect( remoteEP, 
+				m_sock.BeginConnect( remoteEP,
 					new AsyncCallback(ConnectCallback), m_sock);
 
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_lasterror = e.Message;
 				ErrorNotify("DataAsyncSocket.Connect");
 			}
 		}
 
-		private void ConnectCallback(IAsyncResult ar) 
+		private void ConnectCallback(IAsyncResult ar)
 		{
-			try 
+			try
 			{
 				// Retrieve the socket from the state object.
 				Socket sock = (Socket) ar.AsyncState;
@@ -84,8 +84,8 @@ namespace FTPCom
 				// Complete the connection.
 				sock.EndConnect(ar);
 
-				// 
-				if (m_datacmd == 0) 
+				//
+				if (m_datacmd == 0)
 					Receive();
 				else
 					if (m_datacmd == 1)
@@ -96,17 +96,17 @@ namespace FTPCom
 				// Signal that the connection has been made.
 				m_ftpmonitor.DataSocketConnected();
 
-			} 
-			catch (Exception ex) 
+			}
+			catch (Exception ex)
 			{
 				m_lasterror = ex.Message;
 				ErrorNotify("DataAsyncSocket.ConnectCallback");
 			}
 		}
 
-		public void Receive() 
+		public void Receive()
 		{
-			try 
+			try
 			{
 				m_startTick = Environment.TickCount;
 
@@ -117,18 +117,18 @@ namespace FTPCom
 				// Begin receiving the data from the remote device.
 				m_sock.BeginReceive( state.buffer, 0, StateObject.BufferSize, 0,
 					new AsyncCallback(ReceiveCallback), state);
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_lasterror = e.Message;
 				ErrorNotify("DataAsyncSocket.Receive");
 			}
 		}
-		public void ReceiveCallback( IAsyncResult ar ) 
+		public void ReceiveCallback( IAsyncResult ar )
 		{
-			try 
+			try
 			{
-				// Retrieve the state object and the client socket 
+				// Retrieve the state object and the client socket
 				// from the async state object.
 				DataStateObject state = (DataStateObject) ar.AsyncState;
 				Socket sock = state.workSocket;
@@ -161,8 +161,8 @@ namespace FTPCom
 					m_endTick = Environment.TickCount;
 					m_ftpmonitor.TransferCompleted(state.BytesTransfered, m_endTick - m_startTick);
 				}
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_lasterror = e.Message;
 				ErrorNotify("DataAsyncSocket.ReceiveCallback");
@@ -183,7 +183,7 @@ namespace FTPCom
 
 		public void SendFile()
 		{
-			try 
+			try
 			{
 				m_startTick = Environment.TickCount;
 
@@ -201,17 +201,17 @@ namespace FTPCom
 				// Begin sending the data.
 				m_sock.BeginSend( state.bufferupload, 0, (int)state.bufferupload.Length, 0,
 					new AsyncCallback(SendFileCallback), state);
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_lasterror = e.Message;
 				ErrorNotify("DataAsyncSocket.SendFile");
-			}				
+			}
 		}
 
-		private void SendFileCallback(IAsyncResult ar) 
+		private void SendFileCallback(IAsyncResult ar)
 		{
-			try 
+			try
 			{
 				// Retrieve the socket from the state object.
 				DataStateObject state = (DataStateObject) ar.AsyncState;
@@ -228,13 +228,13 @@ namespace FTPCom
 					m_endTick = Environment.TickCount;
 					m_ftpmonitor.TransferCompleted(state.BytesTransfered, m_endTick - m_startTick);
 				}
-				else 
-				{					
+				else
+				{
 					m_sock.BeginSend( state.bufferupload, state.BytesTransfered, (int)state.fs.Length, 0,
 						new AsyncCallback(SendFileCallback), state);
 				}
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_lasterror = e.Message;
 				ErrorNotify("DataAsyncSocket.SendFileCallBack");
@@ -243,7 +243,7 @@ namespace FTPCom
 
 		public void ReceiveFile()
 		{
-			try 
+			try
 			{
 				m_startTick = Environment.TickCount;
 
@@ -256,18 +256,18 @@ namespace FTPCom
 				// Begin receiving the data from the remote device.
 				m_sock.BeginReceive( state.buffer, 0, StateObject.BufferSize, 0,
 					new AsyncCallback(ReceiveFileCallback), state);
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_lasterror = e.Message;
 				ErrorNotify("DataAsyncSocket.ReceiveFile");
-			}		
+			}
 		}
-		private void ReceiveFileCallback( IAsyncResult ar ) 
+		private void ReceiveFileCallback( IAsyncResult ar )
 		{
-			try 
+			try
 			{
-				// Retrieve the state object and the client socket 
+				// Retrieve the state object and the client socket
 				// from the async state object.
 				DataStateObject state = (DataStateObject) ar.AsyncState;
 				Socket sock = state.workSocket;
@@ -288,14 +288,14 @@ namespace FTPCom
 					m_endTick = Environment.TickCount;
 					m_ftpmonitor.TransferCompleted(state.BytesTransfered, m_endTick - m_startTick);
 				}
-				else 
+				else
 				{
 					//  Get the rest of the data.
 					sock.BeginReceive(state.buffer,0,StateObject.BufferSize,0,
 						new AsyncCallback(ReceiveFileCallback), state);
 				}
-			} 
-			catch (Exception e) 
+			}
+			catch (Exception e)
 			{
 				m_lasterror = e.Message;
 				ErrorNotify("DataAsyncSocket.ReceiveFileCallback");
@@ -307,7 +307,7 @@ namespace FTPCom
 		}
 
 		private void ErrorNotify(string functionName)
-		{			
+		{
 			m_ftpmonitor.ErrorNotify(m_lasterror, functionName);
 		}
 

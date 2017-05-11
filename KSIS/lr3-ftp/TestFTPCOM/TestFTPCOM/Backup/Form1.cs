@@ -90,7 +90,7 @@ namespace TestFTPCOM
 		{
 			if( disposing )
 			{
-				if (components != null) 
+				if (components != null)
 				{
 					components.Dispose();
 				}
@@ -148,25 +148,25 @@ namespace TestFTPCOM
 			this.BtnClose = new System.Windows.Forms.Button();
 			this.ftpc = new FTPCom.FTPC();
 			this.SuspendLayout();
-			// 
+			//
 			// statusBar1
-			// 
+			//
 			this.statusBar1.Location = new System.Drawing.Point(0, 479);
 			this.statusBar1.Name = "statusBar1";
 			this.statusBar1.Size = new System.Drawing.Size(768, 22);
 			this.statusBar1.TabIndex = 0;
 			this.statusBar1.Text = "statusBar1";
-			// 
+			//
 			// toolBar1
-			// 
+			//
 			this.toolBar1.DropDownArrows = true;
 			this.toolBar1.Name = "toolBar1";
 			this.toolBar1.ShowToolTips = true;
 			this.toolBar1.Size = new System.Drawing.Size(768, 39);
 			this.toolBar1.TabIndex = 1;
-			// 
+			//
 			// TextLog
-			// 
+			//
 			this.TextLog.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.TextLog.Location = new System.Drawing.Point(0, 415);
 			this.TextLog.Name = "TextLog";
@@ -174,18 +174,18 @@ namespace TestFTPCOM
 			this.TextLog.Size = new System.Drawing.Size(768, 64);
 			this.TextLog.TabIndex = 2;
 			this.TextLog.Text = "";
-			// 
+			//
 			// splitter1
-			// 
+			//
 			this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.splitter1.Location = new System.Drawing.Point(0, 412);
 			this.splitter1.Name = "splitter1";
 			this.splitter1.Size = new System.Drawing.Size(768, 3);
 			this.splitter1.TabIndex = 3;
 			this.splitter1.TabStop = false;
-			// 
+			//
 			// LocalView
-			// 
+			//
 			this.LocalView.AllowDrop = true;
 			this.LocalView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 																						this.chName,
@@ -206,47 +206,47 @@ namespace TestFTPCOM
 			this.LocalView.DragEnter += new System.Windows.Forms.DragEventHandler(this.LocalView_DragEnter);
 			this.LocalView.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.LocalView_ColumnClick);
 			this.LocalView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LocalView_MouseMove);
-			// 
+			//
 			// chName
-			// 
+			//
 			this.chName.Text = "Name";
 			this.chName.Width = 120;
-			// 
+			//
 			// chSize
-			// 
+			//
 			this.chSize.Text = "Size";
-			// 
+			//
 			// chType
-			// 
+			//
 			this.chType.Text = "Type";
-			// 
+			//
 			// chModified
-			// 
+			//
 			this.chModified.Text = "Modified";
 			this.chModified.Width = 120;
-			// 
+			//
 			// ImgListViewLarge
-			// 
+			//
 			this.ImgListViewLarge.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
 			this.ImgListViewLarge.ImageSize = new System.Drawing.Size(16, 16);
 			this.ImgListViewLarge.TransparentColor = System.Drawing.Color.Transparent;
-			// 
+			//
 			// ImgListViewSmall
-			// 
+			//
 			this.ImgListViewSmall.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
 			this.ImgListViewSmall.ImageSize = new System.Drawing.Size(16, 16);
 			this.ImgListViewSmall.TransparentColor = System.Drawing.Color.Transparent;
-			// 
+			//
 			// SplitView
-			// 
+			//
 			this.SplitView.Location = new System.Drawing.Point(121, 39);
 			this.SplitView.Name = "SplitView";
 			this.SplitView.Size = new System.Drawing.Size(3, 373);
 			this.SplitView.TabIndex = 5;
 			this.SplitView.TabStop = false;
-			// 
+			//
 			// ServerView
-			// 
+			//
 			this.ServerView.AllowDrop = true;
 			this.ServerView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 																						 this.schName,
@@ -269,26 +269,26 @@ namespace TestFTPCOM
 			this.ServerView.DragEnter += new System.Windows.Forms.DragEventHandler(this.ServerView_DragEnter);
 			this.ServerView.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ServerView_MouseMove);
 			this.ServerView.BeforeLabelEdit += new System.Windows.Forms.LabelEditEventHandler(this.ServerView_BeforeLabelEdit);
-			// 
+			//
 			// schName
-			// 
+			//
 			this.schName.Text = "Name";
 			this.schName.Width = 120;
-			// 
+			//
 			// schSize
-			// 
+			//
 			this.schSize.Text = "Size";
-			// 
+			//
 			// schType
-			// 
+			//
 			this.schType.Text = "Type";
-			// 
+			//
 			// schModified
-			// 
+			//
 			this.schModified.Text = "Modified";
-			// 
+			//
 			// contextMenuServer
-			// 
+			//
 			this.contextMenuServer.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
 																							  this.MnuServerNewFolder,
 																							  this.menuItem7,
@@ -297,64 +297,64 @@ namespace TestFTPCOM
 																							  this.MenuDelete,
 																							  this.menuItem8,
 																							  this.MnuServerProperties});
-			// 
+			//
 			// MnuServerNewFolder
-			// 
+			//
 			this.MnuServerNewFolder.Index = 0;
 			this.MnuServerNewFolder.Shortcut = System.Windows.Forms.Shortcut.CtrlF;
 			this.MnuServerNewFolder.Text = "New Folder";
 			this.MnuServerNewFolder.Click += new System.EventHandler(this.MnuServerNewFolder_Click);
-			// 
+			//
 			// menuItem7
-			// 
+			//
 			this.menuItem7.Index = 1;
 			this.menuItem7.Text = "-";
-			// 
+			//
 			// MenuDownload
-			// 
+			//
 			this.MenuDownload.Index = 2;
 			this.MenuDownload.Shortcut = System.Windows.Forms.Shortcut.CtrlD;
 			this.MenuDownload.Text = "Download";
 			this.MenuDownload.Click += new System.EventHandler(this.MenuDownload_Click);
-			// 
+			//
 			// MnuServerRename
-			// 
+			//
 			this.MnuServerRename.Index = 3;
 			this.MnuServerRename.Shortcut = System.Windows.Forms.Shortcut.CtrlR;
 			this.MnuServerRename.Text = "Rename";
 			this.MnuServerRename.Click += new System.EventHandler(this.MnuServerRename_Click);
-			// 
+			//
 			// MenuDelete
-			// 
+			//
 			this.MenuDelete.Index = 4;
 			this.MenuDelete.Shortcut = System.Windows.Forms.Shortcut.Del;
 			this.MenuDelete.Text = "Delete";
 			this.MenuDelete.Click += new System.EventHandler(this.MenuDelete_Click);
-			// 
+			//
 			// menuItem8
-			// 
+			//
 			this.menuItem8.Index = 5;
 			this.menuItem8.Text = "-";
-			// 
+			//
 			// MnuServerProperties
-			// 
+			//
 			this.MnuServerProperties.Index = 6;
 			this.MnuServerProperties.Shortcut = System.Windows.Forms.Shortcut.CtrlP;
 			this.MnuServerProperties.Text = "Properties";
-			// 
+			//
 			// ImgListServerSmall
-			// 
+			//
 			this.ImgListServerSmall.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
 			this.ImgListServerSmall.ImageSize = new System.Drawing.Size(16, 16);
 			this.ImgListServerSmall.TransparentColor = System.Drawing.Color.Transparent;
-			// 
+			//
 			// mainMenu1
-			// 
+			//
 			this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
 																					  this.menuItem1});
-			// 
+			//
 			// menuItem1
-			// 
+			//
 			this.menuItem1.Index = 0;
 			this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
 																					  this.menuItem2,
@@ -362,29 +362,29 @@ namespace TestFTPCOM
 																					  this.menuItem4,
 																					  this.menuItem5});
 			this.menuItem1.Text = "File";
-			// 
+			//
 			// menuItem2
-			// 
+			//
 			this.menuItem2.Index = 0;
 			this.menuItem2.Text = "New";
-			// 
+			//
 			// menuItem3
-			// 
+			//
 			this.menuItem3.Index = 1;
 			this.menuItem3.Text = "Open...";
-			// 
+			//
 			// menuItem4
-			// 
+			//
 			this.menuItem4.Index = 2;
 			this.menuItem4.Text = "-";
-			// 
+			//
 			// menuItem5
-			// 
+			//
 			this.menuItem5.Index = 3;
 			this.menuItem5.Text = "Quit";
-			// 
+			//
 			// CBFTPServer
-			// 
+			//
 			this.CBFTPServer.Items.AddRange(new object[] {
 															 "localhost"});
 			this.CBFTPServer.Location = new System.Drawing.Point(80, 8);
@@ -392,67 +392,67 @@ namespace TestFTPCOM
 			this.CBFTPServer.Size = new System.Drawing.Size(136, 21);
 			this.CBFTPServer.TabIndex = 7;
 			this.CBFTPServer.Text = "localhost";
-			// 
+			//
 			// label1
-			// 
+			//
 			this.label1.Location = new System.Drawing.Point(8, 8);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(72, 16);
 			this.label1.TabIndex = 8;
 			this.label1.Text = "FTP Server :";
-			// 
+			//
 			// label2
-			// 
+			//
 			this.label2.Location = new System.Drawing.Point(240, 8);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(64, 16);
 			this.label2.TabIndex = 9;
 			this.label2.Text = "Username :";
-			// 
+			//
 			// EFUsername
-			// 
+			//
 			this.EFUsername.Location = new System.Drawing.Point(304, 8);
 			this.EFUsername.Name = "EFUsername";
 			this.EFUsername.Size = new System.Drawing.Size(80, 20);
 			this.EFUsername.TabIndex = 10;
 			this.EFUsername.Text = "anonymous";
-			// 
+			//
 			// Text1
-			// 
+			//
 			this.Text1.Location = new System.Drawing.Point(392, 8);
 			this.Text1.Name = "Text1";
 			this.Text1.Size = new System.Drawing.Size(88, 16);
 			this.Text1.TabIndex = 11;
 			this.Text1.Text = "Password :";
-			// 
+			//
 			// EFPassword
-			// 
+			//
 			this.EFPassword.Location = new System.Drawing.Point(456, 8);
 			this.EFPassword.Name = "EFPassword";
 			this.EFPassword.Size = new System.Drawing.Size(104, 20);
 			this.EFPassword.TabIndex = 12;
 			this.EFPassword.Text = "anonymous@free.fr";
-			// 
+			//
 			// BTConnect
-			// 
+			//
 			this.BTConnect.Location = new System.Drawing.Point(592, 8);
 			this.BTConnect.Name = "BTConnect";
 			this.BTConnect.Size = new System.Drawing.Size(64, 24);
 			this.BTConnect.TabIndex = 13;
 			this.BTConnect.Text = "Connect";
 			this.BTConnect.Click += new System.EventHandler(this.BTConnect_Click);
-			// 
+			//
 			// BtnClose
-			// 
+			//
 			this.BtnClose.Location = new System.Drawing.Point(672, 8);
 			this.BtnClose.Name = "BtnClose";
 			this.BtnClose.Size = new System.Drawing.Size(56, 24);
 			this.BtnClose.TabIndex = 14;
 			this.BtnClose.Text = "Close";
 			this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
-			// 
+			//
 			// ftpc
-			// 
+			//
 			this.ftpc.Hostname = "";
 			this.ftpc.LocalFolder = "c:\\temp";
 			this.ftpc.Password = "";
@@ -469,9 +469,9 @@ namespace TestFTPCOM
 			this.ftpc.Message += new FTPCom.FTPEventHandler(this.ftpc_Message);
 			this.ftpc.FileUploadCompleted += new FTPCom.FTPEventHandler(this.ftpc_FileUploadCompleted);
 			this.ftpc.ConnectionTerminated += new FTPCom.FTPEventHandler(this.ftpc_ConnectionTerminated);
-			// 
+			//
 			// SharpFTP
-			// 
+			//
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.ClientSize = new System.Drawing.Size(768, 501);
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
@@ -502,7 +502,7 @@ namespace TestFTPCOM
 		/// The main entry point for the application.
 		/// </summary>
 		[STAThread]
-		static void Main() 
+		static void Main()
 		{
 			Application.Run(new SharpFTP());
 		}
@@ -524,12 +524,12 @@ namespace TestFTPCOM
 			ImgListViewLarge.Images.Clear();
 
 			int idImage = 0;
-			
+
 			ListViewItem lvItem = new ListViewItem("..");
 			lvItem.Tag = folder;
 
 			LocalView.Items.Add(lvItem);
-			
+
 			Shell32.FolderItems items = folder.Items();
 
 			// Folder enumeration
@@ -541,7 +541,7 @@ namespace TestFTPCOM
 				}
 			}
 
-			// Other files 
+			// Other files
 			foreach(Shell32.FolderItem item in items)
 			{
 				if (!item.IsFolder)
@@ -551,7 +551,7 @@ namespace TestFTPCOM
 			}
 
 			// End update view
-			LocalView.EndUpdate();		
+			LocalView.EndUpdate();
 
 			//ftpc.LocalFolder = folder.Title;
 
@@ -565,7 +565,7 @@ namespace TestFTPCOM
 			sValues[0] = item.Name;
 			if (item.Size == 0)
 				sValues[1] = "";
-			else				
+			else
 				sValues[1] = Convert.ToString(item.Size / 1024) + " KB";
 			sValues[2] = item.Type;
 			sValues[3] = item.ModifyDate.ToString();
@@ -578,7 +578,7 @@ namespace TestFTPCOM
 			*/
 			ImgListViewSmall.Images.Add (ExtractIcon.GetIcon(item.Path, true));
 
-			ListViewItem lvItem = new ListViewItem(sValues, idImage++);	
+			ListViewItem lvItem = new ListViewItem(sValues, idImage++);
 			lvItem.Tag = item;
 			LocalView.Items.Add (lvItem);
 		}
@@ -589,16 +589,16 @@ namespace TestFTPCOM
 			{
 				Shell32.Folder item;
 
-				item = (Shell32.Folder) LocalView.SelectedItems[0].Tag; 				
+				item = (Shell32.Folder) LocalView.SelectedItems[0].Tag;
 				FillLocalView( (Shell32.Folder) item.ParentFolder);
 			}
 			else
 			{
 				Shell32.FolderItem item;
 
-				item = (Shell32.FolderItem) LocalView.SelectedItems[0].Tag; 
+				item = (Shell32.FolderItem) LocalView.SelectedItems[0].Tag;
 				if (item.IsFolder)
-				{				
+				{
 					ftpc.LocalFolder = item.Path;
 					FillLocalView( (Shell32.Folder) item.GetFolder);
 				}
@@ -666,7 +666,7 @@ namespace TestFTPCOM
 			int idimage = 0;
 			string msg;
 
-			msg = "Transfered " + e.TotalBytes.ToString() + " bytes in " + ((float)e.TimeElapsed / 1000).ToString() + " seconds" + CRLF; 
+			msg = "Transfered " + e.TotalBytes.ToString() + " bytes in " + ((float)e.TimeElapsed / 1000).ToString() + " seconds" + CRLF;
 			TextLog.SelectionColor = Color.Black;
 			TextLog.AppendText(msg);
 
@@ -687,7 +687,7 @@ namespace TestFTPCOM
 					ImgListServerSmall.Images.Add (m_IconFolder);
 					ServerView.Items.Add(new ListViewItem(items, idimage++));
 				}
-			}		
+			}
 			for (i = 0; i < ftpc.FileCount; i++)
 			{
 				if (!ftpc.IsFolder(i))
@@ -698,7 +698,7 @@ namespace TestFTPCOM
 					ImgListServerSmall.Images.Add (ExtractIcon.GetIcon(items[0], false));
 					ServerView.Items.Add(new ListViewItem(items, idimage++));
 				}
-			}		
+			}
 			ServerView.EndUpdate();
 			this.Cursor = Cursors.Default;
 		}
@@ -709,10 +709,10 @@ namespace TestFTPCOM
 
 		private void LocalView_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
 		{
-			if (e.Data.GetDataPresent(DataFormats.Text)) 
+			if (e.Data.GetDataPresent(DataFormats.Text))
 				e.Effect = DragDropEffects.Copy;
 			else
-				e.Effect = DragDropEffects.None;		
+				e.Effect = DragDropEffects.None;
 		}
 
 		private void LocalView_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
@@ -729,7 +729,7 @@ namespace TestFTPCOM
 
 		private void ftpc_FileDownloadCompleted(object sender, FTPCom.FTPEventArgs e)
 		{
-			string msg = "Transfered " + e.TotalBytes.ToString() + " bytes in " + ((float)e.TimeElapsed / 1000).ToString() + " seconds" + CRLF; 
+			string msg = "Transfered " + e.TotalBytes.ToString() + " bytes in " + ((float)e.TimeElapsed / 1000).ToString() + " seconds" + CRLF;
 			TextLog.SelectionColor = Color.Black;
 			TextLog.AppendText(msg);
 			FillLocalView(m_currentFolder);
@@ -760,7 +760,7 @@ namespace TestFTPCOM
 			}
 			else
 			{
-				string dirname = ServerView.SelectedItems[0].Text; 
+				string dirname = ServerView.SelectedItems[0].Text;
 				if (ftpc.IsFolder(dirname))
 				{
 					this.Cursor = Cursors.WaitCursor;
@@ -768,7 +768,7 @@ namespace TestFTPCOM
 					ftpc.DirChange(dirname);
 					ftpc.Dir();
 				}
-			}		
+			}
 		}
 
 		private void ServerView_AfterLabelEdit(object sender, System.Windows.Forms.LabelEditEventArgs e)
@@ -807,15 +807,15 @@ namespace TestFTPCOM
 				}
 
 				LocalView.DoDragDrop(msg, DragDropEffects.Copy | DragDropEffects.Move);
-			}		
+			}
 		}
 
 		private void ServerView_DragEnter(object sender, System.Windows.Forms.DragEventArgs e)
 		{
-			if (e.Data.GetDataPresent(DataFormats.Text)) 
+			if (e.Data.GetDataPresent(DataFormats.Text))
 				e.Effect = DragDropEffects.Copy;
 			else
-				e.Effect = DragDropEffects.None;			
+				e.Effect = DragDropEffects.None;
 		}
 
 		private void ServerView_DragDrop(object sender, System.Windows.Forms.DragEventArgs e)
@@ -827,7 +827,7 @@ namespace TestFTPCOM
 			foreach (string sfile in filename)
 			{
 				ftpc.FileUpload(sfile, GetFileSize(sfile));
-			}		
+			}
 		}
 
 		private int GetFileSize(string filename)
@@ -838,7 +838,7 @@ namespace TestFTPCOM
 
 		private void ftpc_FileUploadCompleted(object sender, FTPCom.FTPEventArgs e)
 		{
-			string msg = "Transfered " + e.TotalBytes.ToString() + " bytes in " + ((float)e.TimeElapsed / 1000).ToString() + " seconds" + CRLF; 
+			string msg = "Transfered " + e.TotalBytes.ToString() + " bytes in " + ((float)e.TimeElapsed / 1000).ToString() + " seconds" + CRLF;
 			TextLog.SelectionColor = Color.Black;
 			TextLog.AppendText(msg);
 			ftpc.Dir();
@@ -880,7 +880,7 @@ namespace TestFTPCOM
 				TextLog.AppendText(e.Message);
 			TextLog.AppendText("\n");
 			TextLog.SelectionStart = TextLog.TextLength;
-			TextLog.ScrollToCaret();		
+			TextLog.ScrollToCaret();
 		}
 
 		private void BtnClose_Click(object sender, System.EventArgs e)
@@ -891,7 +891,7 @@ namespace TestFTPCOM
 
 		public void ftpc_ConnectionTerminated(object sender, FTPCom.FTPEventArgs e)
 		{
-		
+
 		}
 	}
 }

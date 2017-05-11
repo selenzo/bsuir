@@ -1,0 +1,166 @@
+Calculator:
+{
+ class: window,
+ label: Calculator,
+ MSW_class: SciCalc
+}
+{
+ rtree_state: open,
+ ltree_state: open
+}
+Calculator."0,(static)":
+{
+ class: static_text,
+ MSW_id: 403
+}
+Calculator.Bin:
+{
+ class: radio_button,
+ label: Bin
+}
+Calculator.Button_0:
+{
+ class: object,
+ MSW_id: 124,
+ MSW_class: Button
+}
+Calculator.Button_1:
+{
+ class: object,
+ MSW_id: 125,
+ MSW_class: Button
+}
+Calculator.Button_2:
+{
+ class: object,
+ MSW_id: 126,
+ MSW_class: Button
+}
+Calculator.Button_3:
+{
+ class: object,
+ MSW_id: 127,
+ MSW_class: Button
+}
+Calculator.Button_4:
+{
+ class: object,
+ MSW_id: 128,
+ MSW_class: Button
+}
+Calculator.Button_5:
+{
+ class: object,
+ MSW_id: 129,
+ MSW_class: Button
+}
+Calculator.Button_6:
+{
+ class: object,
+ MSW_id: 130,
+ MSW_class: Button
+}
+Calculator.Button_7:
+{
+ class: object,
+ MSW_id: 131,
+ MSW_class: Button
+}
+Calculator.Button_8:
+{
+ class: object,
+ MSW_id: 132,
+ MSW_class: Button
+}
+Calculator.Button_9:
+{
+ class: object,
+ MSW_id: 133,
+ MSW_class: Button
+}
+Calculator.Button_C:
+{
+ class: object,
+ MSW_id: 81,
+ MSW_class: Button
+}
+Calculator.Button_MP:
+{
+ class: object,
+ MSW_id: 116,
+ MSW_class: Button
+}
+Calculator.Button_MR:
+{
+ class: object,
+ MSW_id: 114,
+ MSW_class: Button
+}
+Calculator.Button_MS:
+{
+ class: object,
+ MSW_id: 115,
+ MSW_class: Button
+}
+Calculator.Button_add:
+{
+ class: object,
+ MSW_id: 92,
+ MSW_class: Button
+}
+Calculator.Button_cos:
+{
+ class: object,
+ MSW_id: 99,
+ MSW_class: Button
+}
+Calculator.Button_div:
+{
+ class: object,
+ MSW_id: 90,
+ MSW_class: Button
+}
+Calculator.Button_eq:
+{
+ class: object,
+ MSW_id: 112,
+ MSW_class: Button
+}
+Calculator.Button_grad_1:
+{
+ class: radio_button,
+ label: Degrees
+}
+Calculator.Button_grad_2:
+{
+ class: radio_button,
+ label: Radians
+}
+Calculator.Button_grad_3:
+{
+ class: radio_button,
+ label: Grads
+}
+Calculator.Button_mul:
+{
+ class: object,
+ MSW_id: 91,
+ MSW_class: Button
+}
+Calculator.Button_sin:
+{
+ class: object,
+ MSW_id: 98,
+ MSW_class: Button
+}
+Calculator.Button_sqr:
+{
+ class: object,
+ MSW_id: 104,
+ MSW_class: Button
+}
+Calculator.Dec:
+{
+ class: radio_button,
+ label: Dec
+}
